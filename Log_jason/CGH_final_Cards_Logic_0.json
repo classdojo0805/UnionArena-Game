@@ -1,0 +1,532 @@
+{
+  "EX02BT_CGH-2-001": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2500,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "is_opponent_turn"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "EX02BT_CGH-2-002": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1000,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "on_leave": [
+        {
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "EX02BT_CGH-2-003": {
+    "ap_cost": 2,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "conditional_branch",
+              "condition": {
+                "type": "target_count",
+                "target": {
+                  "player": "opponent",
+                  "location": "front_line",
+                  "filters": {
+                    "max_bp": 3000,
+                    "state": "rest"
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              },
+              "if_true": [
+                {
+                  "type": "retire",
+                  "target": {
+                    "player": "opponent",
+                    "location": "front_line",
+                    "amount": 1,
+                    "modifier": "up_to",
+                    "filters": {
+                      "max_bp": 3000,
+                      "state": "rest"
+                    }
+                  },
+                  "to_removal": false
+                }
+              ],
+              "if_false": [
+                {
+                  "type": "return_to_hand",
+                  "target": {
+                    "player": "opponent",
+                    "location": "front_line",
+                    "amount": 1,
+                    "modifier": "up_to",
+                    "filters": {
+                      "max_bp": 3000,
+                      "state": "active"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "EX02BT_CGH-2-005": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3500,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": true,
+          "limit": null,
+          "conditions": [],
+          "costs": [
+            {
+              "type": "discard",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 2,
+                "modifier": "exact"
+              },
+              "destination": "outside"
+            }
+          ],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "look_amount": 3,
+              "take_amount": 2,
+              "reveal": false,
+              "filters": {},
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order",
+              "on_success": []
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "EX02BT_CGH-2-005_2": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3500,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": true,
+          "limit": null,
+          "conditions": [],
+          "costs": [
+            {
+              "type": "discard",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 2,
+                "modifier": "exact"
+              },
+              "destination": "outside"
+            }
+          ],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "look_amount": 3,
+              "take_amount": 2,
+              "reveal": false,
+              "filters": {},
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order",
+              "on_success": []
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "EX02BT_CGH-2-006": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2500,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "twice_block": true
+              },
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "EX02BT_CGH-2-006_2": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2500,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "twice_block": true
+              },
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "EX02BT_CGH-2-007": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "conditional_branch",
+              "condition": {
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": "front_line",
+                  "filters": {
+                    "other": true,
+                    "max_energy": 1
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              },
+              "if_true": [
+                {
+                  "type": "return_to_hand",
+                  "target": {
+                    "player": "self",
+                    "location": "front_line",
+                    "amount": 1,
+                    "modifier": "exact",
+                    "filters": {
+                      "other": true,
+                      "max_energy": 1
+                    }
+                  }
+                }
+              ],
+              "if_false": [
+                {
+                  "type": "return_to_hand",
+                  "target": "self_card"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "EX02BT_CGH-2-004": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "on_leave": [
+        {
+          "optional": true,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "amount": 1,
+                "modifier": "up_to",
+                "filters": {
+                  "card_type": "character"
+                }
+              },
+              "keywords": {
+                "impact_nullify": true
+              },
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UAPR_CGH-2-004": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "藍",
+    "traits": [
+      "黑色騎士團"
+    ],
+    "logic_tags": {
+      "on_leave": [
+        {
+          "optional": true,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "amount": 1,
+                "modifier": "up_to",
+                "filters": {
+                  "card_type": "character"
+                }
+              },
+              "keywords": {
+                "impact_nullify": true
+              },
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  }
+}

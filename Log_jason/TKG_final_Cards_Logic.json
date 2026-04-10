@@ -1,0 +1,489 @@
+{
+  "UAPR_TKG-P-001": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "continuous": [
+        {
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "custom",
+              "description": "此卡的顏色及能源需求也被視為全部顏色"
+            }
+          ]
+        }
+      ],
+      "on_play": [
+        {
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "change_state",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 2,
+                "filters": {
+                  "card_type": "ap_card"
+                }
+              },
+              "state": "active"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": {
+      "type": "UNKNOWN",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-067": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1000,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {
+      "on_play": [
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "自己的生命值是4～5"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            },
+            {
+              "type": "discard",
+              "amount": 1,
+              "destination": "outside"
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "自己的生命值是3或以下"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": {
+      "type": "UNKNOWN",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-068": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {},
+    "life_trigger": {
+      "type": "get",
+      "effect": {}
+    }
+  },
+  "UAPR_TKG-1-068": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {},
+    "life_trigger": {
+      "type": "get",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-069": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {
+      "on_play": [
+        {
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            },
+            {
+              "type": "discard",
+              "amount": 1,
+              "destination": "outside"
+            }
+          ]
+        }
+      ],
+      "continuous": [
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "self_life <= 5"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "buff_bp",
+              "target": "self_card",
+              "amount": 1000,
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": {
+      "type": "UNKNOWN",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-070": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {
+      "main_act": [
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "遊戲回合為１"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "custom",
+              "description": "將自己１張生命值加入手牌"
+            },
+            {
+              "type": "buff_bp",
+              "target": "self_card",
+              "amount": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ],
+      "on_leave": [
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "此角色因戰鬥而退場"
+            },
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "life"
+              },
+              "operator": "<=",
+              "count": 3
+            }
+          ],
+          "costs": [
+            {
+              "type": "ask_yes_no",
+              "prompt": "是否將自己１張手牌放置到場外？"
+            },
+            {
+              "type": "discard",
+              "amount": 1,
+              "destination": "outside"
+            }
+          ],
+          "actions": [
+            {
+              "type": "change_state",
+              "target": {
+                "player": "opponent",
+                "location": "front_line",
+                "amount": 1
+              },
+              "state": "rest"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": {
+      "type": "UNKNOWN",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-070_2": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {
+      "main_act": [
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "遊戲回合為１"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "custom",
+              "description": "將自己１張生命值加入手牌"
+            },
+            {
+              "type": "buff_bp",
+              "target": "self_card",
+              "amount": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ],
+      "on_leave": [
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "此角色因戰鬥而退場"
+            },
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "life"
+              },
+              "operator": "<=",
+              "count": 3
+            }
+          ],
+          "costs": [
+            {
+              "type": "ask_yes_no",
+              "prompt": "是否將自己１張手牌放置到場外？"
+            },
+            {
+              "type": "discard",
+              "amount": 1,
+              "destination": "outside"
+            }
+          ],
+          "actions": [
+            {
+              "type": "change_state",
+              "target": {
+                "player": "opponent",
+                "location": "front_line",
+                "amount": 1
+              },
+              "state": "rest"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": {
+      "type": "UNKNOWN",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-071": {
+    "ap_cost": 1,
+    "energy_req": 5,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 5000,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {
+      "continuous": [
+        {
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "custom",
+              "description": "此角色只能以突襲登場。"
+            },
+            {
+              "type": "custom",
+              "description": "衝擊➊"
+            },
+            {
+              "type": "custom",
+              "description": "傷害➋"
+            }
+          ]
+        },
+        {
+          "conditions": [
+            {
+              "type": "custom",
+              "description": "對手攻擊階段結束時"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "choose_effect",
+              "options": [
+                [
+                  {
+                    "type": "custom",
+                    "description": "將自己１張生命值加入手牌。"
+                  }
+                ],
+                [
+                  {
+                    "type": "retire",
+                    "target": "self_card",
+                    "to_removal": false
+                  },
+                  {
+                    "type": "draw",
+                    "amount": 1
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": {
+      "type": "get",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-071_2": {
+    "ap_cost": 1,
+    "energy_req": 5,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 5000,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {
+      "continuous": [
+        {
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "custom",
+              "description": "此角色只能以突襲登場。"
+            },
+            {
+              "type": "add_keyword",
+              "target": "self_card",
+              "keyword": "impact",
+              "duration": "continuous"
+            },
+            {
+              "type": "add_keyword",
+              "target": "self_card",
+              "keyword": "damage",
+              "duration": "continuous"
+            }
+          ]
+        }
+      ],
+      "on_attack": [
+        {
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "choose_effect",
+              "options": [
+                [
+                  {
+                    "type": "custom",
+                    "description": "將自己１張生命值加入手牌。"
+                  }
+                ],
+                [
+                  {
+                    "type": "retire",
+                    "target": "self_card",
+                    "to_removal": false
+                  },
+                  {
+                    "type": "draw",
+                    "amount": 1
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": {
+      "type": "get",
+      "effect": {}
+    }
+  },
+  "UA47BT_TKG-1-072": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "紅",
+    "traits": [],
+    "logic_tags": {},
+    "life_trigger": {
+      "type": "UNKNOWN",
+      "effect": {}
+    }
+  }
+}
