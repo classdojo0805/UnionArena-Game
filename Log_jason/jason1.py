@@ -16,8 +16,7 @@ LOGIC_FILE = r"C:\Users\user\Documents\UA_APP0.1\Log_jason\TKG_final_Cards_Logic
 
 
 API_KEYS = [
-    "AIzaSyCagkOxyjhZoHQOXVn_7mKdfAsQ4kWAx6Q",
-    "AIzaSyAgEtjwS4ViKjH1y56X_vr7EnRvZMFXJxU", # api key nmsl
+     # api key nmsl
 ] 
 current_key_idx = 0
 client = genai.Client(api_key=API_KEYS[current_key_idx])
