@@ -15,9 +15,7 @@ LOGIC_FILE = r"C:\Users\wei\Documents\UA_APP0.1\Log_jason\TKG_final_Cards_Logic_
 
 
 API_KEYS = [
-    "AIzaSyBpWvEsSPL0_uSqBUZRDy7o78Ntjs8mplw", #api 0805
-    "AIzaSyA3uOGag2sW8p3w3QsAZaFnLHoyjg-9zZc" # api key huc生畢照
-    
+
 ] # 請記得填入你的 API Key 
 current_key_idx = 0
 client = genai.Client(api_key=API_KEYS[current_key_idx])
