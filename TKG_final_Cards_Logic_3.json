@@ -1,0 +1,3351 @@
+{
+  "UA47BT_TKG-1-004_2": {
+    "ap_cost": 1,
+    "energy_req": 7,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 5000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_attack": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "attack_count",
+              "player": "self",
+              "operator": "==",
+              "count": 1
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "damage": 2
+              },
+              "duration": "turn"
+            }
+          ]
+        }
+      ],
+      "on_attack_end": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "history",
+              "action": "opponent_retired_character_this_turn"
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "change_state",
+              "target": "self_card",
+              "state": "active"
+            },
+            {
+              "type": "draw",
+              "amount": 1
+            }
+          ]
+        }
+      ],
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "targeting_cost": {
+                  "type": "discard",
+                  "target": {
+                    "player": "opponent",
+                    "location": "hand",
+                    "amount": 1,
+                    "modifier": "exact"
+                  },
+                  "destination": "outside"
+                }
+              },
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-005": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "change_state",
+              "target": "self_card",
+              "state": "rest"
+            }
+          ],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "generated_energy",
+              "value": 1,
+              "duration": "turn"
+            },
+            {
+              "type": "gain_effect",
+              "target": "self_card",
+              "gained_trigger": "on_main_phase_end",
+              "effects": [
+                {
+                  "type": "retire",
+                  "target": "self_card",
+                  "to_removal": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-006": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "return_to_hand",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "max_energy": 1,
+                  "other": true,
+                  "card_type": "character"
+                }
+              },
+              "on_fail": [
+                {
+                  "type": "return_to_hand",
+                  "target": "self_card"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-007": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {},
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-008": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            },
+            {
+              "type": "discard",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 1,
+                "modifier": "exact"
+              },
+              "destination": "outside"
+            }
+          ]
+        }
+      ],
+      "on_attack": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "history",
+              "action": "opponent_retired_character_this_turn"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            },
+            {
+              "type": "discard",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 1,
+                "modifier": "exact"
+              },
+              "destination": "outside"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-009": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": true,
+          "limit": null,
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1,
+              "on_success": [
+                {
+                  "type": "retire",
+                  "target": {
+                    "player": "opponent",
+                    "location": "front_line",
+                    "amount": 1,
+                    "modifier": "up_to",
+                    "filters": {
+                      "max_bp": 2000
+                    }
+                  },
+                  "to_removal": false
+                }
+              ]
+            }
+          ],
+          "actions": []
+        }
+      ],
+      "on_attack": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "history",
+              "action": "opponent_retired_character_this_turn"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "opponent",
+              "location": "front_line",
+              "amount": 1
+            },
+            "state": "rest"
+          },
+          {
+            "type": "add_keyword",
+            "target": "selected_target",
+            "keyword": "cannot_stand",
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-009_2": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": true,
+          "limit": null,
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1,
+              "on_success": [
+                {
+                  "type": "retire",
+                  "target": {
+                    "player": "opponent",
+                    "location": "front_line",
+                    "amount": 1,
+                    "modifier": "up_to",
+                    "filters": {
+                      "max_bp": 2000
+                    }
+                  },
+                  "to_removal": false
+                }
+              ]
+            }
+          ],
+          "actions": []
+        }
+      ],
+      "on_attack": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "history",
+              "action": "opponent_retired_character_this_turn"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "opponent",
+              "location": "front_line",
+              "amount": 1
+            },
+            "state": "rest"
+          },
+          {
+            "type": "add_keyword",
+            "target": "selected_target",
+            "keyword": "cannot_stand",
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-010": {
+    "ap_cost": 1,
+    "energy_req": 6,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "conditions": [
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "retire",
+              "target": {
+                "player": "opponent",
+                "location": "front_line",
+                "amount": 1,
+                "modifier": "exact"
+              },
+              "to_removal": false
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-010_2": {
+    "ap_cost": 1,
+    "energy_req": 6,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "conditions": [
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "retire",
+              "target": {
+                "player": "opponent",
+                "location": "front_line",
+                "amount": 1,
+                "modifier": "exact"
+              },
+              "to_removal": false
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-011": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2500,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "look_amount": 5,
+              "take_amount": 1,
+              "reveal": true,
+              "filters": {
+                "name": "有馬 貴將"
+              },
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order",
+              "on_success": [
+                {
+                  "type": "discard",
+                  "target": {
+                    "player": "self",
+                    "location": "hand",
+                    "amount": 1,
+                    "modifier": "exact"
+                  },
+                  "destination": "outside"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-012": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "in_hand_continuous": [
+        {
+          "optional": false,
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "opponent",
+                "location": "field",
+                "filters": {
+                  "any_of": [
+                    {
+                      "color": "purple"
+                    },
+                    {
+                      "color": "red"
+                    }
+                  ]
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "cost_reduction",
+              "target": "self_card",
+              "attribute": "energy",
+              "value": 1,
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-013": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {},
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-013_2": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {},
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-014": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "滑步"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "move_card",
+              "source": {
+                "player": "self",
+                "location": "outside",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "max_energy": 2,
+                  "trait": "真戶班"
+                }
+              },
+              "destination": "hand"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-015": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "look_amount": 3,
+              "take_amount": 1,
+              "reveal": true,
+              "filters": {
+                "trait": "真戶班"
+              },
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order",
+              "on_success": [
+                {
+                  "type": "discard",
+                  "target": {
+                    "player": "self",
+                    "location": "hand",
+                    "amount": 1,
+                    "modifier": "exact"
+                  },
+                  "destination": "outside"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "opponent",
+              "location": "front_line",
+              "amount": 1
+            },
+            "state": "rest"
+          },
+          {
+            "type": "add_keyword",
+            "target": "selected_target",
+            "keyword": "cannot_stand",
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-015_2": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "look_amount": 3,
+              "take_amount": 1,
+              "reveal": true,
+              "filters": {
+                "trait": "真戶班"
+              },
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order",
+              "on_success": [
+                {
+                  "type": "discard",
+                  "target": {
+                    "player": "self",
+                    "location": "hand",
+                    "amount": 1,
+                    "modifier": "exact"
+                  },
+                  "destination": "outside"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "opponent",
+              "location": "front_line",
+              "amount": 1
+            },
+            "state": "rest"
+          },
+          {
+            "type": "add_keyword",
+            "target": "selected_target",
+            "keyword": "cannot_stand",
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-016": {
+    "ap_cost": 1,
+    "energy_req": 5,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "history",
+              "action": "played_this_turn",
+              "target": "self_card"
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "activate_ap",
+              "amount": 3
+            },
+            {
+              "type": "apply_player_restriction",
+              "player": "self",
+              "restriction": "cannot_play_from_hand",
+              "duration": "turn"
+            }
+          ]
+        },
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "佐佐木 琲世"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "trait": "真戶班"
+                }
+              },
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-016_2": {
+    "ap_cost": 1,
+    "energy_req": 5,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "history",
+              "action": "played_this_turn",
+              "target": "self_card"
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "activate_ap",
+              "amount": 3
+            },
+            {
+              "type": "apply_player_restriction",
+              "player": "self",
+              "restriction": "cannot_play_from_hand",
+              "duration": "turn"
+            }
+          ]
+        },
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "佐佐木 琲世"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "trait": "真戶班"
+                }
+              },
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-016_3": {
+    "ap_cost": 1,
+    "energy_req": 5,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "history",
+              "action": "played_this_turn",
+              "target": "self_card"
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "activate_ap",
+              "amount": 3
+            },
+            {
+              "type": "apply_player_restriction",
+              "player": "self",
+              "restriction": "cannot_play_from_hand",
+              "duration": "turn"
+            }
+          ]
+        },
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "佐佐木 琲世"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "trait": "真戶班"
+                }
+              },
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-017": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2500,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": "self_card",
+              "operator": "==",
+              "count": 1,
+              "filters": {
+                "state": "active"
+              }
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "generated_energy",
+              "value": 1,
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-018": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "energy_line",
+                "filters": {
+                  "name": "self_card"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            },
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "trait": "真戶班"
+                }
+              },
+              "operator": ">=",
+              "count": 6
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "change_state",
+              "target": "self_card",
+              "state": "active"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn_by_name",
+            "amount": 1,
+            "name": "真戶 曉"
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "change_state",
+              "target": "self_card",
+              "state": "rest"
+            }
+          ],
+          "actions": [
+            {
+              "type": "cost_reduction",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "trait": "真戶班",
+                  "other": true
+                }
+              },
+              "attribute": "ap",
+              "value": 1,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-018_2": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "energy_line",
+                "filters": {
+                  "name": "self_card"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            },
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "trait": "真戶班"
+                }
+              },
+              "operator": ">=",
+              "count": 6
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "change_state",
+              "target": "self_card",
+              "state": "active"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn_by_name",
+            "amount": 1,
+            "name": "真戶 曉"
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "change_state",
+              "target": "self_card",
+              "state": "rest"
+            }
+          ],
+          "actions": [
+            {
+              "type": "cost_reduction",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "trait": "真戶班",
+                  "other": true
+                }
+              },
+              "attribute": "ap",
+              "value": 1,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-019": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            },
+            {
+              "type": "discard",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 1,
+                "modifier": "exact"
+              },
+              "destination": "outside"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            },
+            {
+              "type": "discard",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 1,
+                "modifier": "exact"
+              },
+              "destination": "outside"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-020": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "impact_nullify": true
+              },
+              "duration": "continuous"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "impact": 1
+              },
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-020_2": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "impact_nullify": true
+              },
+              "duration": "continuous"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "impact": 1
+              },
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-021": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "trait": "真戶班"
+                }
+              },
+              "operator": ">=",
+              "count": 4
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "continuous"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "choose_effect",
+              "player": "self",
+              "amount": 1,
+              "modifier": "exact",
+              "options": [
+                [
+                  {
+                    "type": "conditional_branch",
+                    "condition": {
+                      "type": "target_count",
+                      "target": {
+                        "player": "self",
+                        "location": "front_line",
+                        "filters": {
+                          "name": "滑步"
+                        }
+                      },
+                      "operator": "==",
+                      "count": 1
+                    },
+                    "if_true": [
+                      {
+                        "type": "move_card",
+                        "source": "self_card",
+                        "destination": "energy_line"
+                      }
+                    ],
+                    "if_false": [
+                      {
+                        "type": "move_card",
+                        "source": "self_card",
+                        "destination": "front_line"
+                      }
+                    ]
+                  }
+                ],
+                [
+                  {
+                    "type": "conditional_branch",
+                    "condition": {
+                      "type": "target_count",
+                      "target": {
+                        "player": "self",
+                        "location": "front_line",
+                        "filters": {
+                          "name": "滑步"
+                        }
+                      },
+                      "operator": "==",
+                      "count": 1
+                    },
+                    "if_true": [
+                      {
+                        "type": "move_card",
+                        "source": "self_card",
+                        "destination": "energy_line"
+                      },
+                      {
+                        "type": "move_card",
+                        "source": {
+                          "player": "self",
+                          "location": "energy_line",
+                          "amount": 1,
+                          "modifier": "exact",
+                          "filters": {
+                            "card_type": "character",
+                            "other": true
+                          }
+                        },
+                        "destination": "front_line"
+                      }
+                    ],
+                    "if_false": [
+                      {
+                        "type": "move_card",
+                        "source": "self_card",
+                        "destination": "front_line"
+                      },
+                      {
+                        "type": "move_card",
+                        "source": {
+                          "player": "self",
+                          "location": "front_line",
+                          "amount": 1,
+                          "modifier": "exact",
+                          "filters": {
+                            "card_type": "character",
+                            "other": true
+                          }
+                        },
+                        "destination": "energy_line"
+                      }
+                    ]
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-022": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "self_card"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "choose_effect",
+              "player": "self",
+              "amount": 1,
+              "modifier": "exact",
+              "options": [
+                [
+                  {
+                    "type": "change_state",
+                    "target": "self_card",
+                    "state": "active"
+                  }
+                ],
+                [
+                  {
+                    "type": "conditional_branch",
+                    "condition": {
+                      "type": "target_count",
+                      "target": {
+                        "player": "self",
+                        "location": "field",
+                        "filters": {
+                          "name": "self_card",
+                          "state": "active"
+                        }
+                      },
+                      "operator": ">=",
+                      "count": 1
+                    },
+                    "if_true": [
+                      {
+                        "type": "draw",
+                        "amount": 1
+                      }
+                    ],
+                    "if_false": []
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-022_2": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "self_card"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "choose_effect",
+              "player": "self",
+              "amount": 1,
+              "modifier": "exact",
+              "options": [
+                [
+                  {
+                    "type": "change_state",
+                    "target": "self_card",
+                    "state": "active"
+                  }
+                ],
+                [
+                  {
+                    "type": "conditional_branch",
+                    "condition": {
+                      "type": "target_count",
+                      "target": {
+                        "player": "self",
+                        "location": "field",
+                        "filters": {
+                          "name": "self_card",
+                          "state": "active"
+                        }
+                      },
+                      "operator": ">=",
+                      "count": 1
+                    },
+                    "if_true": [
+                      {
+                        "type": "draw",
+                        "amount": 1
+                      }
+                    ],
+                    "if_false": []
+                  }
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-023": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "trait": "真戶班"
+                }
+              },
+              "operator": ">=",
+              "count": 4
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 500,
+              "duration": "continuous"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "self_card"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-024": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2500,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": true,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "up_to",
+                "filters": {
+                  "trait": "真戶班",
+                  "other": true
+                }
+              },
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "trait": "真戶班",
+                  "other": true
+                }
+              },
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-024_2": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2500,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": true,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "up_to",
+                "filters": {
+                  "trait": "真戶班",
+                  "other": true
+                }
+              },
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "trait": "真戶班",
+                  "other": true
+                }
+              },
+              "attribute": "bp",
+              "value": 1000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-025": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 3000,
+              "duration": "turn"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-026": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 2000,
+              "duration": "turn"
+            }
+          ]
+        },
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "alternative_cost",
+              "original_cost": {
+                "type": "pay_ap",
+                "amount": 1
+              },
+              "new_cost": {
+                "type": "discard",
+                "target": {
+                  "player": "self",
+                  "location": "hand",
+                  "amount": 1,
+                  "modifier": "exact"
+                },
+                "destination": "outside"
+              }
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_effect",
+              "target": "self_card",
+              "gained_trigger": "main_act",
+              "effects": [
+                {
+                  "type": "stat_change",
+                  "target": "self_card",
+                  "attribute": "bp",
+                  "value": 0,
+                  "duration": "turn"
+                }
+              ],
+              "limit": {
+                "type": "per_turn",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-026_2": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "stat_change",
+              "target": "self_card",
+              "attribute": "bp",
+              "value": 2000,
+              "duration": "turn"
+            }
+          ]
+        },
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "alternative_cost",
+              "original_cost": {
+                "type": "pay_ap",
+                "amount": 1
+              },
+              "new_cost": {
+                "type": "discard",
+                "target": {
+                  "player": "self",
+                  "location": "hand",
+                  "amount": 1,
+                  "modifier": "exact"
+                },
+                "destination": "outside"
+              }
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_effect",
+              "target": "self_card",
+              "gained_trigger": "main_act",
+              "effects": [
+                {
+                  "type": "stat_change",
+                  "target": "self_card",
+                  "attribute": "bp",
+                  "value": 0,
+                  "duration": "turn"
+                }
+              ],
+              "limit": {
+                "type": "per_turn",
+                "amount": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-027": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "場域卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "on_battle_win": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "trait": "CCG",
+                  "history": "played_this_turn"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "draw",
+              "amount": 1
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-028": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "activate_ap",
+              "amount": 2
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [
+          {
+            "type": "life_count",
+            "player": "self",
+            "operator": "==",
+            "count": 0
+          }
+        ],
+        "costs": [],
+        "actions": [
+          {
+            "type": "recover_life",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-029": {
+    "ap_cost": 2,
+    "energy_req": 5,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "in_hand_continuous": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "有馬 貴將"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "cost_reduction",
+              "target": "self_card",
+              "attribute": "ap",
+              "value": 1,
+              "duration": "continuous"
+            }
+          ]
+        }
+      ],
+      "event_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "retire",
+              "target": {
+                "player": "opponent",
+                "location": "front_line",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "max_bp": 5000
+                }
+              },
+              "to_removal": false
+            },
+            {
+              "type": "draw",
+              "amount": 1
+            },
+            {
+              "type": "discard",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 1,
+                "modifier": "exact"
+              },
+              "destination": "outside"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "retire",
+            "target": {
+              "player": "opponent",
+              "location": "front_line",
+              "amount": 1
+            },
+            "to_removal": false
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-031": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "activate_ap",
+              "amount": 2
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [
+          {
+            "type": "life_count",
+            "player": "self",
+            "operator": "==",
+            "count": 0
+          }
+        ],
+        "costs": [],
+        "actions": [
+          {
+            "type": "recover_life",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-032": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "event_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "conditional_branch",
+              "condition": {
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "佐佐木 琲世"
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              },
+              "if_true": [
+                {
+                  "type": "retire",
+                  "target": {
+                    "player": "opponent",
+                    "location": "front_line",
+                    "amount": 1,
+                    "modifier": "exact",
+                    "filters": {
+                      "max_bp": 5000
+                    }
+                  },
+                  "to_removal": false
+                }
+              ],
+              "if_false": [
+                {
+                  "type": "retire",
+                  "target": {
+                    "player": "opponent",
+                    "location": "front_line",
+                    "amount": 1,
+                    "modifier": "exact",
+                    "filters": {
+                      "max_bp": 3000
+                    }
+                  },
+                  "to_removal": false
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "retire",
+            "target": {
+              "player": "opponent",
+              "location": "front_line",
+              "amount": 1
+            },
+            "to_removal": false
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-033": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "main_act": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "player": "self",
+              "look_amount": 5,
+              "take_amount": 3,
+              "modifier": "up_to",
+              "reveal": true,
+              "filters": {
+                "trait": "真戶班",
+                "unique_names": true
+              },
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-110": {
+    "ap_cost": 1,
+    "energy_req": 5,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "damage": 2
+              },
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-110_2": {
+    "ap_cost": 1,
+    "energy_req": 5,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": "self_card",
+              "keywords": {
+                "damage": 2
+              },
+              "duration": "continuous"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-111": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "look_amount": 3,
+              "take_amount": 1,
+              "reveal": true,
+              "filters": {
+                "trait": "真戶班"
+              },
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order",
+              "on_success": []
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "佐佐木 琲世"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "play_character",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "max_energy": 3,
+                  "ap_consumption": 1,
+                  "color": "yellow",
+                  "trait": "真戶班"
+                }
+              },
+              "state": "rest"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-111_2": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "黃",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "logic_tags": {
+      "on_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [],
+          "actions": [
+            {
+              "type": "look_at_deck",
+              "look_amount": 3,
+              "take_amount": 1,
+              "reveal": true,
+              "filters": {
+                "trait": "真戶班"
+              },
+              "take_action": "add_to_hand",
+              "remainder": "bottom_deck_any_order",
+              "on_success": []
+            }
+          ]
+        }
+      ],
+      "main_act": [
+        {
+          "optional": false,
+          "limit": {
+            "type": "per_turn",
+            "amount": 1
+          },
+          "conditions": [
+            {
+              "type": "target_count",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "filters": {
+                  "name": "佐佐木 琲世"
+                }
+              },
+              "operator": ">=",
+              "count": 1
+            },
+            {
+              "type": "play_type",
+              "value": "raid"
+            }
+          ],
+          "costs": [
+            {
+              "type": "pay_ap",
+              "amount": 1
+            }
+          ],
+          "actions": [
+            {
+              "type": "play_character",
+              "target": {
+                "player": "self",
+                "location": "hand",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "max_energy": 3,
+                  "ap_consumption": 1,
+                  "color": "yellow",
+                  "trait": "真戶班"
+                }
+              },
+              "state": "rest"
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  }
+}

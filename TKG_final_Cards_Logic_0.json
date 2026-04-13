@@ -1,0 +1,61 @@
+{
+  "UAPR_TKG-P-001": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "continuous": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "treat_as_color",
+              "target": "self_card",
+              "color": "all"
+            }
+          ]
+        }
+      ],
+      "event_play": [
+        {
+          "optional": false,
+          "limit": null,
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "activate_ap",
+              "amount": 2
+            }
+          ]
+        }
+      ]
+    },
+    "life_trigger": [
+      {
+        "conditions": [
+          {
+            "type": "life_count",
+            "player": "self",
+            "operator": "==",
+            "count": 0
+          }
+        ],
+        "costs": [],
+        "actions": [
+          {
+            "type": "recover_life",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+jason_all.py
+text.py
+CGH_final_Cards_Display.json
+CGH_final_Cards_Logic_0.json
+CGH_final_structured.json
+UAjon.code-workspace
+.vscode/settings.json
+backend/data/KGR_final_structured.json
+TKG_final_Cards_Logic.json
+backend/data/TKG_final_structured.json

@@ -1,0 +1,4240 @@
+[
+  {
+    "card_id": "UAPR_TKG-P-001",
+    "name": "東京喰種",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "此卡的顏色及能源需求也被視為全部顏色。\n選擇自己最多２張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "自己沒有生命值的情況下，將自己牌庫上面１張卡放置到自己的生命值區。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UAPR_TKG-P-001.jpg?v=20260216_02",
+    "raw_text": "此卡的顏色及能源需求也被視為全部顏色。\n選擇自己最多２張AP卡被激活。",
+    "color": "黃",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 4
+  },
+  {
+    "card_id": "UA47BT_TKG-1-067",
+    "name": "干支",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 自己的生命值是４～５的情況下，抽１張卡，然後將自己１張手牌放置到場外。自己的生命值是３或以下的情況下，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-067.jpg?v=20260216_02",
+    "raw_text": "登場時 自己的生命值是４～５的情況下，抽１張卡，然後將自己１張手牌放置到場外。自己的生命值是３或以下的情況下，抽１張卡。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-068",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-068.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UAPR_TKG-1-068",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UAPR_TKG-1-068.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-069",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "自己的生命值是５或以下的情況下，此角色的BP+1000。\n 登場時 抽１張卡，然後將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-069.jpg?v=20260216_02",
+    "raw_text": "自己的生命值是５或以下的情況下，此角色的BP+1000。\n 登場時 抽１張卡，然後將自己１張手牌放置到場外。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-070",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動 退場時",
+        "keywords": [],
+        "text": "主起動 回合１ 將自己１張生命值加入手牌。如這樣做，此角色在本回合中，BP+1000。\n 退場時 此角色因戰鬥而退場，並且自己的生命值是３或以下的情況下，可將自己１張手牌放置到場外。如這樣做，選擇對手前線最多１張角色休息。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-070.jpg?v=20260216_02",
+    "raw_text": "主起動 回合１ 將自己１張生命值加入手牌。如這樣做，此角色在本回合中，BP+1000。\n 退場時 此角色因戰鬥而退場，並且自己的生命值是３或以下的情況下，可將自己１張手牌放置到場外。如這樣做，選擇對手前線最多１張角色休息。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-070_2",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動 退場時",
+        "keywords": [],
+        "text": "主起動 回合１ 將自己１張生命值加入手牌。如這樣做，此角色在本回合中，BP+1000。\n 退場時 此角色因戰鬥而退場，並且自己的生命值是３或以下的情況下，可將自己１張手牌放置到場外。如這樣做，選擇對手前線最多１張角色休息。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-070_2.jpg?v=20260216_02",
+    "raw_text": "主起動 回合１ 將自己１張生命值加入手牌。如這樣做，此角色在本回合中，BP+1000。\n 退場時 此角色因戰鬥而退場，並且自己的生命值是３或以下的情況下，可將自己１張手牌放置到場外。如這樣做，選擇對手前線最多１張角色休息。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-071",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "衝擊➊",
+          "傷害➋"
+        ],
+        "text": "此角色只能以突襲登場。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)\n對手攻擊階段結束時，「將自己１張生命值加入手牌。」或「將此角色退場，並且抽１張卡。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-071.jpg?v=20260216_02",
+    "raw_text": "此角色只能以突襲登場。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)\n對手攻擊階段結束時，「將自己１張生命值加入手牌。」或「將此角色退場，並且抽１張卡。」。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-071_2",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "衝擊➊",
+          "傷害➋"
+        ],
+        "text": "此角色只能以突襲登場。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)\n對手攻擊階段結束時，「將自己１張生命值加入手牌。」或「將此角色退場，並且抽１張卡。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-071_2.jpg?v=20260216_02",
+    "raw_text": "此角色只能以突襲登場。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)\n對手攻擊階段結束時，「將自己１張生命值加入手牌。」或「將此角色退場，並且抽１張卡。」。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-072",
+    "name": "霧嶋 絢都",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-072.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-073",
+    "name": "霧嶋 絢都",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "滑步"
+        ],
+        "text": "滑步 (在自己的移動階段可從前線移動到能源線)"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-073.jpg?v=20260216_02",
+    "raw_text": "滑步 (在自己的移動階段可從前線移動到能源線)",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-074",
+    "name": "霧嶋 絢都",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 自己的生命值是６或以上的情況下，抽１張卡，然後將自己１張手牌放置到場外。自己的生命值是５或以下的情況下，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張BP2500或以下的角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-074.jpg?v=20260216_02",
+    "raw_text": "登場時 自己的生命值是６或以上的情況下，抽１張卡，然後將自己１張手牌放置到場外。自己的生命值是５或以下的情況下，抽１張卡。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 2500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-074_2",
+    "name": "霧嶋 絢都",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 自己的生命值是６或以上的情況下，抽１張卡，然後將自己１張手牌放置到場外。自己的生命值是５或以下的情況下，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張BP2500或以下的角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-074_2.jpg?v=20260216_02",
+    "raw_text": "登場時 自己的生命值是６或以上的情況下，抽１張卡，然後將自己１張手牌放置到場外。自己的生命值是５或以下的情況下，抽１張卡。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 2500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-075",
+    "name": "霧嶋 絢都",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 退場時",
+        "keywords": [
+          "２次攻擊"
+        ],
+        "text": "〈霧嶋 絢都〉\n 登場時 此角色在本回合中，獲得 ２次攻擊 。\n 退場時 從自己手牌選擇最多１張能源需求『１或以下』及AP消耗１的紅色角色卡，以休息狀態在自己場上登場。自己的生命值是３或以下的情況下，改為『３或以下』。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-075.jpg?v=20260216_02",
+    "raw_text": "〈霧嶋 絢都〉\n 登場時 此角色在本回合中，獲得 ２次攻擊 。\n 退場時 從自己手牌選擇最多１張能源需求『１或以下』及AP消耗１的紅色角色卡，以休息狀態在自己場上登場。自己的生命值是３或以下的情況下，改為『３或以下』。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-075_2",
+    "name": "霧嶋 絢都",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 退場時",
+        "keywords": [
+          "２次攻擊"
+        ],
+        "text": "〈霧嶋 絢都〉\n 登場時 此角色在本回合中，獲得 ２次攻擊 。\n 退場時 從自己手牌選擇最多１張能源需求『１或以下』及AP消耗１的紅色角色卡，以休息狀態在自己場上登場。自己的生命值是３或以下的情況下，改為『３或以下』。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-075_2.jpg?v=20260216_02",
+    "raw_text": "〈霧嶋 絢都〉\n 登場時 此角色在本回合中，獲得 ２次攻擊 。\n 退場時 從自己手牌選擇最多１張能源需求『１或以下』及AP消耗１的紅色角色卡，以休息狀態在自己場上登場。自己的生命值是３或以下的情況下，改為『３或以下』。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-076",
+    "name": "奈白＆黑奈",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "對手場上擁有黃色或紫色卡的情況下，手牌上此卡的能源需求減少。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-076.jpg?v=20260216_02",
+    "raw_text": "對手場上擁有黃色或紫色卡的情況下，手牌上此卡的能源需求減少。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-077",
+    "name": "多多良",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "此角色以激活狀態登場。\n 登場時 自己的生命值是５或以下的情況下，選擇對手前線最多１張『BP2500或以下』的角色退場。自己的生命值是３或以下的情況下，改為『BP3500或以下』。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-077.jpg?v=20260216_02",
+    "raw_text": "此角色以激活狀態登場。\n 登場時 自己的生命值是５或以下的情況下，選擇對手前線最多１張『BP2500或以下』的角色退場。自己的生命值是３或以下的情況下，改為『BP3500或以下』。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "2",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-078",
+    "name": "啼",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "攻擊時 阻擋時",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 攻擊時  阻擋時 自己的生命值是３或以下的情況下，此角色在本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-078.jpg?v=20260216_02",
+    "raw_text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 攻擊時  阻擋時 自己的生命值是３或以下的情況下，此角色在本回合中，BP+1000。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-078_2",
+    "name": "啼",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "攻擊時 阻擋時",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 攻擊時  阻擋時 自己的生命值是３或以下的情況下，此角色在本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-078_2.jpg?v=20260216_02",
+    "raw_text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 攻擊時  阻擋時 自己的生命值是３或以下的情況下，此角色在本回合中，BP+1000。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-079",
+    "name": "野呂",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "退場時",
+        "keywords": [],
+        "text": "退場時 從以下選擇最多１項。\n．可將自己１張生命值加入手牌。如這樣做，將此卡以休息狀態在自己場上登場。\n．可將自己２張手牌放置到場外。如這樣做，將此卡加入手牌。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-079.jpg?v=20260216_02",
+    "raw_text": "退場時 從以下選擇最多１項。\n．可將自己１張生命值加入手牌。如這樣做，將此卡以休息狀態在自己場上登場。\n．可將自己２張手牌放置到場外。如這樣做，將此卡加入手牌。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-080",
+    "name": "亞門 鋼太朗",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-080.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-081",
+    "name": "亞門 鋼太朗",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看２張卡，將最多１要［特徵：CCG］或〈亞門的掌上壓〉公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張BP2500或以下的角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-081.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看２張卡，將最多１要［特徵：CCG］或〈亞門的掌上壓〉公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-082",
+    "name": "亞門 鋼太朗",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 在前線的情況 休息 回合１ 選擇自己場上最多２張［特徵：CCG］，本回合中，BP+1000。自己場上擁有８張或以上［特徵：CCG］的情況下，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-082.jpg?v=20260216_02",
+    "raw_text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 在前線的情況 休息 回合１ 選擇自己場上最多２張［特徵：CCG］，本回合中，BP+1000。自己場上擁有８張或以上［特徵：CCG］的情況下，抽１張卡。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-082_2",
+    "name": "亞門 鋼太朗",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 在前線的情況 休息 回合１ 選擇自己場上最多２張［特徵：CCG］，本回合中，BP+1000。自己場上擁有８張或以上［特徵：CCG］的情況下，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-082_2.jpg?v=20260216_02",
+    "raw_text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 在前線的情況 休息 回合１ 選擇自己場上最多２張［特徵：CCG］，本回合中，BP+1000。自己場上擁有８張或以上［特徵：CCG］的情況下，抽１張卡。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-083",
+    "name": "亞門 鋼太朗",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "〈亞門 鋼太朗〉\n 登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡。\n 主起動 在前線的情況 休息 回合１ 抽１張卡。然後可將自己場外１張〈亞門的掌上壓〉放置到移除區。如這樣做，自己１張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-083.jpg?v=20260216_02",
+    "raw_text": "〈亞門 鋼太朗〉\n 登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡。\n 主起動 在前線的情況 休息 回合１ 抽１張卡。然後可將自己場外１張〈亞門的掌上壓〉放置到移除區。如這樣做，自己１張AP卡被激活。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-083_2",
+    "name": "亞門 鋼太朗",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "〈亞門 鋼太朗〉\n 登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡。\n 主起動 在前線的情況 休息 回合１ 抽１張卡。然後可將自己場外１張〈亞門的掌上壓〉放置到移除區。如這樣做，自己１張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-083_2.jpg?v=20260216_02",
+    "raw_text": "〈亞門 鋼太朗〉\n 登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡。\n 主起動 在前線的情況 休息 回合１ 抽１張卡。然後可將自己場外１張〈亞門的掌上壓〉放置到移除區。如這樣做，自己１張AP卡被激活。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-084",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "衝擊➊",
+          "傷害➋"
+        ],
+        "text": "自己場上每有１張［特徵：CCG］，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 主起動 回合１ 只有在自己場上擁有８張或以上［特徵：CCG］的情況下才可以發動。此角色在本回合中，獲得 衝擊➊ 及 傷害➋ 。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-084.jpg?v=20260216_02",
+    "raw_text": "自己場上每有１張［特徵：CCG］，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 主起動 回合１ 只有在自己場上擁有８張或以上［特徵：CCG］的情況下才可以發動。此角色在本回合中，獲得 衝擊➊ 及 傷害➋ 。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "2",
+    "energy": 12,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-084_2",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "衝擊➊",
+          "傷害➋"
+        ],
+        "text": "自己場上每有１張［特徵：CCG］，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 主起動 回合１ 只有在自己場上擁有８張或以上［特徵：CCG］的情況下才可以發動。此角色在本回合中，獲得 衝擊➊ 及 傷害➋ 。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-084_2.jpg?v=20260216_02",
+    "raw_text": "自己場上每有１張［特徵：CCG］，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 主起動 回合１ 只有在自己場上擁有８張或以上［特徵：CCG］的情況下才可以發動。此角色在本回合中，獲得 衝擊➊ 及 傷害➋ 。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "2",
+    "energy": 12,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-085",
+    "name": "黑磐 巖",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "２次阻擋",
+          "衝擊無效"
+        ],
+        "text": "自己場上擁有４張或以上［特徵：CCG］的情況下，此角色獲得 ２次阻擋 (此角色在本回合初次進行阻擋時會被激活)及 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-085.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有４張或以上［特徵：CCG］的情況下，此角色獲得 ２次阻擋 (此角色在本回合初次進行阻擋時會被激活)及 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-086",
+    "name": "篠原 幸紀",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在前線的情況 回合１ 選擇自己場上１張〈鈴屋 什造〉，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-086.jpg?v=20260216_02",
+    "raw_text": "主起動 在前線的情況 回合１ 選擇自己場上１張〈鈴屋 什造〉，本回合中，BP+1000。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-087",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-087.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-087_2",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-087_2.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-088",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "自己回合中",
+        "keywords": [],
+        "text": "自己回合中 自己場上擁有４張或以上［特徵：CCG］的情況下，此角色的BP+500。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-088.jpg?v=20260216_02",
+    "raw_text": "自己回合中 自己場上擁有４張或以上［特徵：CCG］的情況下，此角色的BP+500。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UAPR_TKG-1-088",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "自己回合中",
+        "keywords": [],
+        "text": "自己回合中 自己場上擁有４張或以上［特徵：CCG］的情況下，此角色的BP+500。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UAPR_TKG-1-088.jpg?v=20260216_02",
+    "raw_text": "自己回合中 自己場上擁有４張或以上［特徵：CCG］的情況下，此角色的BP+500。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-089",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "此卡從手牌進行突襲的時候，自己場上擁有８張或以上［特徵：CCG］的情況下，AP消耗-1。\n〈鈴屋 什造〉\n 登場時 選擇對手前線最多１張BP少於或等於『自己場上的［特徵：CCG］的張數x500』的角色退場。〈鈴屋 什造〉的此效果１回合只能發動１次。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-089.jpg?v=20260216_02",
+    "raw_text": "此卡從手牌進行突襲的時候，自己場上擁有８張或以上［特徵：CCG］的情況下，AP消耗-1。\n〈鈴屋 什造〉\n 登場時 選擇對手前線最多１張BP少於或等於『自己場上的［特徵：CCG］的張數x500』的角色退場。〈鈴屋 什造〉的此效果１回合只能發動１次。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-089_2",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "此卡從手牌進行突襲的時候，自己場上擁有８張或以上［特徵：CCG］的情況下，AP消耗-1。\n〈鈴屋 什造〉\n 登場時 選擇對手前線最多１張BP少於或等於『自己場上的［特徵：CCG］的張數x500』的角色退場。〈鈴屋 什造〉的此效果１回合只能發動１次。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-089_2.jpg?v=20260216_02",
+    "raw_text": "此卡從手牌進行突襲的時候，自己場上擁有８張或以上［特徵：CCG］的情況下，AP消耗-1。\n〈鈴屋 什造〉\n 登場時 選擇對手前線最多１張BP少於或等於『自己場上的［特徵：CCG］的張數x500』的角色退場。〈鈴屋 什造〉的此效果１回合只能發動１次。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-090",
+    "name": "瀧澤 政道",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-090.jpg?v=20260216_02",
+    "raw_text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1000,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-091",
+    "name": "永近 英良",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 抽１張卡，然後將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-091.jpg?v=20260216_02",
+    "raw_text": "登場時 抽１張卡，然後將自己１張手牌放置到場外。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-092",
+    "name": "永近 英良",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "此角色是激活狀態的情況下，此角色的生產能源+。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-092.jpg?v=20260216_02",
+    "raw_text": "此角色是激活狀態的情況下，此角色的生產能源+。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-092_2",
+    "name": "永近 英良",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "此角色是激活狀態的情況下，此角色的生產能源+。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-092_2.jpg?v=20260216_02",
+    "raw_text": "此角色是激活狀態的情況下，此角色的生產能源+。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-093",
+    "name": "平子 丈",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 將自己場上１張能源需求１或以下的其他角色返回手牌。沒有返回的情況下，將此角色返回手牌。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-093.jpg?v=20260216_02",
+    "raw_text": "登場時 將自己場上１張能源需求１或以下的其他角色返回手牌。沒有返回的情況下，將此角色返回手牌。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 1500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-094",
+    "name": "真戶 曉",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡，然後將自己１張手牌放置到場外。\n 主起動 將１張手牌放置到場外 回合１ 選擇自己場上１張在本回合中因自己的效果而從激活狀態變為休息狀態的〈亞門 鋼太朗〉被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-094.jpg?v=20260216_02",
+    "raw_text": "登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡，然後將自己１張手牌放置到場外。\n 主起動 將１張手牌放置到場外 回合１ 選擇自己場上１張在本回合中因自己的效果而從激活狀態變為休息狀態的〈亞門 鋼太朗〉被激活。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 2500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-094_2",
+    "name": "真戶 曉",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡，然後將自己１張手牌放置到場外。\n 主起動 將１張手牌放置到場外 回合１ 選擇自己場上１張在本回合中因自己的效果而從激活狀態變為休息狀態的〈亞門 鋼太朗〉被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-094_2.jpg?v=20260216_02",
+    "raw_text": "登場時 自己場上擁有４張或以上［特徵：CCG］的情況下，抽１張卡，然後將自己１張手牌放置到場外。\n 主起動 將１張手牌放置到場外 回合１ 選擇自己場上１張在本回合中因自己的效果而從激活狀態變為休息狀態的〈亞門 鋼太朗〉被激活。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 2500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-095",
+    "name": "「青桐樹」的據點",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "此場域以激活狀態登場。\n 主起動 休息 將１張手牌放置到場外 只有在自己的生命值是５或以下的情況下才可以發動。選擇自己場上１張角色，本回合中，BP+1500。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-095.jpg?v=20260216_02",
+    "raw_text": "此場域以激活狀態登場。\n 主起動 休息 將１張手牌放置到場外 只有在自己的生命值是５或以下的情況下才可以發動。選擇自己場上１張角色，本回合中，BP+1500。",
+    "color": "紅",
+    "type": "場域卡",
+    "ap": "1",
+    "energy": 3,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-096",
+    "name": "亞門的掌上壓",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇自己最多２張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "自己沒有生命值的情況下，將自己牌庫上面１張卡放置到自己的生命值區。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-096.jpg?v=20260216_02",
+    "raw_text": "選擇自己最多２張AP卡被激活。",
+    "color": "紅",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 3
+  },
+  {
+    "card_id": "UA47BT_TKG-1-097",
+    "name": "可以告訴我你的名字嗎",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇自己最多２張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "自己沒有生命值的情況下，將自己牌庫上面１張卡放置到自己的生命值區。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-097.jpg?v=20260216_02",
+    "raw_text": "選擇自己最多２張AP卡被激活。",
+    "color": "紅",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 3
+  },
+  {
+    "card_id": "UA47BT_TKG-1-098",
+    "name": "…你太壯了",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "衝擊+➊",
+          "衝擊➊"
+        ],
+        "text": "選擇自己場上１張〈亞門 鋼太朗〉，本回合中，BP+3000並給予 衝擊+➊ (衝擊給予的傷害+1，沒有衝擊的情況下，獲得 衝擊➊ )。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-098.jpg?v=20260216_02",
+    "raw_text": "選擇自己場上１張〈亞門 鋼太朗〉，本回合中，BP+3000並給予 衝擊+➊ (衝擊給予的傷害+1，沒有衝擊的情況下，獲得 衝擊➊ )。",
+    "color": "紅",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 2
+  },
+  {
+    "card_id": "UA47BT_TKG-1-099",
+    "name": "半赫者",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "自己場上擁有〈金木 研〉的情況下，手牌上此卡的AP消耗-1。\n選擇對手前線最多１張BP5000或以下的角色退場。自己的生命值是３或以下的情況下，選擇自己前線最多１張〈金木 研〉，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-099.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有〈金木 研〉的情況下，手牌上此卡的AP消耗-1。\n選擇對手前線最多１張BP5000或以下的角色退場。自己的生命值是３或以下的情況下，選擇自己前線最多１張〈金木 研〉，本回合中，BP+1000。",
+    "color": "紅",
+    "type": "事件卡",
+    "ap": "2",
+    "energy": 5
+  },
+  {
+    "card_id": "UA47BT_TKG-1-100",
+    "name": "梟討伐作戰",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇對手前線１張BP少於或等於『自己場上的［特徵：CCG］的張數x1000』的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-100.jpg?v=20260216_02",
+    "raw_text": "選擇對手前線１張BP少於或等於『自己場上的［特徵：CCG］的張數x1000』的角色退場。",
+    "color": "紅",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 4
+  },
+  {
+    "card_id": "UA47ST_TKG-1-112",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "自己回合中 登場時",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "根據自己的生命值數量，此角色獲得以下全部效果。\n．５或以下： 自己回合中 此角色的BP+500。\n．３或以下： 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 登場時 可將自己１張生命值加入手牌。如這樣做，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-112.jpg?v=20260216_02",
+    "raw_text": "根據自己的生命值數量，此角色獲得以下全部效果。\n．５或以下： 自己回合中 此角色的BP+500。\n．３或以下： 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 登場時 可將自己１張生命值加入手牌。如這樣做，抽１張卡。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-112_2",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "自己回合中 登場時",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "根據自己的生命值數量，此角色獲得以下全部效果。\n．５或以下： 自己回合中 此角色的BP+500。\n．３或以下： 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 登場時 可將自己１張生命值加入手牌。如這樣做，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-112_2.jpg?v=20260216_02",
+    "raw_text": "根據自己的生命值數量，此角色獲得以下全部效果。\n．５或以下： 自己回合中 此角色的BP+500。\n．３或以下： 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 登場時 可將自己１張生命值加入手牌。如這樣做，抽１張卡。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-113",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "自己場上擁有４張或以上［特徵：CCG］的情況下，此角色獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-113.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有４張或以上［特徵：CCG］的情況下，此角色獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-113_2",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "自己場上擁有４張或以上［特徵：CCG］的情況下，此角色獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-113_2.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有４張或以上［特徵：CCG］的情況下，此角色獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。",
+    "color": "紅",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-034",
+    "name": "系璃",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看３張卡，將最多１張卡放置到埸外，將餘下的卡以任意順序放置到牌庫上面。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-034.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看３張卡，將最多１張卡放置到埸外，將餘下的卡以任意順序放置到牌庫上面。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-035",
+    "name": "入見 佳耶",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 將自己場上１張能源需求１或以下的其他角色返回手牌。沒有返回的情況下，將此角色返回手牌。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-035.jpg?v=20260216_02",
+    "raw_text": "登場時 將自己場上１張能源需求１或以下的其他角色返回手牌。沒有返回的情況下，將此角色返回手牌。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 1500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-036",
+    "name": "詩",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 選擇對手前線最多１張BP1500或以上的角色，本回合中，BP-1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇對手前線１張BP1500或以上的角色，本回合中，BP-1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-036.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇對手前線最多１張BP1500或以上的角色，本回合中，BP-1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇對手前線１張BP1500或以上的角色，本回合中，BP-1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-036",
+    "name": "詩",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 選擇對手前線最多１張BP1500或以上的角色，本回合中，BP-1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇對手前線１張BP1500或以上的角色，本回合中，BP-1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-036.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇對手前線最多１張BP1500或以上的角色，本回合中，BP-1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇對手前線１張BP1500或以上的角色，本回合中，BP-1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-037",
+    "name": "詩",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看４張卡，將最多１張卡放置到場外，並且將最多１張擁有的角色卡或AP消耗２或以上的角色卡公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。\n 主起動 休息 此卡退場 從自己牌庫上面查看３張卡，將最多１張卡加入手牌，將餘下的卡放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-037.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看４張卡，將最多１張卡放置到場外，並且將最多１張擁有的角色卡或AP消耗２或以上的角色卡公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。\n 主起動 休息 此卡退場 從自己牌庫上面查看３張卡，將最多１張卡加入手牌，將餘下的卡放置到場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-037_2",
+    "name": "詩",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看４張卡，將最多１張卡放置到場外，並且將最多１張擁有的角色卡或AP消耗２或以上的角色卡公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。\n 主起動 休息 此卡退場 從自己牌庫上面查看３張卡，將最多１張卡加入手牌，將餘下的卡放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-037_2.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看４張卡，將最多１張卡放置到場外，並且將最多１張擁有的角色卡或AP消耗２或以上的角色卡公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。\n 主起動 休息 此卡退場 從自己牌庫上面查看３張卡，將最多１張卡加入手牌，將餘下的卡放置到場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-038",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-038.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-038",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-038.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-039",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在前線的情況 回合１ 只有在此角色是激活狀態的情況下才可以發動。從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-039.jpg?v=20260216_02",
+    "raw_text": "主起動 在前線的情況 回合１ 只有在此角色是激活狀態的情況下才可以發動。從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UAPR_TKG-1-039",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在前線的情況 回合１ 只有在此角色是激活狀態的情況下才可以發動。從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UAPR_TKG-1-039.jpg?v=20260216_02",
+    "raw_text": "主起動 在前線的情況 回合１ 只有在此角色是激活狀態的情況下才可以發動。從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-040",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [
+          "傷害➋"
+        ],
+        "text": "自己場外的卡的能源需求數目有５種或以上的情況下，此角色獲得 傷害➋ 。\n 登場時 從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "從自己場外選擇１張能源需求２或以下及AP消耗１的紫色角色卡，以激活狀態在自己前線登場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-040.jpg?v=20260216_02",
+    "raw_text": "自己場外的卡的能源需求數目有５種或以上的情況下，此角色獲得 傷害➋ 。\n 登場時 從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-040_2",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [
+          "傷害➋"
+        ],
+        "text": "自己場外的卡的能源需求數目有５種或以上的情況下，此角色獲得 傷害➋ 。\n 登場時 從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "從自己場外選擇１張能源需求２或以下及AP消耗１的紫色角色卡，以激活狀態在自己前線登場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-040_2.jpg?v=20260216_02",
+    "raw_text": "自己場外的卡的能源需求數目有５種或以上的情況下，此角色獲得 傷害➋ 。\n 登場時 從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-041",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "自己回合中 登場時",
+        "keywords": [],
+        "text": "自己場外的卡的能源需求數目有５種或以上的情況下，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 自己回合中 此角色的BP+1000。\n 登場時 此角色在本回合中，獲得「可能的話對手必需要阻擋此角色的第１次攻擊。」及「回合１ 此角色進行攻擊並戰鬥勝利時，此角色被激活。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-041.jpg?v=20260216_02",
+    "raw_text": "自己場外的卡的能源需求數目有５種或以上的情況下，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 自己回合中 此角色的BP+1000。\n 登場時 此角色在本回合中，獲得「可能的話對手必需要阻擋此角色的第１次攻擊。」及「回合１ 此角色進行攻擊並戰鬥勝利時，此角色被激活。」。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "2",
+    "energy": 7,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-041_2",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "自己回合中 登場時",
+        "keywords": [],
+        "text": "自己場外的卡的能源需求數目有５種或以上的情況下，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 自己回合中 此角色的BP+1000。\n 登場時 此角色在本回合中，獲得「可能的話對手必需要阻擋此角色的第１次攻擊。」及「回合１ 此角色進行攻擊並戰鬥勝利時，此角色被激活。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-041_2.jpg?v=20260216_02",
+    "raw_text": "自己場外的卡的能源需求數目有５種或以上的情況下，手牌上此卡的能源需求減少。\n此角色以激活狀態登場。\n 自己回合中 此角色的BP+1000。\n 登場時 此角色在本回合中，獲得「可能的話對手必需要阻擋此角色的第１次攻擊。」及「回合１ 此角色進行攻擊並戰鬥勝利時，此角色被激活。」。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "2",
+    "energy": 7,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-042",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "攻擊時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-042.jpg?v=20260216_02",
+    "raw_text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 12,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-042_2",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "攻擊時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-042_2.jpg?v=20260216_02",
+    "raw_text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 12,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-042_3",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "攻擊時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-042_3.jpg?v=20260216_02",
+    "raw_text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 12,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UAPR_TKG-1-042",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "攻擊時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UAPR_TKG-1-042.jpg?v=20260216_02",
+    "raw_text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 12,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UAPR_TKG-1-042_2",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "攻擊時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/images/wait_for_update.png",
+    "raw_text": "此卡進行突襲的時候，自己場外每有１種能源需求數目，能源需求減少。\n〈金木 研〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 攻擊時 對手可將他自己場外７張卡放置到移除區。如對手這樣做，自己抽２張卡，然後將自己１張手牌放置到場外。如對手不這樣做，選擇對手前線最多１張BP5000或以下的角色退場。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 12,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-043",
+    "name": "神代 利世",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "退場時",
+        "keywords": [],
+        "text": "退場時 選擇自己場上最多１張下面沒有背面向上的卡的〈金木 研〉，將此卡以背面向上放置到被選擇的角色下面。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-043.jpg?v=20260216_02",
+    "raw_text": "退場時 選擇自己場上最多１張下面沒有背面向上的卡的〈金木 研〉，將此卡以背面向上放置到被選擇的角色下面。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-044",
+    "name": "神代 利世",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在場外的情況 選擇自己場上１張下面沒有背面向上的卡的〈金木 研〉，將以卡以背面向上放置到被選擇的角色下面。可將自己１張手牌放置到場外。如這樣做，被此效果選擇的角色被激活，並且本回合中，BP-1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-044.jpg?v=20260216_02",
+    "raw_text": "主起動 在場外的情況 選擇自己場上１張下面沒有背面向上的卡的〈金木 研〉，將以卡以背面向上放置到被選擇的角色下面。可將自己１張手牌放置到場外。如這樣做，被此效果選擇的角色被激活，並且本回合中，BP-1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-044_2",
+    "name": "神代 利世",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在場外的情況 選擇自己場上１張下面沒有背面向上的卡的〈金木 研〉，將以卡以背面向上放置到被選擇的角色下面。可將自己１張手牌放置到場外。如這樣做，被此效果選擇的角色被激活，並且本回合中，BP-1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-044_2.jpg?v=20260216_02",
+    "raw_text": "主起動 在場外的情況 選擇自己場上１張下面沒有背面向上的卡的〈金木 研〉，將以卡以背面向上放置到被選擇的角色下面。可將自己１張手牌放置到場外。如這樣做，被此效果選擇的角色被激活，並且本回合中，BP-1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-044",
+    "name": "神代 利世",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在場外的情況 選擇自己場上１張下面沒有背面向上的卡的〈金木 研〉，將以卡以背面向上放置到被選擇的角色下面。可將自己１張手牌放置到場外。如這樣做，被此效果選擇的角色被激活，並且本回合中，BP-1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-044.jpg?v=20260216_02",
+    "raw_text": "主起動 在場外的情況 選擇自己場上１張下面沒有背面向上的卡的〈金木 研〉，將以卡以背面向上放置到被選擇的角色下面。可將自己１張手牌放置到場外。如這樣做，被此效果選擇的角色被激活，並且本回合中，BP-1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-045",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-045.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-045_2",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-045_2.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-045",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-045.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-046",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在前線的情況 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，BP+2000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "從自己場外選擇１張能源需求２或以下及AP消耗１的紫色角色卡，以激活狀態在自己前線登場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-046.jpg?v=20260216_02",
+    "raw_text": "主起動 在前線的情況 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，BP+2000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-047",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [
+          "２次攻擊"
+        ],
+        "text": "〈霧嶋 董香〉\n 登場時 從以下選擇１項。\n．選擇自己場上最多１張能源需求３或以下的角色被激活。\n．抽１張卡。\n 主起動 在前線的情況 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，獲得 ２次攻擊 。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-047.jpg?v=20260216_02",
+    "raw_text": "〈霧嶋 董香〉\n 登場時 從以下選擇１項。\n．選擇自己場上最多１張能源需求３或以下的角色被激活。\n．抽１張卡。\n 主起動 在前線的情況 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，獲得 ２次攻擊 。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-047_2",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [
+          "２次攻擊"
+        ],
+        "text": "〈霧嶋 董香〉\n 登場時 從以下選擇１項。\n．選擇自己場上最多１張能源需求３或以下的角色被激活。\n．抽１張卡。\n 主起動 在前線的情況 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，獲得 ２次攻擊 。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-047_2.jpg?v=20260216_02",
+    "raw_text": "〈霧嶋 董香〉\n 登場時 從以下選擇１項。\n．選擇自己場上最多１張能源需求３或以下的角色被激活。\n．抽１張卡。\n 主起動 在前線的情況 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，獲得 ２次攻擊 。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-048",
+    "name": "古間 圓兒",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "對手場上擁有黃色或紅色卡的情況下，手牌上此卡的能源需求減少。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-048.jpg?v=20260216_02",
+    "raw_text": "對手場上擁有黃色或紅色卡的情況下，手牌上此卡的能源需求減少。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-049",
+    "name": "月山 習",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-049.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-050",
+    "name": "月山 習",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看２張卡，將最多１張事件卡公開並加入手牌，將餘下的卡放置到場外。有加入手牌的情況下，將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-050.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看２張卡，將最多１張事件卡公開並加入手牌，將餘下的卡放置到場外。有加入手牌的情況下，將自己１張手牌放置到場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-051",
+    "name": "月山 習",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 退場時",
+        "keywords": [],
+        "text": "登場時 可將自己場外２張卡或以上放置到移除區。如這樣做，如果自己移除區擁有10張卡或以上，此角色被激活。〈月山 習〉的此效果１回合只能發動１次。\n 退場時 可將自己場外２張其他〈月山 習〉放置到移除區。如這樣做，將此卡加入手牌。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-051.jpg?v=20260216_02",
+    "raw_text": "登場時 可將自己場外２張卡或以上放置到移除區。如這樣做，如果自己移除區擁有10張卡或以上，此角色被激活。〈月山 習〉的此效果１回合只能發動１次。\n 退場時 可將自己場外２張其他〈月山 習〉放置到移除區。如這樣做，將此卡加入手牌。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-051_2",
+    "name": "月山 習",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 退場時",
+        "keywords": [],
+        "text": "登場時 可將自己場外２張卡或以上放置到移除區。如這樣做，如果自己移除區擁有10張卡或以上，此角色被激活。〈月山 習〉的此效果１回合只能發動１次。\n 退場時 可將自己場外２張其他〈月山 習〉放置到移除區。如這樣做，將此卡加入手牌。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-051_2.jpg?v=20260216_02",
+    "raw_text": "登場時 可將自己場外２張卡或以上放置到移除區。如這樣做，如果自己移除區擁有10張卡或以上，此角色被激活。〈月山 習〉的此效果１回合只能發動１次。\n 退場時 可將自己場外２張其他〈月山 習〉放置到移除區。如這樣做，將此卡加入手牌。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-052",
+    "name": "月山 習",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 攻擊時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "〈月山 習〉\n 登場時 選擇對手前線最多１張角色，本回合中，BP-1000。可將自己場外相同張數的角色卡及事件卡任意放置到移除區。每用此效果放置１張卡到移除區，被選擇的角色在本回合中，另外再BP-500。\n 攻擊時 可將自己場外１張角色卡及１張事件卡放置到移除區。如這樣做，此角色在本回合中，獲得 衝擊➊ 。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-052.jpg?v=20260216_02",
+    "raw_text": "〈月山 習〉\n 登場時 選擇對手前線最多１張角色，本回合中，BP-1000。可將自己場外相同張數的角色卡及事件卡任意放置到移除區。每用此效果放置１張卡到移除區，被選擇的角色在本回合中，另外再BP-500。\n 攻擊時 可將自己場外１張角色卡及１張事件卡放置到移除區。如這樣做，此角色在本回合中，獲得 衝擊➊ 。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-052_2",
+    "name": "月山 習",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 攻擊時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "〈月山 習〉\n 登場時 選擇對手前線最多１張角色，本回合中，BP-1000。可將自己場外相同張數的角色卡及事件卡任意放置到移除區。每用此效果放置１張卡到移除區，被選擇的角色在本回合中，另外再BP-500。\n 攻擊時 可將自己場外１張角色卡及１張事件卡放置到移除區。如這樣做，此角色在本回合中，獲得 衝擊➊ 。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-052_2.jpg?v=20260216_02",
+    "raw_text": "〈月山 習〉\n 登場時 選擇對手前線最多１張角色，本回合中，BP-1000。可將自己場外相同張數的角色卡及事件卡任意放置到移除區。每用此效果放置１張卡到移除區，被選擇的角色在本回合中，另外再BP-500。\n 攻擊時 可將自己場外１張角色卡及１張事件卡放置到移除區。如這樣做，此角色在本回合中，獲得 衝擊➊ 。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-053",
+    "name": "西尾 錦",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 將自己牌庫上面２張卡放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-053.jpg?v=20260216_02",
+    "raw_text": "登場時 將自己牌庫上面２張卡放置到場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-053_2",
+    "name": "西尾 錦",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 將自己牌庫上面２張卡放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-053_2.jpg?v=20260216_02",
+    "raw_text": "登場時 將自己牌庫上面２張卡放置到場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-054",
+    "name": "笛口 雛實",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-054.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-054",
+    "name": "笛口 雛實",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-054.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-055",
+    "name": "笛口 雛實",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 自己回合中",
+        "keywords": [],
+        "text": "登場時 從以下選擇１項。\n．抽１張卡，然後將自己１張手牌放置到場外。\n． 自己回合中 的情況下，選擇自己場上最多１張其他角色，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-055.jpg?v=20260216_02",
+    "raw_text": "登場時 從以下選擇１項。\n．抽１張卡，然後將自己１張手牌放置到場外。\n． 自己回合中 的情況下，選擇自己場上最多１張其他角色，本回合中，BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-055_2",
+    "name": "笛口 雛實",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 自己回合中",
+        "keywords": [],
+        "text": "登場時 從以下選擇１項。\n．抽１張卡，然後將自己１張手牌放置到場外。\n． 自己回合中 的情況下，選擇自己場上最多１張其他角色，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-055_2.jpg?v=20260216_02",
+    "raw_text": "登場時 從以下選擇１項。\n．抽１張卡，然後將自己１張手牌放置到場外。\n． 自己回合中 的情況下，選擇自己場上最多１張其他角色，本回合中，BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-056",
+    "name": "笛口 涼子",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-056.jpg?v=20260216_02",
+    "raw_text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1000,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-056",
+    "name": "笛口 涼子",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-056.jpg?v=20260216_02",
+    "raw_text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1000,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-057",
+    "name": "芳村",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "此角色是激活狀態的情況下，此角色的生產能源+。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-057.jpg?v=20260216_02",
+    "raw_text": "此角色是激活狀態的情況下，此角色的生產能源+。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-057",
+    "name": "芳村",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "此角色是激活狀態的情況下，此角色的生產能源+。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-057.jpg?v=20260216_02",
+    "raw_text": "此角色是激活狀態的情況下，此角色的生產能源+。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-058",
+    "name": "四方 蓮示",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇自己場上１張其他角色，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-058.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇自己場上１張其他角色，本回合中，BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-058",
+    "name": "四方 蓮示",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇自己場上１張其他角色，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-058.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇自己場上最多１張其他角色，本回合中，BP+1000。\n 主起動 在前線的情況 支付1AP 回合１ 選擇自己場上１張其他角色，本回合中，BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-059",
+    "name": "四方 蓮示",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "自己場外及移除區合計有10張卡或以上的情況下，此角色的BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-059.jpg?v=20260216_02",
+    "raw_text": "自己場外及移除區合計有10張卡或以上的情況下，此角色的BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-059_2",
+    "name": "四方 蓮示",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "自己場外及移除區合計有10張卡或以上的情況下，此角色的BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-059_2.jpg?v=20260216_02",
+    "raw_text": "自己場外及移除區合計有10張卡或以上的情況下，此角色的BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-060",
+    "name": "喰種餐廳",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 將自己移除區最多２張卡放置到場外。\n 主起動 休息 只有在自己場上擁有〈月山 習〉的情況下才可以發動。將自己場外２張卡放置到移除區。如這樣做，抽１張卡，然後將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-060.jpg?v=20260216_02",
+    "raw_text": "登場時 將自己移除區最多２張卡放置到場外。\n 主起動 休息 只有在自己場上擁有〈月山 習〉的情況下才可以發動。將自己場外２張卡放置到移除區。如這樣做，抽１張卡，然後將自己１張手牌放置到場外。",
+    "color": "紫",
+    "type": "場域卡",
+    "ap": "1",
+    "energy": 3,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-061",
+    "name": "咖啡",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇自己最多２張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "自己沒有生命值的情況下，將自己牌庫上面１張卡放置到自己的生命值區。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-061.jpg?v=20260216_02",
+    "raw_text": "選擇自己最多２張AP卡被激活。",
+    "color": "紫",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 3
+  },
+  {
+    "card_id": "UA47ST_TKG-1-061",
+    "name": "咖啡",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇自己最多２張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "自己沒有生命值的情況下，將自己牌庫上面１張卡放置到自己的生命值區。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-061.jpg?v=20260216_02",
+    "raw_text": "選擇自己最多２張AP卡被激活。",
+    "color": "紫",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 3
+  },
+  {
+    "card_id": "UA47BT_TKG-1-063",
+    "name": "這樣就好…金木君…",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "從自己牌庫上面查看２張卡，將最多１張卡加入手牌，將餘下的卡放置到場外。本回合中，下次從手牌使用能源需求５或以上的〈金木 研〉的AP消耗-1。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-063.jpg?v=20260216_02",
+    "raw_text": "從自己牌庫上面查看２張卡，將最多１張卡加入手牌，將餘下的卡放置到場外。本回合中，下次從手牌使用能源需求５或以上的〈金木 研〉的AP消耗-1。",
+    "color": "紫",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 4
+  },
+  {
+    "card_id": "UA47BT_TKG-1-064",
+    "name": "變態？真意外啊…",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "１回合只能使用１張〈變態？真意外啊…〉。\n抽１張卡。自己場上擁有〈月山 習〉的情況下，自己１張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "從自己場外選擇１張能源需求２或以下及AP消耗１的紫色角色卡，以激活狀態在自己前線登場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-064.jpg?v=20260216_02",
+    "raw_text": "１回合只能使用１張〈變態？真意外啊…〉。\n抽１張卡。自己場上擁有〈月山 習〉的情況下，自己１張AP卡被激活。",
+    "color": "紫",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 2
+  },
+  {
+    "card_id": "UA47BT_TKG-1-065",
+    "name": "被我吃掉也沒辦法吧…",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "自己場上擁有〈金木 研〉，並且自己場外的卡的能源需求數目有３種或以上的情況下，手牌上此卡的能源需求減少。\n選擇對手前線１張BP5000或以下的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-065.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有〈金木 研〉，並且自己場外的卡的能源需求數目有３種或以上的情況下，手牌上此卡的能源需求減少。\n選擇對手前線１張BP5000或以下的角色退場。",
+    "color": "紫",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 6
+  },
+  {
+    "card_id": "UA47BT_TKG-1-066",
+    "name": "這是我的啊!!",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "自己場上擁有〈月山 習〉的情況下，手牌上此卡的能源需求減少。\n選擇下面擁有背面向上的卡的角色來使用此卡的時候，此卡的能源需求減少。\n選擇對手前線１張BP5000或以下的角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-066.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有〈月山 習〉的情況下，手牌上此卡的能源需求減少。\n選擇下面擁有背面向上的卡的角色來使用此卡的時候，此卡的能源需求減少。\n選擇對手前線１張BP5000或以下的角色退場。",
+    "color": "紫",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 6
+  },
+  {
+    "card_id": "UA47ST_TKG-1-101",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "自己回合中",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "此角色下面擁有背面向上的卡的情況下，此角色獲得 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)。\n 自己回合中 此角色下面擁有背面向上的卡的情況下，此角色的BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-101.jpg?v=20260216_02",
+    "raw_text": "此角色下面擁有背面向上的卡的情況下，此角色獲得 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)。\n 自己回合中 此角色下面擁有背面向上的卡的情況下，此角色的BP+1000。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-102",
+    "name": "金木 研",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [
+          "衝擊無效"
+        ],
+        "text": "〈金木 研〉\n 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 登場時 抽２張卡，然後將自己１張手牌放置到場外。\n 主起動 在前線的情況 回合１ 只有在此角色下面擁有背面向上的卡的情況下才可以發動。此角色被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-102.jpg?v=20260216_02",
+    "raw_text": "〈金木 研〉\n 衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 登場時 抽２張卡，然後將自己１張手牌放置到場外。\n 主起動 在前線的情況 回合１ 只有在此角色下面擁有背面向上的卡的情況下才可以發動。此角色被激活。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-103",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "自己回合中 登場時",
+        "keywords": [],
+        "text": "自己回合中 此角色的BP+500。\n 登場時 可將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-103.jpg?v=20260216_02",
+    "raw_text": "自己回合中 此角色的BP+500。\n 登場時 可將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色被激活。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-104",
+    "name": "霧嶋 董香",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "２次攻擊",
+          "衝擊➊"
+        ],
+        "text": "此角色以激活狀態登場。\n 主起動 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，獲得 ２次攻擊 及「此角色在本回合中的第２次攻擊中，此角色獲得 衝擊➊ 」。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-104.jpg?v=20260216_02",
+    "raw_text": "此角色以激活狀態登場。\n 主起動 回合１ 將自己前線１張能源需求４或以下，並且是激活狀態的〈金木 研〉休息。如這樣做，此角色在本回合中，獲得 ２次攻擊 及「此角色在本回合中的第２次攻擊中，此角色獲得 衝擊➊ 」。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "2",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-105",
+    "name": "永近 英良",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己場外選擇最多１張能源需求４或以下的〈金木 研〉放置到自己牌庫上面。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-105.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己場外選擇最多１張能源需求４或以下的〈金木 研〉放置到自己牌庫上面。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-106",
+    "name": "西尾 錦",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-106.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看１張卡，然後放置到牌庫上面或場外。",
+    "color": "紫",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-107",
+    "name": "安定區",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 選擇自己場上最多１張角色被激活。\n 主起動 休息 此卡退場 選擇自己場上１張角色被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-107.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇自己場上最多１張角色被激活。\n 主起動 休息 此卡退場 選擇自己場上１張角色被激活。",
+    "color": "紫",
+    "type": "場域卡",
+    "ap": "1",
+    "energy": 2,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-108",
+    "name": "金木的面具",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "抽３張卡，然後將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-108.jpg?v=20260216_02",
+    "raw_text": "抽３張卡，然後將自己１張手牌放置到場外。",
+    "color": "紫",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 3
+  },
+  {
+    "card_id": "UA47BT_TKG-1-001",
+    "name": "阿原 半兵衛",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 『從自己牌庫上面查看１張卡，然後放置到牌庫上面或下面』。自己場上擁有〈鈴屋 什造〉的情況下，改為『從自己牌庫上面查看２張卡，然後任意放置到牌庫上面或下面』。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-001.jpg?v=20260216_02",
+    "raw_text": "登場時 『從自己牌庫上面查看１張卡，然後放置到牌庫上面或下面』。自己場上擁有〈鈴屋 什造〉的情況下，改為『從自己牌庫上面查看２張卡，然後任意放置到牌庫上面或下面』。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-002",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-002.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-002_2",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-002_2.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-003",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "對手前線擁有角色，或本回合中，對手有角色退場的情況下，此角色的生產能源+。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-003.jpg?v=20260216_02",
+    "raw_text": "對手前線擁有角色，或本回合中，對手有角色退場的情況下，此角色的生產能源+。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-004",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [
+          "傷害➋"
+        ],
+        "text": "〈有馬 貴將〉\n此角色在每回合的第１次攻擊中，此角色獲得 傷害➋ 。\n回合１ 此角色攻擊結束時，本回合中，對手有角色退場的情況下，此角色被激活，並且抽１張卡。\n 登場時 此角色在自己下回合開始為止，獲得「對手用效果選擇此角色的時候，若不追加將他自己１張手牌放置到場外，便不能選擇。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-004.jpg?v=20260216_02",
+    "raw_text": "〈有馬 貴將〉\n此角色在每回合的第１次攻擊中，此角色獲得 傷害➋ 。\n回合１ 此角色攻擊結束時，本回合中，對手有角色退場的情況下，此角色被激活，並且抽１張卡。\n 登場時 此角色在自己下回合開始為止，獲得「對手用效果選擇此角色的時候，若不追加將他自己１張手牌放置到場外，便不能選擇。」。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 7,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-004_2",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [
+          "傷害➋"
+        ],
+        "text": "〈有馬 貴將〉\n此角色在每回合的第１次攻擊中，此角色獲得 傷害➋ 。\n回合１ 此角色攻擊結束時，本回合中，對手有角色退場的情況下，此角色被激活，並且抽１張卡。\n 登場時 此角色在自己下回合開始為止，獲得「對手用效果選擇此角色的時候，若不追加將他自己１張手牌放置到場外，便不能選擇。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-004_2.jpg?v=20260216_02",
+    "raw_text": "〈有馬 貴將〉\n此角色在每回合的第１次攻擊中，此角色獲得 傷害➋ 。\n回合１ 此角色攻擊結束時，本回合中，對手有角色退場的情況下，此角色被激活，並且抽１張卡。\n 登場時 此角色在自己下回合開始為止，獲得「對手用效果選擇此角色的時候，若不追加將他自己１張手牌放置到場外，便不能選擇。」。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 7,
+    "bp": 5000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-005",
+    "name": "伊丙 入",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-005.jpg?v=20260216_02",
+    "raw_text": "主起動 休息 回合１ 此角色在本回合中，生產能源+並獲得「主階段結束時，將此角色退場。」。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1000,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-006",
+    "name": "宇井 郡",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 將自己場上１張能源需求１或以下的其他角色返回手牌。沒有返回的情況下，將此角色返回手牌。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-006.jpg?v=20260216_02",
+    "raw_text": "登場時 將自己場上１張能源需求１或以下的其他角色返回手牌。沒有返回的情況下，將此角色返回手牌。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 1500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-007",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-007.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-008",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 攻擊時",
+        "keywords": [],
+        "text": "登場時 抽１張卡，然後將自己１張手牌放置到場外。\n 攻擊時 本回合中，對手有角色退場的情況下，抽１張卡，然後將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-008.jpg?v=20260216_02",
+    "raw_text": "登場時 抽１張卡，然後將自己１張手牌放置到場外。\n 攻擊時 本回合中，對手有角色退場的情況下，抽１張卡，然後將自己１張手牌放置到場外。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-009",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 攻擊時",
+        "keywords": [],
+        "text": "登場時 可支付１AP。如這樣做，選擇對手前線最多１張BP2000或以下的角色退場。\n 攻擊時 本回合中，對手有角色退場的情況下，此角色在本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色休息，該角色下一次不會被激活。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-009.jpg?v=20260216_02",
+    "raw_text": "登場時 可支付１AP。如這樣做，選擇對手前線最多１張BP2000或以下的角色退場。\n 攻擊時 本回合中，對手有角色退場的情況下，此角色在本回合中，BP+1000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-009_2",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 攻擊時",
+        "keywords": [],
+        "text": "登場時 可支付１AP。如這樣做，選擇對手前線最多１張BP2000或以下的角色退場。\n 攻擊時 本回合中，對手有角色退場的情況下，此角色在本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色休息，該角色下一次不會被激活。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-009_2.jpg?v=20260216_02",
+    "raw_text": "登場時 可支付１AP。如這樣做，選擇對手前線最多１張BP2000或以下的角色退場。\n 攻擊時 本回合中，對手有角色退場的情況下，此角色在本回合中，BP+1000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-010",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "〈鈴屋 什造〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 登場時 對手將他自己前線１張角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-010.jpg?v=20260216_02",
+    "raw_text": "〈鈴屋 什造〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 登場時 對手將他自己前線１張角色退場。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 6,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-010_2",
+    "name": "鈴屋 什造",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "〈鈴屋 什造〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 登場時 對手將他自己前線１張角色退場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-010_2.jpg?v=20260216_02",
+    "raw_text": "〈鈴屋 什造〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 登場時 對手將他自己前線１張角色退場。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 6,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-011",
+    "name": "平子 丈",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看５張卡，將最多１張〈有馬 貴將〉公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-011.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看５張卡，將最多１張〈有馬 貴將〉公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 2500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-012",
+    "name": "舊多 二福",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "對手場上擁有紫色或紅色卡的情況下，手牌上此卡的能源需求減少。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-012.jpg?v=20260216_02",
+    "raw_text": "對手場上擁有紫色或紅色卡的情況下，手牌上此卡的能源需求減少。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-013",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-013.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-013_2",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": ""
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-013_2.jpg?v=20260216_02",
+    "raw_text": "",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-014",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "滑步"
+        ],
+        "text": "滑步 (在自己的移動階段可從前線移動到能源線)\n 主起動 在前線的情況 支付1AP 回合１ 從自己場外選擇１張能源需求２或以下的［特徵：真戶班］加入手牌。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-014.jpg?v=20260216_02",
+    "raw_text": "滑步 (在自己的移動階段可從前線移動到能源線)\n 主起動 在前線的情況 支付1AP 回合１ 從自己場外選擇１張能源需求２或以下的［特徵：真戶班］加入手牌。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-015",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色休息，該角色下一次不會被激活。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-015.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-015_2",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時",
+        "keywords": [],
+        "text": "登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色休息，該角色下一次不會被激活。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-015_2.jpg?v=20260216_02",
+    "raw_text": "登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。有加入手牌的情況下，將自己１張手牌放置到場外。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-016",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動 主起動",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "〈佐佐木 琲世〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 主起動 回合１ 只有在此角色登場的回合才可以發動。自己全部AP卡被激活。本回合中，自己不能使用手牌。\n 主起動 在前線的情況 支付➊AP 回合１ 自己場上全部［特徵：真戶班］，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-016.jpg?v=20260216_02",
+    "raw_text": "〈佐佐木 琲世〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 主起動 回合１ 只有在此角色登場的回合才可以發動。自己全部AP卡被激活。本回合中，自己不能使用手牌。\n 主起動 在前線的情況 支付➊AP 回合１ 自己場上全部［特徵：真戶班］，本回合中，BP+1000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-016_2",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動 主起動",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "〈佐佐木 琲世〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 主起動 回合１ 只有在此角色登場的回合才可以發動。自己全部AP卡被激活。本回合中，自己不能使用手牌。\n 主起動 在前線的情況 支付➊AP 回合１ 自己場上全部［特徵：真戶班］，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-016_2.jpg?v=20260216_02",
+    "raw_text": "〈佐佐木 琲世〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 主起動 回合１ 只有在此角色登場的回合才可以發動。自己全部AP卡被激活。本回合中，自己不能使用手牌。\n 主起動 在前線的情況 支付➊AP 回合１ 自己場上全部［特徵：真戶班］，本回合中，BP+1000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-016_3",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動 主起動",
+        "keywords": [
+          "衝擊➊"
+        ],
+        "text": "〈佐佐木 琲世〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 主起動 回合１ 只有在此角色登場的回合才可以發動。自己全部AP卡被激活。本回合中，自己不能使用手牌。\n 主起動 在前線的情況 支付➊AP 回合１ 自己場上全部［特徵：真戶班］，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-016_3.jpg?v=20260216_02",
+    "raw_text": "〈佐佐木 琲世〉\n 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)\n 主起動 回合１ 只有在此角色登場的回合才可以發動。自己全部AP卡被激活。本回合中，自己不能使用手牌。\n 主起動 在前線的情況 支付➊AP 回合１ 自己場上全部［特徵：真戶班］，本回合中，BP+1000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-017",
+    "name": "真戶 曉",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "此角色是激活狀態的情況下，此角色的生產能源+。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-017.jpg?v=20260216_02",
+    "raw_text": "此角色是激活狀態的情況下，此角色的生產能源+。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 2500,
+    "gen_energy": "+(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-018",
+    "name": "真戶 曉",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動 主起動",
+        "keywords": [],
+        "text": "登場時 在能源線的情況 自己場上擁有６張或以上［特徵：真戶班］的情況下，此角色被激活。\n 主起動 休息 選擇自己場上１張其他［特徵：真戶班］。本回合中，發動該角色的 主起動 效果的時候，可以不執行支付➊AP 來發動。〈真戶 曉〉的此效果１回合只能發動１次。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-018.jpg?v=20260216_02",
+    "raw_text": "登場時 在能源線的情況 自己場上擁有６張或以上［特徵：真戶班］的情況下，此角色被激活。\n 主起動 休息 選擇自己場上１張其他［特徵：真戶班］。本回合中，發動該角色的 主起動 效果的時候，可以不執行支付➊AP 來發動。〈真戶 曉〉的此效果１回合只能發動１次。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-018_2",
+    "name": "真戶 曉",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動 主起動",
+        "keywords": [],
+        "text": "登場時 在能源線的情況 自己場上擁有６張或以上［特徵：真戶班］的情況下，此角色被激活。\n 主起動 休息 選擇自己場上１張其他［特徵：真戶班］。本回合中，發動該角色的 主起動 效果的時候，可以不執行支付➊AP 來發動。〈真戶 曉〉的此效果１回合只能發動１次。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-018_2.jpg?v=20260216_02",
+    "raw_text": "登場時 在能源線的情況 自己場上擁有６張或以上［特徵：真戶班］的情況下，此角色被激活。\n 主起動 休息 選擇自己場上１張其他［特徵：真戶班］。本回合中，發動該角色的 主起動 效果的時候，可以不執行支付➊AP 來發動。〈真戶 曉〉的此效果１回合只能發動１次。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-019",
+    "name": "瓜江 久生",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 抽１張卡，然後將自己１張手牌放置到場外。\n 主起動 支付➊AP 回合１ 抽１張卡，然後將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-019.jpg?v=20260216_02",
+    "raw_text": "登場時 抽１張卡，然後將自己１張手牌放置到場外。\n 主起動 支付➊AP 回合１ 抽１張卡，然後將自己１張手牌放置到場外。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 2,
+    "bp": 3000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-020",
+    "name": "瓜江 久生",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "衝擊無效",
+          "衝擊➊"
+        ],
+        "text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 支付1AP 回合１ 此角色在本回合中，獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-020.jpg?v=20260216_02",
+    "raw_text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 支付1AP 回合１ 此角色在本回合中，獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-020_2",
+    "name": "瓜江 久生",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "衝擊無效",
+          "衝擊➊"
+        ],
+        "text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 支付1AP 回合１ 此角色在本回合中，獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-020_2.jpg?v=20260216_02",
+    "raw_text": "衝擊無效 (與此角色戰鬥的角色，在本次戰鬥中失去衝擊)\n 主起動 支付1AP 回合１ 此角色在本回合中，獲得 衝擊➊ (進行攻擊並戰鬥勝利時，對手玩家受到１點傷害)。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-021",
+    "name": "不知 吟士",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [
+          "滑步"
+        ],
+        "text": "滑步 (在自己的移動階段可從前線移動到能源線)\n自己場上擁有４張或以上［特徵：真戶班］的情況下，此角色的BP+1000。\n 主起動 支付1AP 回合１ 將此角色移動到別的戰線，或與別的戰線的角色調換位置。"
+      }
+    ],
+    "trigger": {
+      "keyword": null,
+      "text": null
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-021.jpg?v=20260216_02",
+    "raw_text": "滑步 (在自己的移動階段可從前線移動到能源線)\n自己場上擁有４張或以上［特徵：真戶班］的情況下，此角色的BP+1000。\n 主起動 支付1AP 回合１ 將此角色移動到別的戰線，或與別的戰線的角色調換位置。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 1,
+    "bp": 2000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-022",
+    "name": "不知 吟士",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在前線的情況 支付➊AP 回合１ 從以下選擇１項。\n．此角色被激活。\n．此角色是激活狀態的情況下，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-022.jpg?v=20260216_02",
+    "raw_text": "主起動 在前線的情況 支付➊AP 回合１ 從以下選擇１項。\n．此角色被激活。\n．此角色是激活狀態的情況下，抽１張卡。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-022_2",
+    "name": "不知 吟士",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 在前線的情況 支付➊AP 回合１ 從以下選擇１項。\n．此角色被激活。\n．此角色是激活狀態的情況下，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-022_2.jpg?v=20260216_02",
+    "raw_text": "主起動 在前線的情況 支付➊AP 回合１ 從以下選擇１項。\n．此角色被激活。\n．此角色是激活狀態的情況下，抽１張卡。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-023",
+    "name": "六月 透",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "自己場上擁有４張或以上［特徵：真戶班］的情況下，此角色的BP+500。\n 主起動 在前線的情況 支付➊AP 回合１ 抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-023.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有４張或以上［特徵：真戶班］的情況下，此角色的BP+500。\n 主起動 在前線的情況 支付➊AP 回合１ 抽１張卡。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1500,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-024",
+    "name": "六月 透",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 選擇自己場上最多１張其他［特徵：真戶班］，本回合中，BP+1000。\n 主起動 支付➊AP 回合１ 選擇自己場上１張其他［特徵：真戶班］，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-024.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇自己場上最多１張其他［特徵：真戶班］，本回合中，BP+1000。\n 主起動 支付➊AP 回合１ 選擇自己場上１張其他［特徵：真戶班］，本回合中，BP+1000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 2500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-024_2",
+    "name": "六月 透",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "登場時 選擇自己場上最多１張其他［特徵：真戶班］，本回合中，BP+1000。\n 主起動 支付➊AP 回合１ 選擇自己場上１張其他［特徵：真戶班］，本回合中，BP+1000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-024_2.jpg?v=20260216_02",
+    "raw_text": "登場時 選擇自己場上最多１張其他［特徵：真戶班］，本回合中，BP+1000。\n 主起動 支付➊AP 回合１ 選擇自己場上１張其他［特徵：真戶班］，本回合中，BP+1000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 2500,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-025",
+    "name": "米林 才子",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動",
+        "keywords": [],
+        "text": "主起動 支付1AP 回合１ 此角色在本回合中，BP+3000。"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-025.jpg?v=20260216_02",
+    "raw_text": "主起動 支付1AP 回合１ 此角色在本回合中，BP+3000。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 0,
+    "bp": 1000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-026",
+    "name": "米林 才子",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動 主起動 主起動 主起動",
+        "keywords": [],
+        "text": "此角色在本回合中有發動含有支付➊AP 的 主起動 效果的情況下，此角色的BP+2000。\n此角色的 主起動 效果的支付➊AP 可改為將１張手牌放置到場外 。\n 主起動 在前線的情況 回合１ 選擇自己場上１張其他［特徵：真戶班］。此角色在本回合中，獲得被選擇角色的１個含有支付➊AP 的 主起動 效果。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-026.jpg?v=20260216_02",
+    "raw_text": "此角色在本回合中有發動含有支付➊AP 的 主起動 效果的情況下，此角色的BP+2000。\n此角色的 主起動 效果的支付➊AP 可改為將１張手牌放置到場外 。\n 主起動 在前線的情況 回合１ 選擇自己場上１張其他［特徵：真戶班］。此角色在本回合中，獲得被選擇角色的１個含有支付➊AP 的 主起動 效果。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-026_2",
+    "name": "米林 才子",
+    "traits": [
+      "CCG",
+      "真戶班",
+      "Qs"
+    ],
+    "main_effects": [
+      {
+        "timing": "主起動 主起動 主起動 主起動",
+        "keywords": [],
+        "text": "此角色在本回合中有發動含有支付➊AP 的 主起動 效果的情況下，此角色的BP+2000。\n此角色的 主起動 效果的支付➊AP 可改為將１張手牌放置到場外 。\n 主起動 在前線的情況 回合１ 選擇自己場上１張其他［特徵：真戶班］。此角色在本回合中，獲得被選擇角色的１個含有支付➊AP 的 主起動 效果。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-026_2.jpg?v=20260216_02",
+    "raw_text": "此角色在本回合中有發動含有支付➊AP 的 主起動 效果的情況下，此角色的BP+2000。\n此角色的 主起動 效果的支付➊AP 可改為將１張手牌放置到場外 。\n 主起動 在前線的情況 回合１ 選擇自己場上１張其他［特徵：真戶班］。此角色在本回合中，獲得被選擇角色的１個含有支付➊AP 的 主起動 效果。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 3,
+    "bp": 3000,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-027",
+    "name": "CCG本局",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "回合１ 自己的［特徵：CCG］進行攻擊並戰鬥勝利時，抽１張卡。"
+      }
+    ],
+    "trigger": {
+      "keyword": "獲得",
+      "text": "將此卡加入手牌。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-027.jpg?v=20260216_02",
+    "raw_text": "回合１ 自己的［特徵：CCG］進行攻擊並戰鬥勝利時，抽１張卡。",
+    "color": "黃",
+    "type": "場域卡",
+    "ap": "1",
+    "energy": 4,
+    "gen_energy": "(_)(_)"
+  },
+  {
+    "card_id": "UA47BT_TKG-1-028",
+    "name": "佐佐木的真正實力",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇自己最多２張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "自己沒有生命值的情況下，將自己牌庫上面１張卡放置到自己的生命值區。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-028.jpg?v=20260216_02",
+    "raw_text": "選擇自己最多２張AP卡被激活。",
+    "color": "黃",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 3
+  },
+  {
+    "card_id": "UA47BT_TKG-1-029",
+    "name": "CCG的死神",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "自己場上擁有〈有馬 貴將〉的情況下，手牌上此卡的AP消耗-1。\n選擇對手前線１張BP5000或以下的角色退場。抽１張卡，然後將自己１張手牌放置到場外。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-029.jpg?v=20260216_02",
+    "raw_text": "自己場上擁有〈有馬 貴將〉的情況下，手牌上此卡的AP消耗-1。\n選擇對手前線１張BP5000或以下的角色退場。抽１張卡，然後將自己１張手牌放置到場外。",
+    "color": "黃",
+    "type": "事件卡",
+    "ap": "2",
+    "energy": 5
+  },
+  {
+    "card_id": "UA47BT_TKG-1-031",
+    "name": "重要的事情是有順序的",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇自己最多２張AP卡被激活。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "自己沒有生命值的情況下，將自己牌庫上面１張卡放置到自己的生命值區。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-031.jpg?v=20260216_02",
+    "raw_text": "選擇自己最多２張AP卡被激活。",
+    "color": "黃",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 3
+  },
+  {
+    "card_id": "UA47BT_TKG-1-032",
+    "name": "給我…勇氣…。",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "選擇對手前線１張『BP3000或以下』的角色退場。\n自己場上擁有〈佐佐木 琲世〉的情況下，改為『BP5000或以下』。"
+      }
+    ],
+    "trigger": {
+      "keyword": "",
+      "text": "選擇對手前線１張角色退場。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-032.jpg?v=20260216_02",
+    "raw_text": "選擇對手前線１張『BP3000或以下』的角色退場。\n自己場上擁有〈佐佐木 琲世〉的情況下，改為『BP5000或以下』。",
+    "color": "黃",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 4
+  },
+  {
+    "card_id": "UA47BT_TKG-1-033",
+    "name": "米林才子，開始工作！",
+    "traits": [],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [],
+        "text": "從自己牌庫上面查看５張卡，將合計最多３張不同卡名的［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。"
+      }
+    ],
+    "trigger": {
+      "keyword": "抽牌",
+      "text": "抽１張卡。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47BT_TKG-1-033.jpg?v=20260216_02",
+    "raw_text": "從自己牌庫上面查看５張卡，將合計最多３張不同卡名的［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。",
+    "color": "黃",
+    "type": "事件卡",
+    "ap": "1",
+    "energy": 4
+  },
+  {
+    "card_id": "UA47ST_TKG-1-110",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "傷害➋"
+        ],
+        "text": "傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-110.jpg?v=20260216_02",
+    "raw_text": "傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-110_2",
+    "name": "有馬 貴將",
+    "traits": [
+      "CCG"
+    ],
+    "main_effects": [
+      {
+        "timing": "常駐",
+        "keywords": [
+          "傷害➋"
+        ],
+        "text": "傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)"
+      }
+    ],
+    "trigger": {
+      "keyword": "激活",
+      "text": "選擇自己場上１張角色被，並且本回合中，BP+3000。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-110_2.jpg?v=20260216_02",
+    "raw_text": "傷害➋ (此角色的攻擊給予的直接傷害為２點傷害)",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 5,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-111",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "〈佐佐木 琲世〉\n 登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。\n 主起動 在前線的情況 支付➊AP 回合１ 從自己手牌選擇１張能源需求３或以下及AP消耗１的黃色［特徵：真戶班］，以休息狀態在自己場上登場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-111.jpg?v=20260216_02",
+    "raw_text": "〈佐佐木 琲世〉\n 登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。\n 主起動 在前線的情況 支付➊AP 回合１ 從自己手牌選擇１張能源需求３或以下及AP消耗１的黃色［特徵：真戶班］，以休息狀態在自己場上登場。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  },
+  {
+    "card_id": "UA47ST_TKG-1-111_2",
+    "name": "佐佐木 琲世",
+    "traits": [
+      "CCG",
+      "真戶班"
+    ],
+    "main_effects": [
+      {
+        "timing": "登場時 主起動",
+        "keywords": [],
+        "text": "〈佐佐木 琲世〉\n 登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。\n 主起動 在前線的情況 支付➊AP 回合１ 從自己手牌選擇１張能源需求３或以下及AP消耗１的黃色［特徵：真戶班］，以休息狀態在自己場上登場。"
+      }
+    ],
+    "trigger": {
+      "keyword": "突襲",
+      "text": "將此卡加入手牌，或在滿足能源需求的情況下進行。"
+    },
+    "img_url": "https://rugiacreation.com/ua/cardlist/small/UA47ST_TKG-1-111_2.jpg?v=20260216_02",
+    "raw_text": "〈佐佐木 琲世〉\n 登場時 從自己牌庫上面查看３張卡，將最多１張［特徵：真戶班］公開並加入手牌，將餘下的卡以任意順序放置到牌庫下面。\n 主起動 在前線的情況 支付➊AP 回合１ 從自己手牌選擇１張能源需求３或以下及AP消耗１的黃色［特徵：真戶班］，以休息狀態在自己場上登場。",
+    "color": "黃",
+    "type": "角色卡",
+    "ap": "1",
+    "energy": 4,
+    "bp": 4000,
+    "gen_energy": "(_)"
+  }
+]
