@@ -14,8 +14,7 @@ LOGIC_FILE = r"C:\Users\wei\Documents\UA_APP0.1\Log_jason\TKG_final_Cards_Logic_
 
 #=== LLM API 配置 ===
 API_KEYS = [
-    "AIzaSyBL84xY1X39R9KavjCgUQ-JIkvt4lfQsoE", #api WBC
-    "AIzaSyAfc7OILnPXxwW99JKGW9cG0KO6Wb4wOPk" # api key lopo
+
 ] # 請記得填入你的 API Key 
 current_key_idx = 0
 client = genai.Client(api_key=API_KEYS[current_key_idx])
