@@ -13,8 +13,7 @@ DISPLAY_FILE = r"C:\Users\wei\Documents\UA_APP0.1\Log_jason\TKG_final_Cards_Disp
 LOGIC_FILE = r"C:\Users\wei\Documents\UA_APP0.1\Log_jason\TKG_final_Cards_Logic_2.json"
 
 API_KEYS = [
-    "AIzaSyCidbQbKnwDAkhWYJi6m8HQCKvYoyAnywI", # api nmsl
-    "AIzaSyAYvzSecXdci7B1MIDY-dhcGx8HjeZ8evs"# api key projet
+
 ] # 請記得填入你的 API Key 
 current_key_idx = 0
 client = genai.Client(api_key=API_KEYS[current_key_idx])
