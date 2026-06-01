@@ -9,6 +9,7 @@ RAW_INPUT_FILE = os.path.join(BASE_DIR, "TKG_final_structured.json")
 
 # 4 個包含翻譯資料的檔案
 FILES_TO_CLEAN = [
+    "TKG_final_Cards_Logic.json",
     "TKG_final_Cards_Logic_0.json",
     "TKG_final_Cards_Logic_1.json",
     "TKG_final_Cards_Logic_2.json",

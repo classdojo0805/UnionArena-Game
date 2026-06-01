@@ -1,52 +1,4 @@
 {
-  "UA47BT_TKG-1-048": {
-    "ap_cost": 1,
-    "energy_req": 3,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 3000,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "in_hand_continuous": [
-        {
-          "optional": false,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "opponent",
-                "location": "field",
-                "filters": {
-                  "any_of": [
-                    {
-                      "color": "yellow"
-                    },
-                    {
-                      "color": "red"
-                    }
-                  ]
-                }
-              },
-              "operator": ">=",
-              "count": 1
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "cost_reduction",
-              "target": "self_card",
-              "attribute": "energy",
-              "value": 1,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": []
-  },
   "UA47BT_TKG-1-049": {
     "ap_cost": 1,
     "energy_req": 0,
@@ -70,42 +22,428 @@
       }
     ]
   },
-  "UA47BT_TKG-1-050": {
+  "UA47BT_TKG-1-061": {
     "ap_cost": 1,
-    "energy_req": 1,
-    "type": "角色卡",
+    "energy_req": 3,
+    "type": "事件卡",
     "gen_energy": 0,
-    "bp": 2000,
+    "bp": 0,
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張事件卡。效果為『主起動』，因此積木將放在 `event_play` 時機點。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。",
+        "3_confirm_effect_count": "任務面板有一個獨立效果標籤，將會產出一個動作陣列。",
+        "4_function_mapping_check": "所有動作（`activate_ap`）都在字典中。"
+      },
+      "effect_blocks": {
+        "event_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "activate_ap",
+                "amount": 2
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [
+          {
+            "type": "life_count",
+            "player": "self",
+            "operator": "==",
+            "count": 0
+          }
+        ],
+        "costs": [],
+        "actions": [
+          {
+            "type": "recover_life",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-061": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張事件卡，效果為「主起動」。根據規則，事件卡的「主起動」效果應放在 `event_play` 時機點。",
+        "2_scan_special_rules": "發現「最多２張」的數量修飾詞，將使用 `modifier: \"up_to\"`。",
+        "3_confirm_effect_count": "任務面板有一個獨立效果標籤，將產出一個動作陣列。",
+        "4_function_mapping_check": "所有動作都在字典中：`change_state` 對應「激活」，`target` 選取器對應「自己最多２張AP卡」。"
+      },
+      "effect_blocks": {
+        "event_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "change_state",
+                "target": {
+                  "player": "self",
+                  "location": "energy_line",
+                  "amount": 2,
+                  "modifier": "up_to",
+                  "filters": {
+                    "card_type": "ap_card"
+                  }
+                },
+                "state": "active"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [
+          {
+            "type": "life_count",
+            "player": "self",
+            "operator": "==",
+            "count": 0
+          }
+        ],
+        "costs": [],
+        "actions": [
+          {
+            "type": "recover_life",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-064": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張事件卡，積木將放在 `event_play` 時機點。",
+        "2_scan_special_rules": "發現了『１回合只能使用１張〈變態？真意外啊…〉』的限制，將作為 `limit` 屬性處理。",
+        "3_confirm_effect_count": "任務面板有兩個效果標籤（抽卡、條件式AP激活），將會產出一個包含兩個動作的陣列，其中一個動作是條件分支。",
+        "4_function_mapping_check": "所有動作（draw, target_count, activate_ap, conditional_branch）都在字典中找到對應函數名稱。"
+      },
+      "effect_blocks": {
+        "event_play": [
+          {
+            "optional": false,
+            "limit": {
+              "type": "per_turn",
+              "amount": 1,
+              "target_card_name": "變態？真意外啊…"
+            },
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "draw",
+                "amount": 1
+              },
+              {
+                "type": "conditional_branch",
+                "conditions": [
+                  {
+                    "type": "target_count",
+                    "target": {
+                      "player": "self",
+                      "location": "field",
+                      "filters": {
+                        "name": "月山 習"
+                      }
+                    },
+                    "operator": ">=",
+                    "count": 1
+                  }
+                ],
+                "on_success": [
+                  {
+                    "type": "activate_ap",
+                    "amount": 1
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "play_character",
+            "target": {
+              "player": "self",
+              "location": "outside",
+              "amount": 1,
+              "filters": {
+                "card_type": "character",
+                "max_energy": 2,
+                "max_ap": 1
+              }
+            },
+            "state": "active"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-065": {
+    "ap_cost": 1,
+    "energy_req": 6,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張事件卡。第一個效果（能源需求減少）將放在 `in_hand_continuous` 時機點。第二個效果（退場角色）將放在 `event_play` 時機點。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特殊規則。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果。將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中找到對應函數名稱。"
+      },
+      "effect_blocks": {
+        "in_hand_continuous": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [
+              {
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "金木 研"
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              },
+              {
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": "outside",
+                  "filters": {
+                    "unique_energy_requirement": true
+                  }
+                },
+                "operator": ">=",
+                "count": 3
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "cost_reduction",
+                "target": {
+                  "player": "self",
+                  "location": "hand",
+                  "filters": {
+                    "name": "self_card"
+                  }
+                },
+                "attribute": "energy",
+                "value": -1,
+                "duration": "continuous"
+              }
+            ]
+          }
+        ],
+        "event_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "retire",
+                "target": {
+                  "player": "opponent",
+                  "location": "front_line",
+                  "amount": 1,
+                  "modifier": "exact",
+                  "filters": {
+                    "max_bp": 5000
+                  }
+                },
+                "to_removal": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "retire",
+            "target": {
+              "player": "opponent",
+              "location": "front_line",
+              "amount": 1
+            },
+            "to_removal": false
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-104": {
+    "ap_cost": 2,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡。效果1為『登場時』觸發，效果2為『主起動』觸發。",
+        "2_scan_special_rules": "『主起動』效果有『回合1』限制。效果2包含『如這樣做』，後續效果將作為前置動作的on_success。所有暫時性效果持續『本回合中』。衝擊➊的獲得有『第2次攻擊中』的條件，將透過gain_effect與conditional_branch處理。",
+        "3_confirm_effect_count": "將產出2個獨立效果區塊。",
+        "4_function_mapping_check": "所有動作皆可在字典中找到對應函數：change_state, stat_change, gain_effect, conditional_branch, gain_keyword, target_count (condition), max_energy (filter), attack_count (attribute)。"
+      },
+      "effect_blocks": [
         {
+          "trigger": "on_play",
           "optional": false,
-          "limit": null,
           "conditions": [],
           "costs": [],
           "actions": [
             {
-              "type": "look_at_deck",
-              "look_amount": 2,
-              "take_amount": 1,
-              "reveal": true,
-              "filters": {
-                "card_type": "event"
+              "type": "change_state",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "name": "霧嶋 董香"
+                }
               },
-              "take_action": "add_to_hand",
-              "remainder": "outside",
+              "state": "active"
+            }
+          ]
+        },
+        {
+          "trigger": "main_act",
+          "optional": false,
+          "limit": {
+            "per": "turn",
+            "amount": 1
+          },
+          "conditions": [],
+          "costs": [],
+          "actions": [
+            {
+              "type": "change_state",
+              "target": {
+                "player": "self",
+                "location": "front_line",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "card_type": "character",
+                  "max_energy": 4,
+                  "state": "active",
+                  "name": "金木 研"
+                }
+              },
+              "state": "rest",
               "on_success": [
                 {
-                  "type": "discard",
+                  "type": "stat_change",
                   "target": {
                     "player": "self",
-                    "location": "hand",
+                    "location": "field",
                     "amount": 1,
-                    "modifier": "exact"
+                    "modifier": "exact",
+                    "filters": {
+                      "name": "霧嶋 董香"
+                    }
                   },
-                  "destination": "outside"
+                  "attribute": "attack_count",
+                  "value": 2,
+                  "duration": "turn"
+                },
+                {
+                  "type": "gain_effect",
+                  "target": {
+                    "player": "self",
+                    "location": "field",
+                    "amount": 1,
+                    "modifier": "exact",
+                    "filters": {
+                      "name": "霧嶋 董香"
+                    }
+                  },
+                  "gained_trigger": "on_attack",
+                  "effects": [
+                    {
+                      "type": "conditional_branch",
+                      "condition": {
+                        "type": "attack_count",
+                        "player": "self",
+                        "operator": "==",
+                        "count": 2
+                      },
+                      "if_true": [
+                        {
+                          "type": "gain_keyword",
+                          "target": {
+                            "player": "self",
+                            "location": "field",
+                            "amount": 1,
+                            "modifier": "exact",
+                            "filters": {
+                              "name": "霧嶋 董香"
+                            }
+                          },
+                          "keywords": {
+                            "impact": 1
+                          },
+                          "duration": "turn"
+                        }
+                      ],
+                      "if_false": []
+                    }
+                  ]
                 }
               ]
             }
@@ -113,7 +451,69 @@
         }
       ]
     },
-    "life_trigger": []
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-002": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {},
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-002_2": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1500,
+    "color": "黃",
+    "traits": [
+      "CCG"
+    ],
+    "logic_tags": {},
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
   },
   "UA47BT_TKG-1-051": {
     "ap_cost": 1,
@@ -124,25 +524,22 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。效果一觸發時機為『登場時 (on_play)』，效果二觸發時機為『退場時 (on_leave)』。",
+        "2_scan_special_rules": "發現『如這樣做』關鍵字，表示後續效果需包裝在 `on_success` 中。發現『２張卡或以上』，這表示需要『至少』的數量修飾詞，但字典中 `target` 選取器的 `modifier` 僅有 `up_to` 和 `exact`。將在第 4 步標註此問題。發現『１回合只能發動１次』，需使用 `limit` 物件。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果標籤（登場時、退場時），將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作（`move_card`, `target_count`, `change_state`, `return_to_hand`）都在字典中。但『target 選取器』的 `modifier` 缺少『at_least』選項來精確表達『２張卡或以上』。目前將使用 `amount: 2, modifier: \"exact\"` 作為替代，並在此處明確標註『找不到對應函數名稱：target selector amount with 'at_least' modifier』。此外，『此角色』和『此卡』將透過 `{\"player\": \"self\", \"location\": \"field\", \"filters\": {\"name\": \"月山 習\"}}` 來選取，因為字典中沒有 `self_card` 的枚舉值。"
+      },
+      "effect_blocks": [
         {
+          "timing": "on_play",
           "optional": true,
           "limit": {
-            "type": "per_turn_by_name",
+            "per": "turn",
             "amount": 1,
-            "name": "月山 習"
+            "target_card_name": "月山 習"
           },
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "outside"
-              },
-              "operator": ">=",
-              "count": 2
-            }
-          ],
+          "conditions": [],
           "costs": [],
           "actions": [
             {
@@ -169,7 +566,13 @@
                   "if_true": [
                     {
                       "type": "change_state",
-                      "target": "self_card",
+                      "target": {
+                        "player": "self",
+                        "location": "field",
+                        "filters": {
+                          "name": "月山 習"
+                        }
+                      },
                       "state": "active"
                     }
                   ],
@@ -178,26 +581,12 @@
               ]
             }
           ]
-        }
-      ],
-      "on_leave": [
+        },
         {
+          "timing": "on_leave",
           "optional": true,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "outside",
-                "filters": {
-                  "name": "月山 習",
-                  "other": true
-                }
-              },
-              "operator": ">=",
-              "count": 2
-            }
-          ],
+          "limit": null,
+          "conditions": [],
           "costs": [],
           "actions": [
             {
@@ -216,7 +605,14 @@
               "on_success": [
                 {
                   "type": "return_to_hand",
-                  "target": "self_card"
+                  "target": {
+                    "player": "self",
+                    "location": "field",
+                    "filters": {
+                      "name": "月山 習"
+                    }
+                  },
+                  "on_fail": []
                 }
               ]
             }
@@ -247,25 +643,22 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。效果一觸發時機為『登場時 (on_play)』，效果二觸發時機為『退場時 (on_leave)』。",
+        "2_scan_special_rules": "發現『如這樣做』關鍵字，表示後續效果需包裝在 `on_success` 中。發現『２張卡或以上』，這表示需要『至少』的數量修飾詞，但字典中 `target` 選取器的 `modifier` 僅有 `up_to` 和 `exact`。將在第 4 步標註此問題。發現『１回合只能發動１次』，需使用 `limit` 物件。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果標籤（登場時、退場時），將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作（`move_card`, `target_count`, `change_state`, `return_to_hand`）都在字典中。但『target 選取器』的 `modifier` 缺少『at_least』選項來精確表達『２張卡或以上』。目前將使用 `amount: 2, modifier: \"exact\"` 作為替代，並在此處明確標註『找不到對應函數名稱：target selector amount with 'at_least' modifier』。此外，『此角色』和『此卡』將透過 `{\"player\": \"self\", \"location\": \"field\", \"filters\": {\"name\": \"月山 習\"}}` 來選取，因為字典中沒有 `self_card` 的枚舉值。"
+      },
+      "effect_blocks": [
         {
+          "timing": "on_play",
           "optional": true,
           "limit": {
-            "type": "per_turn_by_name",
+            "per": "turn",
             "amount": 1,
-            "name": "月山 習"
+            "target_card_name": "月山 習"
           },
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "outside"
-              },
-              "operator": ">=",
-              "count": 2
-            }
-          ],
+          "conditions": [],
           "costs": [],
           "actions": [
             {
@@ -292,7 +685,13 @@
                   "if_true": [
                     {
                       "type": "change_state",
-                      "target": "self_card",
+                      "target": {
+                        "player": "self",
+                        "location": "field",
+                        "filters": {
+                          "name": "月山 習"
+                        }
+                      },
                       "state": "active"
                     }
                   ],
@@ -301,26 +700,12 @@
               ]
             }
           ]
-        }
-      ],
-      "on_leave": [
+        },
         {
+          "timing": "on_leave",
           "optional": true,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "outside",
-                "filters": {
-                  "name": "月山 習",
-                  "other": true
-                }
-              },
-              "operator": ">=",
-              "count": 2
-            }
-          ],
+          "limit": null,
+          "conditions": [],
           "costs": [],
           "actions": [
             {
@@ -339,7 +724,14 @@
               "on_success": [
                 {
                   "type": "return_to_hand",
-                  "target": "self_card"
+                  "target": {
+                    "player": "self",
+                    "location": "field",
+                    "filters": {
+                      "name": "月山 習"
+                    }
+                  },
+                  "on_fail": []
                 }
               ]
             }
@@ -370,8 +762,15 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。效果觸發時機為「登場時」和「攻擊時」。",
+        "2_scan_special_rules": "「最多１張」已用 `amount: 1, modifier: \"up_to\"` 處理。「相同張數」因前置選擇為「最多１張」，故簡化為判斷是否選擇了１張。 「每用此效果放置１張卡到移除區，被選擇的角色在本回合中，另外再BP-500」因前置選擇限制為最多１張，故簡化為若有放置卡片則額外BP-500。 「如這樣做」已用 `on_success` 處理。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果標籤（登場時、攻擊時），將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作和條件都在字典中。`selected_target` 的使用方式已根據字典規則進行推斷，用於在同一效果塊內引用前一個動作所選取的目標。"
+      },
+      "effect_blocks": [
         {
+          "trigger": "on_play",
           "optional": false,
           "conditions": [
             {
@@ -397,52 +796,47 @@
               "duration": "turn",
               "on_success": [
                 {
-                  "optional": true,
-                  "conditions": [],
-                  "costs": [],
-                  "actions": [
+                  "type": "conditional_branch",
+                  "conditions": [
                     {
-                      "type": "move_card",
-                      "source": {
-                        "player": "self",
-                        "location": "outside",
-                        "amount": {
-                          "dynamic": {
-                            "multiplier": 1,
-                            "factor": {
-                              "target": "selected_target",
-                              "eval_type": "card_count"
-                            }
-                          }
-                        },
-                        "modifier": "exact",
-                        "filters": {
-                          "any_of": [
-                            {
-                              "card_type": "character"
-                            },
-                            {
-                              "card_type": "event"
-                            }
-                          ]
-                        }
-                      },
-                      "destination": "removed_area",
-                      "on_success": [
+                      "type": "target_count",
+                      "target": "selected_target",
+                      "operator": "==",
+                      "count": 1
+                    }
+                  ],
+                  "if_true": [
+                    {
+                      "optional": true,
+                      "actions": [
                         {
-                          "type": "stat_change",
-                          "target": "selected_target",
-                          "attribute": "bp",
-                          "value": {
-                            "dynamic": {
-                              "multiplier": -500,
-                              "factor": {
-                                "target": "moved_cards",
-                                "eval_type": "card_count"
-                              }
+                          "type": "move_card",
+                          "source": {
+                            "player": "self",
+                            "location": "outside",
+                            "amount": 1,
+                            "modifier": "exact",
+                            "filters": {
+                              "any_of": [
+                                {
+                                  "card_type": "character"
+                                },
+                                {
+                                  "card_type": "event"
+                                }
+                              ]
                             }
                           },
-                          "duration": "turn"
+                          "destination": "removed_area",
+                          "on_success": [
+                            {
+                              "type": "stat_change",
+                              "target": "selected_target",
+                              "attribute": "bp",
+                              "value": -500,
+                              "duration": "turn"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -451,10 +845,9 @@
               ]
             }
           ]
-        }
-      ],
-      "on_attack": [
+        },
         {
+          "trigger": "on_attack",
           "optional": true,
           "conditions": [
             {
@@ -462,8 +855,7 @@
               "value": "raid"
             }
           ],
-          "costs": [],
-          "actions": [
+          "costs": [
             {
               "type": "move_card",
               "source": {
@@ -475,32 +867,34 @@
                   "card_type": "character"
                 }
               },
-              "destination": "removed_area",
-              "on_success": [
-                {
-                  "type": "move_card",
-                  "source": {
-                    "player": "self",
-                    "location": "outside",
-                    "amount": 1,
-                    "modifier": "exact",
-                    "filters": {
-                      "card_type": "event"
-                    }
-                  },
-                  "destination": "removed_area",
-                  "on_success": [
-                    {
-                      "type": "gain_keyword",
-                      "target": "self_card",
-                      "keywords": {
-                        "impact": 1
-                      },
-                      "duration": "turn"
-                    }
-                  ]
+              "destination": "removed_area"
+            },
+            {
+              "type": "move_card",
+              "source": {
+                "player": "self",
+                "location": "outside",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "card_type": "event"
                 }
-              ]
+              },
+              "destination": "removed_area"
+            }
+          ],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "name": "self_card"
+              },
+              "keywords": {
+                "impact": 1
+              },
+              "duration": "turn"
             }
           ]
         }
@@ -529,8 +923,15 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。效果觸發時機為「登場時」和「攻擊時」。",
+        "2_scan_special_rules": "「最多１張」已用 `amount: 1, modifier: \"up_to\"` 處理。「相同張數」因前置選擇為「最多１張」，故簡化為判斷是否選擇了１張。 「每用此效果放置１張卡到移除區，被選擇的角色在本回合中，另外再BP-500」因前置選擇限制為最多１張，故簡化為若有放置卡片則額外BP-500。 「如這樣做」已用 `on_success` 處理。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果標籤（登場時、攻擊時），將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作和條件都在字典中。`selected_target` 的使用方式已根據字典規則進行推斷，用於在同一效果塊內引用前一個動作所選取的目標。"
+      },
+      "effect_blocks": [
         {
+          "trigger": "on_play",
           "optional": false,
           "conditions": [
             {
@@ -556,52 +957,47 @@
               "duration": "turn",
               "on_success": [
                 {
-                  "optional": true,
-                  "conditions": [],
-                  "costs": [],
-                  "actions": [
+                  "type": "conditional_branch",
+                  "conditions": [
                     {
-                      "type": "move_card",
-                      "source": {
-                        "player": "self",
-                        "location": "outside",
-                        "amount": {
-                          "dynamic": {
-                            "multiplier": 1,
-                            "factor": {
-                              "target": "selected_target",
-                              "eval_type": "card_count"
-                            }
-                          }
-                        },
-                        "modifier": "exact",
-                        "filters": {
-                          "any_of": [
-                            {
-                              "card_type": "character"
-                            },
-                            {
-                              "card_type": "event"
-                            }
-                          ]
-                        }
-                      },
-                      "destination": "removed_area",
-                      "on_success": [
+                      "type": "target_count",
+                      "target": "selected_target",
+                      "operator": "==",
+                      "count": 1
+                    }
+                  ],
+                  "if_true": [
+                    {
+                      "optional": true,
+                      "actions": [
                         {
-                          "type": "stat_change",
-                          "target": "selected_target",
-                          "attribute": "bp",
-                          "value": {
-                            "dynamic": {
-                              "multiplier": -500,
-                              "factor": {
-                                "target": "moved_cards",
-                                "eval_type": "card_count"
-                              }
+                          "type": "move_card",
+                          "source": {
+                            "player": "self",
+                            "location": "outside",
+                            "amount": 1,
+                            "modifier": "exact",
+                            "filters": {
+                              "any_of": [
+                                {
+                                  "card_type": "character"
+                                },
+                                {
+                                  "card_type": "event"
+                                }
+                              ]
                             }
                           },
-                          "duration": "turn"
+                          "destination": "removed_area",
+                          "on_success": [
+                            {
+                              "type": "stat_change",
+                              "target": "selected_target",
+                              "attribute": "bp",
+                              "value": -500,
+                              "duration": "turn"
+                            }
+                          ]
                         }
                       ]
                     }
@@ -610,10 +1006,9 @@
               ]
             }
           ]
-        }
-      ],
-      "on_attack": [
+        },
         {
+          "trigger": "on_attack",
           "optional": true,
           "conditions": [
             {
@@ -621,8 +1016,7 @@
               "value": "raid"
             }
           ],
-          "costs": [],
-          "actions": [
+          "costs": [
             {
               "type": "move_card",
               "source": {
@@ -634,32 +1028,34 @@
                   "card_type": "character"
                 }
               },
-              "destination": "removed_area",
-              "on_success": [
-                {
-                  "type": "move_card",
-                  "source": {
-                    "player": "self",
-                    "location": "outside",
-                    "amount": 1,
-                    "modifier": "exact",
-                    "filters": {
-                      "card_type": "event"
-                    }
-                  },
-                  "destination": "removed_area",
-                  "on_success": [
-                    {
-                      "type": "gain_keyword",
-                      "target": "self_card",
-                      "keywords": {
-                        "impact": 1
-                      },
-                      "duration": "turn"
-                    }
-                  ]
+              "destination": "removed_area"
+            },
+            {
+              "type": "move_card",
+              "source": {
+                "player": "self",
+                "location": "outside",
+                "amount": 1,
+                "modifier": "exact",
+                "filters": {
+                  "card_type": "event"
                 }
-              ]
+              },
+              "destination": "removed_area"
+            }
+          ],
+          "actions": [
+            {
+              "type": "gain_keyword",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "name": "self_card"
+              },
+              "keywords": {
+                "impact": 1
+              },
+              "duration": "turn"
             }
           ]
         }
@@ -688,25 +1084,35 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "move_card",
-              "source": {
-                "player": "self",
-                "location": "top_deck",
-                "amount": 2,
-                "modifier": "exact"
-              },
-              "destination": "outside"
-            }
-          ]
-        }
-      ]
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡，時機點為登場時 (on_play)。",
+        "2_scan_special_rules": "無特殊規則，例如『作為代價』或『全部AP』。",
+        "3_confirm_effect_count": "任務面板有1個獨立效果標籤，將會產出1個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中：move_card。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "move_card",
+                "source": {
+                  "player": "self",
+                  "location": "deck",
+                  "amount": 2,
+                  "modifier": "exact"
+                },
+                "destination": "outside",
+                "face_down": false
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": [
       {
@@ -730,25 +1136,35 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "move_card",
-              "source": {
-                "player": "self",
-                "location": "top_deck",
-                "amount": 2,
-                "modifier": "exact"
-              },
-              "destination": "outside"
-            }
-          ]
-        }
-      ]
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡，時機點為登場時 (on_play)。",
+        "2_scan_special_rules": "無特殊規則，例如『作為代價』或『全部AP』。",
+        "3_confirm_effect_count": "任務面板有1個獨立效果標籤，將會產出1個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中：move_card。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "move_card",
+                "source": {
+                  "player": "self",
+                  "location": "deck",
+                  "amount": 2,
+                  "modifier": "exact"
+                },
+                "destination": "outside",
+                "face_down": false
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": [
       {
@@ -772,31 +1188,42 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
-        {
-          "optional": true,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡，時機點為 on_play (登場時)",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。",
+        "3_confirm_effect_count": "任務面板有 1 個獨立效果標籤，將產出 1 個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中，沒有找不到對應函數名稱的情況。"
+      },
+      "effect_blocks": {
+        "character_effects": {
+          "on_play": [
             {
-              "type": "stat_change",
-              "target": {
-                "player": "self",
-                "location": "field",
-                "amount": 1,
-                "modifier": "up_to",
-                "filters": {
-                  "other": true
+              "optional": true,
+              "limit": null,
+              "conditions": [],
+              "costs": [],
+              "actions": [
+                {
+                  "type": "stat_change",
+                  "target": {
+                    "player": "self",
+                    "location": "field",
+                    "amount": 1,
+                    "modifier": "up_to",
+                    "filters": {
+                      "other": true,
+                      "card_type": "character"
+                    }
+                  },
+                  "attribute": "bp",
+                  "value": 1000,
+                  "duration": "turn"
                 }
-              },
-              "attribute": "bp",
-              "value": 1000,
-              "duration": "turn"
+              ]
             }
           ]
         }
-      ]
+      }
     },
     "life_trigger": []
   },
@@ -809,180 +1236,42 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
-        {
-          "optional": true,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": {
-                "player": "self",
-                "location": "field",
-                "amount": 1,
-                "modifier": "up_to",
-                "filters": {
-                  "other": true,
-                  "card_type": "character"
-                }
-              },
-              "attribute": "bp",
-              "value": 1000,
-              "duration": "turn"
-            }
-          ]
-        }
-      ]
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。積木將放在 `on_play` 時機點。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。",
+        "3_confirm_effect_count": "任務面板有 1 個獨立效果。將會產出 1 個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中找到對應函數名稱。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {
+                    "other": true,
+                    "card_type": "character"
+                  }
+                },
+                "attribute": "bp",
+                "value": 1000,
+                "duration": "turn"
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": []
-  },
-  "UA47BT_TKG-1-055": {
-    "ap_cost": 1,
-    "energy_req": 0,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 500,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "choose_effect",
-              "player": "self",
-              "amount": 1,
-              "modifier": "exact",
-              "options": [
-                [
-                  {
-                    "type": "draw",
-                    "amount": 1
-                  },
-                  {
-                    "type": "discard",
-                    "target": {
-                      "player": "self",
-                      "location": "hand",
-                      "amount": 1,
-                      "modifier": "exact"
-                    },
-                    "destination": "outside"
-                  }
-                ],
-                [
-                  {
-                    "type": "stat_change",
-                    "target": {
-                      "player": "self",
-                      "location": "field",
-                      "amount": 1,
-                      "modifier": "up_to",
-                      "filters": {
-                        "other": true
-                      }
-                    },
-                    "attribute": "bp",
-                    "value": 1000,
-                    "duration": "turn"
-                  }
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "draw",
-            "amount": 1
-          }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-055_2": {
-    "ap_cost": 1,
-    "energy_req": 0,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 500,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "choose_effect",
-              "player": "self",
-              "amount": 1,
-              "modifier": "exact",
-              "options": [
-                [
-                  {
-                    "type": "draw",
-                    "amount": 1
-                  },
-                  {
-                    "type": "discard",
-                    "target": {
-                      "player": "self",
-                      "location": "hand",
-                      "amount": 1,
-                      "modifier": "exact"
-                    },
-                    "destination": "outside"
-                  }
-                ],
-                [
-                  {
-                    "type": "stat_change",
-                    "target": {
-                      "player": "self",
-                      "location": "field",
-                      "amount": 1,
-                      "modifier": "up_to",
-                      "filters": {
-                        "other": true
-                      }
-                    },
-                    "attribute": "bp",
-                    "value": 1000,
-                    "duration": "turn"
-                  }
-                ]
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "draw",
-            "amount": 1
-          }
-        ]
-      }
-    ]
   },
   "UA47BT_TKG-1-056": {
     "ap_cost": 1,
@@ -993,44 +1282,75 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "main_act": [
-        {
-          "optional": false,
-          "limit": {
-            "type": "per_turn",
-            "amount": 1
-          },
-          "conditions": [],
-          "costs": [
-            {
-              "type": "change_state",
-              "target": "self_card",
-              "state": "rest"
-            }
-          ],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "generated_energy",
-              "value": 1,
-              "duration": "turn"
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。主要積木將放在 `main_act` 時機點。其中一個效果會讓此角色獲得 `on_main_phase_end` 的觸發效果。",
+        "2_scan_special_rules": "此能力有『休息』作為代價，並有『回合１』的使用限制。效果包含暫時性的能源生產值提升，以及獲得一個在主階段結束時觸發的退場效果。",
+        "3_confirm_effect_count": "將會產出一個 `main_act` 陣列，其中包含兩個動作積木。",
+        "4_function_mapping_check": "所有動作 (change_state, stat_change, gain_effect, retire) 和條件/限制 (limit, costs) 都在字典中找到對應函數名稱。"
+      },
+      "effect_blocks": {
+        "main_act": [
+          {
+            "optional": false,
+            "limit": {
+              "turn": 1
             },
-            {
-              "type": "gain_effect",
-              "target": "self_card",
-              "gained_trigger": "on_main_phase_end",
-              "effects": [
-                {
-                  "type": "retire",
-                  "target": "self_card",
-                  "to_removal": false
-                }
-              ]
-            }
-          ]
-        }
-      ]
+            "conditions": [],
+            "costs": [
+              {
+                "type": "change_state",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "笛口 涼子"
+                  }
+                },
+                "state": "rest"
+              }
+            ],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "笛口 涼子"
+                  }
+                },
+                "attribute": "generated_energy",
+                "value": 1,
+                "duration": "turn"
+              },
+              {
+                "type": "gain_effect",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "笛口 涼子"
+                  }
+                },
+                "gained_trigger": "on_main_phase_end",
+                "effects": [
+                  {
+                    "type": "retire",
+                    "target": {
+                      "player": "self",
+                      "location": "field",
+                      "filters": {
+                        "name": "笛口 涼子"
+                      }
+                    },
+                    "to_removal": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": []
   },
@@ -1043,44 +1363,75 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "main_act": [
-        {
-          "optional": false,
-          "limit": {
-            "type": "per_turn",
-            "amount": 1
-          },
-          "conditions": [],
-          "costs": [
-            {
-              "type": "change_state",
-              "target": "self_card",
-              "state": "rest"
-            }
-          ],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "generated_energy",
-              "value": 1,
-              "duration": "turn"
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。主要積木將放在 `main_act` 時機點。其中一個效果會讓此角色獲得 `on_main_phase_end` 的觸發效果。",
+        "2_scan_special_rules": "此能力有『休息』作為代價，並有『回合１』的使用限制。效果包含暫時性的能源生產值提升，以及獲得一個在主階段結束時觸發的退場效果。",
+        "3_confirm_effect_count": "將會產出一個 `main_act` 陣列，其中包含兩個動作積木。",
+        "4_function_mapping_check": "所有動作 (change_state, stat_change, gain_effect, retire) 和條件/限制 (limit, costs) 都在字典中找到對應函數名稱。"
+      },
+      "effect_blocks": {
+        "main_act": [
+          {
+            "optional": false,
+            "limit": {
+              "turn": 1
             },
-            {
-              "type": "gain_effect",
-              "target": "self_card",
-              "gained_trigger": "on_main_phase_end",
-              "effects": [
-                {
-                  "type": "retire",
-                  "target": "self_card",
-                  "to_removal": false
-                }
-              ]
-            }
-          ]
-        }
-      ]
+            "conditions": [],
+            "costs": [
+              {
+                "type": "change_state",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "笛口 涼子"
+                  }
+                },
+                "state": "rest"
+              }
+            ],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "笛口 涼子"
+                  }
+                },
+                "attribute": "generated_energy",
+                "value": 1,
+                "duration": "turn"
+              },
+              {
+                "type": "gain_effect",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "笛口 涼子"
+                  }
+                },
+                "gained_trigger": "on_main_phase_end",
+                "effects": [
+                  {
+                    "type": "retire",
+                    "target": {
+                      "player": "self",
+                      "location": "field",
+                      "filters": {
+                        "name": "笛口 涼子"
+                      }
+                    },
+                    "to_removal": false
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": []
   },
@@ -1093,26 +1444,40 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "continuous": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。積木將放在 continuous 時機點。",
+        "2_scan_special_rules": "未發現「作為代價」、「全部AP」等特例。",
+        "3_confirm_effect_count": "任務面板有 1 個獨立效果。將會產出 1 個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中。"
+      },
+      "effect_blocks": [
         {
+          "timing": "continuous",
           "optional": false,
-          "limit": null,
           "conditions": [
             {
-              "type": "target_count",
-              "target": "self_card",
-              "operator": "==",
-              "count": 1,
-              "filters": {
-                "state": "active"
-              }
+              "type": "state",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "name": "self_card"
+                }
+              },
+              "state": "active"
             }
           ],
           "costs": [],
           "actions": [
             {
               "type": "stat_change",
-              "target": "self_card",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "filters": {
+                  "name": "self_card"
+                }
+              },
               "attribute": "generated_energy",
               "value": 1,
               "duration": "continuous"
@@ -1132,33 +1497,38 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "continuous": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": "self_card",
-              "operator": "==",
-              "count": 1,
-              "filters": {
-                "state": "active"
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡，時機為 continuous (常駐)。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。",
+        "3_confirm_effect_count": "任務面板有 1 個獨立效果，將產出 1 個陣列。",
+        "4_function_mapping_check": "所有動作 (stat_change) 都在字典中。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "self_card",
+                    "state": "active"
+                  }
+                },
+                "attribute": "generated_energy",
+                "value": 1,
+                "duration": "continuous"
               }
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "generated_energy",
-              "value": 1,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ]
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": []
   },
@@ -1171,8 +1541,15 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。它有一個『登場時』效果和一個『主起動』效果。",
+        "2_scan_special_rules": "沒有發現『作為代價』或『全部AP』等特殊規則。『在前線的情況』是一個條件，『回合1』是一個限制。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果標籤，將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作 (stat_change, pay_ap) 和條件 (location) 都在字典中。找不到任何對應函數名稱。"
+      },
+      "effect_blocks": [
         {
+          "timing": "on_play",
           "optional": false,
           "limit": null,
           "conditions": [],
@@ -1195,27 +1572,21 @@
               "duration": "turn"
             }
           ]
-        }
-      ],
-      "main_act": [
+        },
         {
+          "timing": "main_act",
           "optional": false,
           "limit": {
-            "type": "per_turn",
-            "amount": 1
+            "per_turn": 1
           },
           "conditions": [
             {
-              "type": "target_count",
+              "type": "location",
               "target": {
                 "player": "self",
-                "location": "front_line",
-                "filters": {
-                  "name": "self_card"
-                }
+                "name": "self_card"
               },
-              "operator": ">=",
-              "count": 1
+              "location": "front_line"
             }
           ],
           "costs": [
@@ -1281,8 +1652,15 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。它有一個『登場時』效果和一個『主起動』效果。",
+        "2_scan_special_rules": "沒有發現『作為代價』或『全部AP』等特殊規則。『在前線的情況』是一個條件，『回合1』是一個限制。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果標籤，將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作 (stat_change, pay_ap) 和條件 (location) 都在字典中。找不到任何對應函數名稱。"
+      },
+      "effect_blocks": [
         {
+          "timing": "on_play",
           "optional": false,
           "limit": null,
           "conditions": [],
@@ -1305,27 +1683,21 @@
               "duration": "turn"
             }
           ]
-        }
-      ],
-      "main_act": [
+        },
         {
+          "timing": "main_act",
           "optional": false,
           "limit": {
-            "type": "per_turn",
-            "amount": 1
+            "per_turn": 1
           },
           "conditions": [
             {
-              "type": "target_count",
+              "type": "location",
               "target": {
                 "player": "self",
-                "location": "front_line",
-                "filters": {
-                  "name": "self_card"
-                }
+                "name": "self_card"
               },
-              "operator": ">=",
-              "count": 1
+              "location": "front_line"
             }
           ],
           "costs": [
@@ -1382,112 +1754,6 @@
       }
     ]
   },
-  "UA47BT_TKG-1-059": {
-    "ap_cost": 1,
-    "energy_req": 3,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 3000,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "continuous": [
-        {
-          "optional": false,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": [
-                  "outside",
-                  "removed_area"
-                ],
-                "amount": "all"
-              },
-              "operator": ">=",
-              "count": 10
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "bp",
-              "value": 1000,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "draw",
-            "amount": 1
-          }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-059_2": {
-    "ap_cost": 1,
-    "energy_req": 3,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 3000,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "continuous": [
-        {
-          "optional": false,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": [
-                  "outside",
-                  "removed_area"
-                ],
-                "amount": "all"
-              },
-              "operator": ">=",
-              "count": 10
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "bp",
-              "value": 1000,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "draw",
-            "amount": 1
-          }
-        ]
-      }
-    ]
-  },
   "UA47BT_TKG-1-060": {
     "ap_cost": 1,
     "energy_req": 3,
@@ -1497,265 +1763,39 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "move_card",
-              "source": {
-                "player": "self",
-                "location": "removed_area",
-                "amount": 2,
-                "modifier": "up_to"
-              },
-              "destination": "outside"
-            }
-          ]
-        }
-      ],
-      "main_act": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "field",
-                "filters": {
-                  "name": "月山 習"
-                }
-              },
-              "operator": ">=",
-              "count": 1
-            }
-          ],
-          "costs": [
-            {
-              "type": "change_state",
-              "target": "self_card",
-              "state": "rest"
-            }
-          ],
-          "actions": [
-            {
-              "type": "move_card",
-              "source": {
-                "player": "self",
-                "location": "outside",
-                "amount": 2,
-                "modifier": "exact"
-              },
-              "destination": "removed_area",
-              "on_success": [
-                {
-                  "type": "draw",
-                  "amount": 1
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張場域卡。積木將放在 `on_play` 和 `main_act` 時機點。",
+        "2_scan_special_rules": "發現了『休息』作為代價，以及『只有在...情況下才可以發動』作為條件。同時，『如這樣做』表示後續效果必須作為前置動作的 `on_success`。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果標籤（登場時、主起動），將會產出兩個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中，沒有找不到對應函數名稱的情況。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "move_card",
+                "source": {
+                  "player": "self",
+                  "location": "removed_area",
+                  "amount": 2,
+                  "modifier": "up_to"
                 },
-                {
-                  "type": "discard",
-                  "target": {
-                    "player": "self",
-                    "location": "hand",
-                    "amount": 1,
-                    "modifier": "exact"
-                  },
-                  "destination": "outside"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "move_cards",
-            "target": "self_card",
-            "destination": "hand"
-          }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-061": {
-    "ap_cost": 1,
-    "energy_req": 3,
-    "type": "事件卡",
-    "gen_energy": 0,
-    "bp": 0,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "main_act": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "activate_ap",
-              "amount": 2
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [
-          {
-            "type": "life_count",
-            "player": "self",
-            "operator": "==",
-            "count": 0
-          }
-        ],
-        "costs": [],
-        "actions": [
-          {
-            "type": "recover_life",
-            "amount": 1
-          }
-        ]
-      }
-    ]
-  },
-  "UA47ST_TKG-1-061": {
-    "ap_cost": 1,
-    "energy_req": 3,
-    "type": "事件卡",
-    "gen_energy": 0,
-    "bp": 0,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "main_act": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "activate_ap",
-              "amount": 2
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [
-          {
-            "type": "life_count",
-            "player": "self",
-            "operator": "==",
-            "count": 0
-          }
-        ],
-        "costs": [],
-        "actions": [
-          {
-            "type": "recover_life",
-            "amount": 1
-          }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-063": {
-    "ap_cost": 1,
-    "energy_req": 4,
-    "type": "事件卡",
-    "gen_energy": 0,
-    "bp": 0,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "main_act": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "look_at_deck",
-              "look_amount": 2,
-              "take_amount": 1,
-              "modifier": "up_to",
-              "reveal": false,
-              "filters": {},
-              "take_action": "add_to_hand",
-              "remainder": "outside"
-            },
-            {
-              "type": "cost_reduction",
-              "target": "next_played_card",
-              "attribute": "ap",
-              "value": 1,
-              "duration": "turn",
-              "filters": {
-                "name": "金木 研",
-                "min_energy": 5
+                "destination": "outside"
               }
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "draw",
-            "amount": 1
+            ]
           }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-064": {
-    "ap_cost": 1,
-    "energy_req": 2,
-    "type": "事件卡",
-    "gen_energy": 0,
-    "bp": 0,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "event_play": [
-        {
-          "optional": false,
-          "limit": {
-            "type": "per_turn_by_name",
-            "amount": 1,
-            "name": "變態？真意外啊…"
-          },
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "draw",
-              "amount": 1
-            },
-            {
-              "type": "conditional_branch",
-              "condition": {
+        ],
+        "main_act": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [
+              {
                 "type": "target_count",
                 "target": {
                   "player": "self",
@@ -1766,114 +1806,52 @@
                 },
                 "operator": ">=",
                 "count": 1
-              },
-              "if_true": [
-                {
-                  "type": "activate_ap",
-                  "amount": 1
-                }
-              ],
-              "if_false": []
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "play_character",
-            "target": {
-              "player": "self",
-              "location": "outside",
-              "amount": 1,
-              "filters": {
-                "card_type": "character",
-                "max_energy": 2,
-                "max_ap": 1
               }
-            },
-            "state": "active"
+            ],
+            "costs": [
+              {
+                "type": "change_state",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "self_card"
+                  }
+                },
+                "state": "rest"
+              }
+            ],
+            "actions": [
+              {
+                "type": "move_card",
+                "source": {
+                  "player": "self",
+                  "location": "outside",
+                  "amount": 2,
+                  "modifier": "exact"
+                },
+                "destination": "removed_area",
+                "on_success": [
+                  {
+                    "type": "draw",
+                    "amount": 1
+                  },
+                  {
+                    "type": "discard",
+                    "target": {
+                      "player": "self",
+                      "location": "hand",
+                      "amount": 1,
+                      "modifier": "exact"
+                    },
+                    "destination": "outside"
+                  }
+                ]
+              }
+            ]
           }
         ]
       }
-    ]
-  },
-  "UA47BT_TKG-1-065": {
-    "ap_cost": 1,
-    "energy_req": 6,
-    "type": "事件卡",
-    "gen_energy": 0,
-    "bp": 0,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "in_hand_continuous": [
-        {
-          "optional": false,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "front_line",
-                "filters": {
-                  "name": "金木 研"
-                }
-              },
-              "operator": ">=",
-              "count": 1
-            },
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "outside",
-                "filters": {
-                  "eval_type": "unique_energy_requirement"
-                }
-              },
-              "operator": ">=",
-              "count": 3
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "cost_reduction",
-              "target": "self_card",
-              "attribute": "energy",
-              "value": 1,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ],
-      "event_play": [
-        {
-          "optional": false,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "retire",
-              "target": {
-                "player": "opponent",
-                "location": "front_line",
-                "amount": 1,
-                "modifier": "exact",
-                "filters": {
-                  "max_bp": 5000
-                }
-              },
-              "to_removal": false
-            }
-          ]
-        }
-      ]
     },
     "life_trigger": [
       {
@@ -1881,13 +1859,9 @@
         "costs": [],
         "actions": [
           {
-            "type": "retire",
-            "target": {
-              "player": "opponent",
-              "location": "front_line",
-              "amount": 1
-            },
-            "to_removal": false
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
           }
         ]
       }
@@ -1902,85 +1876,111 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "in_hand_continuous": [
-        {
-          "optional": false,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "front_line",
-                "filters": {
-                  "name": "月山 習"
-                }
-              },
-              "operator": ">=",
-              "count": 1
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "cost_reduction",
-              "target": "self_card",
-              "attribute": "energy",
-              "value": 1,
-              "duration": "continuous"
-            }
-          ]
-        },
-        {
-          "optional": false,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "field",
-                "filters": {
-                  "has_underneath_card": true,
-                  "underneath_face_down": true
-                }
-              },
-              "operator": ">=",
-              "count": 1
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "cost_reduction",
-              "target": "self_card",
-              "attribute": "energy",
-              "value": 1,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ],
-      "event_play": [
-        {
-          "optional": false,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "retire",
-              "target": {
-                "player": "opponent",
-                "location": "front_line",
-                "amount": 1,
-                "modifier": "exact",
-                "filters": {
-                  "max_bp": 5000
-                }
-              },
-              "to_removal": false
-            }
-          ]
-        }
-      ]
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張事件卡。效果1和2為手牌中持續效果 (in_hand_continuous)，效果3為打出時效果 (event_play)。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特殊規則。",
+        "3_confirm_effect_count": "任務面板有3個獨立效果標籤，將會產出3個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中。"
+      },
+      "effect_blocks": {
+        "in_hand_continuous": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [
+              {
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "name": "月山 習",
+                    "card_type": "character"
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "cost_reduction",
+                "target": {
+                  "player": "self",
+                  "location": "hand",
+                  "filters": {
+                    "name": "這是我的啊!!"
+                  }
+                },
+                "attribute": "energy",
+                "value": 1,
+                "duration": "continuous"
+              }
+            ]
+          },
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [
+              {
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": "field",
+                  "filters": {
+                    "has_underneath_card": true,
+                    "underneath_face_down": true,
+                    "card_type": "character"
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "cost_reduction",
+                "target": {
+                  "player": "self",
+                  "location": "hand",
+                  "filters": {
+                    "name": "這是我的啊!!"
+                  }
+                },
+                "attribute": "energy",
+                "value": 1,
+                "duration": "continuous"
+              }
+            ]
+          }
+        ],
+        "event_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "retire",
+                "target": {
+                  "player": "opponent",
+                  "location": "front_line",
+                  "amount": 1,
+                  "modifier": "exact",
+                  "filters": {
+                    "card_type": "character",
+                    "max_bp": 5000
+                  }
+                },
+                "to_removal": false
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": [
       {
@@ -2000,373 +2000,6 @@
       }
     ]
   },
-  "UA47ST_TKG-1-101": {
-    "ap_cost": 1,
-    "energy_req": 2,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 3000,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "continuous": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": "self_card",
-              "operator": "==",
-              "count": 1,
-              "filters": {
-                "has_underneath_card": true,
-                "underneath_face_down": true
-              }
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "gain_keyword",
-              "target": "self_card",
-              "keywords": {
-                "impact_nullify": true
-              },
-              "duration": "continuous"
-            }
-          ]
-        },
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": "self_card",
-              "operator": "==",
-              "count": 1,
-              "filters": {
-                "has_underneath_card": true,
-                "underneath_face_down": true
-              }
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "bp",
-              "value": 1000,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "change_state",
-            "target": {
-              "player": "self",
-              "location": "field",
-              "amount": 1,
-              "filters": {
-                "card_type": "character"
-              }
-            },
-            "state": "active"
-          },
-          {
-            "type": "buff_bp",
-            "target": "selected_target",
-            "amount": 3000,
-            "duration": "turn"
-          }
-        ]
-      }
-    ]
-  },
-  "UA47ST_TKG-1-102": {
-    "ap_cost": 1,
-    "energy_req": 4,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 4000,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "continuous": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [
-            {
-              "type": "play_type",
-              "value": "raid"
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "gain_keyword",
-              "target": "self_card",
-              "keywords": {
-                "impact_nullify": true
-              },
-              "duration": "continuous"
-            }
-          ]
-        }
-      ],
-      "on_play": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [
-            {
-              "type": "play_type",
-              "value": "raid"
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "draw",
-              "amount": 2
-            },
-            {
-              "type": "discard",
-              "target": {
-                "player": "self",
-                "location": "hand",
-                "amount": 1,
-                "modifier": "exact"
-              },
-              "destination": "outside"
-            }
-          ]
-        }
-      ],
-      "main_act": [
-        {
-          "optional": false,
-          "limit": {
-            "type": "per_turn",
-            "amount": 1
-          },
-          "conditions": [
-            {
-              "type": "target_count",
-              "target": {
-                "player": "self",
-                "location": "front_line",
-                "filters": {
-                  "name": "金木 研",
-                  "has_underneath_card": true,
-                  "underneath_face_down": true
-                }
-              },
-              "operator": "==",
-              "count": 1
-            },
-            {
-              "type": "play_type",
-              "value": "raid"
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "change_state",
-              "target": "self_card",
-              "state": "active"
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "move_cards",
-            "target": "self_card",
-            "destination": "hand"
-          }
-        ]
-      }
-    ]
-  },
-  "UA47ST_TKG-1-103": {
-    "ap_cost": 1,
-    "energy_req": 3,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 3500,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "continuous": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "bp",
-              "value": 500,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ],
-      "on_play": [
-        {
-          "optional": true,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "change_state",
-              "target": {
-                "player": "self",
-                "location": "front_line",
-                "amount": 1,
-                "modifier": "exact",
-                "filters": {
-                  "max_energy": 4,
-                  "state": "active",
-                  "name": "金木 研"
-                }
-              },
-              "state": "rest",
-              "on_success": [
-                {
-                  "type": "change_state",
-                  "target": "self_card",
-                  "state": "active"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": []
-  },
-  "UA47ST_TKG-1-104": {
-    "ap_cost": 2,
-    "energy_req": 4,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 4000,
-    "color": "紫",
-    "traits": [],
-    "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "change_state",
-              "target": "self_card",
-              "state": "active"
-            }
-          ]
-        }
-      ],
-      "main_act": [
-        {
-          "optional": false,
-          "limit": {
-            "type": "per_turn",
-            "amount": 1
-          },
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "change_state",
-              "target": {
-                "player": "self",
-                "location": "front_line",
-                "amount": 1,
-                "modifier": "exact",
-                "filters": {
-                  "name": "金木 研",
-                  "max_energy": 4,
-                  "state": "active"
-                }
-              },
-              "state": "rest",
-              "on_success": [
-                {
-                  "type": "gain_keyword",
-                  "target": "self_card",
-                  "keywords": {
-                    "twice_attack": true
-                  },
-                  "duration": "turn"
-                },
-                {
-                  "type": "gain_effect",
-                  "target": "self_card",
-                  "gained_trigger": "on_attack",
-                  "effects": [
-                    {
-                      "type": "gain_keyword",
-                      "target": "self_card",
-                      "keywords": {
-                        "impact": 1
-                      },
-                      "duration": "turn"
-                    }
-                  ],
-                  "conditions": [
-                    {
-                      "type": "attack_count",
-                      "player": "self",
-                      "operator": "==",
-                      "count": 2
-                    }
-                  ],
-                  "duration": "turn"
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "move_cards",
-            "target": "self_card",
-            "destination": "hand"
-          }
-        ]
-      }
-    ]
-  },
   "UA47ST_TKG-1-105": {
     "ap_cost": 1,
     "energy_req": 1,
@@ -2376,30 +2009,40 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
-        {
-          "optional": true,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "move_card",
-              "source": {
-                "player": "self",
-                "location": "outside",
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡，時機點為登場時 (on_play)。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。",
+        "3_confirm_effect_count": "任務面板有 1 個獨立效果，將會產出 1 個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中，沒有找不到對應函數名稱的情況。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": true,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "move_card",
+                "source": {
+                  "player": "self",
+                  "location": "outside",
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {
+                    "name": "金木 研",
+                    "max_energy": 4
+                  }
+                },
+                "destination": "top_deck",
                 "amount": 1,
-                "modifier": "up_to",
-                "filters": {
-                  "name": "金木 研",
-                  "max_energy": 4
-                }
-              },
-              "destination": "top_deck"
-            }
-          ]
-        }
-      ]
+                "face_down": false
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": [
       {
@@ -2437,45 +2080,56 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "choose_effect",
-              "player": "self",
-              "amount": 1,
-              "modifier": "exact",
-              "options": [
-                [
-                  {
-                    "type": "look_at_deck",
-                    "look_amount": 1,
-                    "take_amount": 1,
-                    "reveal": false,
-                    "filters": {},
-                    "take_action": "move_card",
-                    "destination": "top_deck"
-                  }
-                ],
-                [
-                  {
-                    "type": "look_at_deck",
-                    "look_amount": 1,
-                    "take_amount": 1,
-                    "reveal": false,
-                    "filters": {},
-                    "take_action": "move_card",
-                    "destination": "outside"
-                  }
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡，時機點為登場時 (on_play)。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。",
+        "3_confirm_effect_count": "任務面板有1個獨立效果標籤，將產出1個陣列。",
+        "4_function_mapping_check": "所有動作 (choose_effect, move_card) 都在字典中。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "choose_effect",
+                "player": "self",
+                "amount": 1,
+                "modifier": "exact",
+                "options": [
+                  [
+                    {
+                      "type": "move_card",
+                      "source": {
+                        "player": "self",
+                        "location": "top_deck",
+                        "amount": 1,
+                        "modifier": "exact"
+                      },
+                      "destination": "top_deck"
+                    }
+                  ],
+                  [
+                    {
+                      "type": "move_card",
+                      "source": {
+                        "player": "self",
+                        "location": "top_deck",
+                        "amount": 1,
+                        "modifier": "exact"
+                      },
+                      "destination": "outside"
+                    }
+                  ]
                 ]
-              ]
-            }
-          ]
-        }
-      ]
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": [
       {
@@ -2513,10 +2167,16 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "on_play": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張場域卡。效果1觸發時機為『登場時 (on_play)』，效果2觸發時機為『主起動 (main_act)』。",
+        "2_scan_special_rules": "效果2的『休息 此卡退場』是作為代價，將會放在 costs 陣列中。",
+        "3_confirm_effect_count": "任務面板有2個獨立效果標籤，將會產出2個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中，沒有找不到對應函數名稱的情況。"
+      },
+      "effect_blocks": [
         {
+          "timing": "on_play",
           "optional": true,
-          "limit": null,
           "conditions": [],
           "costs": [],
           "actions": [
@@ -2534,22 +2194,26 @@
               "state": "active"
             }
           ]
-        }
-      ],
-      "main_act": [
+        },
         {
+          "timing": "main_act",
           "optional": false,
-          "limit": null,
           "conditions": [],
           "costs": [
             {
               "type": "change_state",
-              "target": "self_card",
+              "target": {
+                "player": "self",
+                "name": "self_card"
+              },
               "state": "rest"
             },
             {
               "type": "retire",
-              "target": "self_card",
+              "target": {
+                "player": "self",
+                "name": "self_card"
+              },
               "to_removal": false
             }
           ],
@@ -2594,154 +2258,40 @@
     "color": "紫",
     "traits": [],
     "logic_tags": {
-      "main_act": [
-        {
-          "optional": false,
-          "limit": {},
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "draw",
-              "amount": 3
-            },
-            {
-              "type": "discard",
-              "target": {
-                "player": "self",
-                "location": "hand",
-                "amount": 1,
-                "modifier": "exact"
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張事件卡。積木將放在 `event_play` 時機點。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。效果為依序執行。",
+        "3_confirm_effect_count": "任務面板有兩個獨立效果：抽牌和棄牌。將會產出一個包含兩個動作的陣列。",
+        "4_function_mapping_check": "所有動作（draw, discard）都在字典中找到對應函數名稱。"
+      },
+      "effect_blocks": {
+        "event_play": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "draw",
+                "amount": 3
               },
-              "destination": "outside"
-            }
-          ]
-        }
-      ]
-    },
-    "life_trigger": []
-  },
-  "UA47BT_TKG-1-001": {
-    "ap_cost": 1,
-    "energy_req": 0,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 1000,
-    "color": "黃",
-    "traits": [
-      "CCG"
-    ],
-    "logic_tags": {
-      "on_play": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [],
-          "costs": [],
-          "actions": [
-            {
-              "type": "conditional_branch",
-              "condition": {
-                "type": "target_count",
+              {
+                "type": "discard",
                 "target": {
                   "player": "self",
-                  "location": "field",
-                  "filters": {
-                    "name": "鈴屋 什造"
-                  }
+                  "location": "hand",
+                  "amount": 1,
+                  "modifier": "exact"
                 },
-                "operator": ">=",
-                "count": 1
-              },
-              "if_true": [
-                {
-                  "type": "look_at_deck",
-                  "look_amount": 2,
-                  "take_amount": 0,
-                  "reveal": false,
-                  "filters": {},
-                  "take_action": null,
-                  "remainder": "top_or_bottom"
-                }
-              ],
-              "if_false": [
-                {
-                  "type": "look_at_deck",
-                  "look_amount": 1,
-                  "take_amount": 0,
-                  "reveal": false,
-                  "filters": {},
-                  "take_action": null,
-                  "remainder": "top_or_bottom"
-                }
-              ]
-            }
-          ]
-        }
-      ]
+                "destination": "outside"
+              }
+            ]
+          }
+        ]
+      }
     },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "draw",
-            "amount": 1
-          }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-002": {
-    "ap_cost": 1,
-    "energy_req": 0,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 1500,
-    "color": "黃",
-    "traits": [
-      "CCG"
-    ],
-    "logic_tags": {},
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "move_cards",
-            "target": "self_card",
-            "destination": "hand"
-          }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-002_2": {
-    "ap_cost": 1,
-    "energy_req": 0,
-    "type": "角色卡",
-    "gen_energy": 0,
-    "bp": 1500,
-    "color": "黃",
-    "traits": [
-      "CCG"
-    ],
-    "logic_tags": {},
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "move_cards",
-            "target": "self_card",
-            "destination": "hand"
-          }
-        ]
-      }
-    ]
+    "life_trigger": []
   },
   "UA47BT_TKG-1-003": {
     "ap_cost": 1,
@@ -2754,44 +2304,75 @@
       "CCG"
     ],
     "logic_tags": {
-      "continuous": [
-        {
-          "optional": false,
-          "limit": null,
-          "conditions": [
-            {
-              "type": "any_of",
-              "conditions": [
-                {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。效果為常駐的數值修正，因此積木放在 `continuous` 時機點。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。生產能源+ 意指 +1。",
+        "3_confirm_effect_count": "任務面板有一個【獨立效果】標籤（生產能源+）。將會產出一個陣列。",
+        "4_function_mapping_check": "所有動作 (target_count, history, stat_change, conditional_branch) 都在字典中，沒有找不到對應函數名稱的情況。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "conditional_branch",
+                "condition": {
                   "type": "target_count",
                   "target": {
                     "player": "opponent",
                     "location": "front_line",
-                    "amount": 1,
-                    "modifier": "exact"
+                    "filters": {
+                      "card_type": "character"
+                    }
                   },
                   "operator": ">=",
                   "count": 1
                 },
-                {
-                  "type": "history",
-                  "action": "opponent_retired_character_this_turn"
-                }
-              ]
-            }
-          ],
-          "costs": [],
-          "actions": [
-            {
-              "type": "stat_change",
-              "target": "self_card",
-              "attribute": "generated_energy",
-              "value": 1,
-              "duration": "continuous"
-            }
-          ]
-        }
-      ]
+                "if_true": [
+                  {
+                    "type": "stat_change",
+                    "target": {
+                      "player": "self",
+                      "location": "field",
+                      "name": "self_card"
+                    },
+                    "attribute": "generated_energy",
+                    "value": 1,
+                    "duration": "continuous"
+                  }
+                ],
+                "if_false": [
+                  {
+                    "type": "conditional_branch",
+                    "condition": {
+                      "type": "history",
+                      "action": "opponent_retired_character_this_turn"
+                    },
+                    "if_true": [
+                      {
+                        "type": "stat_change",
+                        "target": {
+                          "player": "self",
+                          "location": "field",
+                          "name": "self_card"
+                        },
+                        "attribute": "generated_energy",
+                        "value": 1,
+                        "duration": "continuous"
+                      }
+                    ],
+                    "if_false": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
     },
     "life_trigger": []
   },
@@ -2806,8 +2387,15 @@
       "CCG"
     ],
     "logic_tags": {
-      "on_attack": [
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡。積木將分別放在 `on_attack` (第1次攻擊時), `on_attack_end` (攻擊結束時), 和 `on_play` (登場時)。",
+        "2_scan_special_rules": "發現了『若不追加...便不能選擇』的特殊規則，這將被解析為 `targeting_cost`。",
+        "3_confirm_effect_count": "任務面板有3個獨立效果標籤，將會產出3個陣列。",
+        "4_function_mapping_check": "所有動作都在字典中。持續時間『自己下回合開始為止』在字典中沒有直接對應的枚舉值，將使用 `continuous` 作為最接近的選項。"
+      },
+      "effect_blocks": [
         {
+          "timing": "on_attack",
           "optional": false,
           "limit": null,
           "conditions": [
@@ -2826,22 +2414,22 @@
           "actions": [
             {
               "type": "gain_keyword",
-              "target": "self_card",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "name": "self_card"
+              },
               "keywords": {
-                "damage": 2
+                "impact": 2
               },
               "duration": "turn"
             }
           ]
-        }
-      ],
-      "on_attack_end": [
+        },
         {
+          "timing": "on_attack_end",
           "optional": false,
-          "limit": {
-            "type": "per_turn",
-            "amount": 1
-          },
+          "limit": null,
           "conditions": [
             {
               "type": "history",
@@ -2856,7 +2444,11 @@
           "actions": [
             {
               "type": "change_state",
-              "target": "self_card",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "name": "self_card"
+              },
               "state": "active"
             },
             {
@@ -2864,10 +2456,9 @@
               "amount": 1
             }
           ]
-        }
-      ],
-      "on_play": [
+        },
         {
+          "timing": "on_play",
           "optional": false,
           "limit": null,
           "conditions": [
@@ -2880,12 +2471,17 @@
           "actions": [
             {
               "type": "gain_keyword",
-              "target": "self_card",
+              "target": {
+                "player": "self",
+                "location": "field",
+                "name": "self_card"
+              },
               "keywords": {
+                "cannot_be_selected": true,
                 "targeting_cost": {
                   "type": "discard",
                   "target": {
-                    "player": "opponent",
+                    "player": "self",
                     "location": "hand",
                     "amount": 1,
                     "modifier": "exact"
@@ -2908,6 +2504,809 @@
             "type": "move_cards",
             "target": "self_card",
             "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-048": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "角色卡，此效果為常駐效果 (continuous)，用於修改手牌中此卡片的能源需求。",
+        "2_scan_special_rules": "未發現『作為代價』、『全部AP』等特例。",
+        "3_confirm_effect_count": "任務面板有一個獨立效果標籤，將產出一個陣列。",
+        "4_function_mapping_check": "所有動作 (cost_reduction, target_count, filters) 都在字典中。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "limit": null,
+            "conditions": [
+              {
+                "type": "target_count",
+                "target": {
+                  "player": "opponent",
+                  "location": "field",
+                  "filters": {
+                    "any_of": [
+                      {
+                        "color": "yellow"
+                      },
+                      {
+                        "color": "red"
+                      }
+                    ]
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "cost_reduction",
+                "target": {
+                  "player": "self",
+                  "location": "hand",
+                  "filters": {
+                    "name": "古間 圓兒"
+                  }
+                },
+                "attribute": "energy",
+                "value": -1,
+                "duration": "continuous"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-050": {
+    "ap_cost": 1,
+    "energy_req": 1,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 2000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在on_play時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『有加入手牌的情況下』是前置動作的on_success條件。",
+        "3_confirm_effect_count": "任務面板顯示有2個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "type": "look_at_cards",
+            "source": {
+              "player": "self",
+              "location": "deck"
+            },
+            "amount": 2,
+            "select_to_hand": {
+              "amount": 1,
+              "modifier": "up_to",
+              "filters": {
+                "card_type": "event"
+              }
+            },
+            "remaining_destination": "outside",
+            "on_success": [
+              {
+                "type": "move_card",
+                "source": {
+                  "player": "self",
+                  "location": "hand",
+                  "amount": 1,
+                  "modifier": "exact"
+                },
+                "destination": "outside"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-055": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 500,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在on_play時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：無特殊規則。",
+        "3_confirm_effect_count": "任務面板顯示有1個獨立效果 (choose_effect)，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "type": "choose_effect",
+            "player": "self",
+            "amount": 1,
+            "modifier": "exact",
+            "options": [
+              [
+                {
+                  "type": "draw",
+                  "amount": 1
+                },
+                {
+                  "type": "discard",
+                  "target": {
+                    "player": "self",
+                    "location": "hand",
+                    "amount": 1,
+                    "modifier": "exact"
+                  },
+                  "destination": "outside"
+                }
+              ],
+              [
+                {
+                  "type": "conditional_branch",
+                  "condition": {
+                    "type": "is_self_turn"
+                  },
+                  "if_true": [
+                    {
+                      "type": "stat_change",
+                      "target": {
+                        "player": "self",
+                        "location": "front_line",
+                        "amount": 1,
+                        "modifier": "up_to",
+                        "filters": {
+                          "other": true,
+                          "card_type": "character"
+                        }
+                      },
+                      "attribute": "bp",
+                      "value": 1000,
+                      "duration": "turn"
+                    }
+                  ],
+                  "if_false": []
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-055_2": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 500,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在on_play時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：無特殊規則。",
+        "3_confirm_effect_count": "任務面板顯示有1個獨立效果 (choose_effect)，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "type": "choose_effect",
+            "player": "self",
+            "amount": 1,
+            "modifier": "exact",
+            "options": [
+              [
+                {
+                  "type": "draw",
+                  "amount": 1
+                },
+                {
+                  "type": "discard",
+                  "target": {
+                    "player": "self",
+                    "location": "hand",
+                    "amount": 1,
+                    "modifier": "exact"
+                  },
+                  "destination": "outside"
+                }
+              ],
+              [
+                {
+                  "type": "conditional_branch",
+                  "condition": {
+                    "type": "is_self_turn"
+                  },
+                  "if_true": [
+                    {
+                      "type": "stat_change",
+                      "target": {
+                        "player": "self",
+                        "location": "front_line",
+                        "amount": 1,
+                        "modifier": "up_to",
+                        "filters": {
+                          "other": true,
+                          "card_type": "character"
+                        }
+                      },
+                      "attribute": "bp",
+                      "value": 1000,
+                      "duration": "turn"
+                    }
+                  ],
+                  "if_false": []
+                }
+              ]
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-103": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3500,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 和 on_play 時機點中。",
+        "2_scan_special_rules": "關於『如這樣做』的規則，我確認這張卡的處理方式為：將後續效果包裝在 on_success 陣列中。",
+        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "conditions": [
+              {
+                "type": "is_self_turn"
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": "self_card",
+                "attribute": "bp",
+                "value": 500,
+                "duration": "turn"
+              }
+            ]
+          }
+        ],
+        "on_play": [
+          {
+            "optional": true,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "change_state",
+                "target": {
+                  "player": "self",
+                  "location": "front_line",
+                  "amount": 1,
+                  "modifier": "exact",
+                  "filters": {
+                    "name": "金木 研",
+                    "max_energy": 4,
+                    "state": "active"
+                  }
+                },
+                "state": "rest",
+                "on_success": [
+                  {
+                    "type": "change_state",
+                    "target": "self_card",
+                    "state": "active"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": []
+  },
+  "UA47BT_TKG-1-063": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "事件卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張事件卡，我決定將主要效果放在 event_play 時機點中。",
+        "2_scan_special_rules": "發現牌庫檢索後將餘下卡片放置場外，以及下次使用的AP消耗減免。AP消耗減免將使用 cost_reduction 搭配 duration: \"turn\" 處理。",
+        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "所有函數皆匹配成功：look_at_deck 和 cost_reduction。"
+      },
+      "effect_blocks": {
+        "event_play": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "look_at_deck",
+                "player": "self",
+                "amount": 2,
+                "select_amount": 1,
+                "select_modifier": "up_to",
+                "destination": "hand",
+                "remainder": "outside",
+                "filters": {}
+              },
+              {
+                "type": "cost_reduction",
+                "target": {
+                  "player": "self",
+                  "location": "hand",
+                  "filters": {
+                    "name": "金木 研",
+                    "min_energy": 5
+                  }
+                },
+                "attribute": "ap",
+                "value": 1,
+                "duration": "turn"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-101": {
+    "ap_cost": 1,
+    "energy_req": 2,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：無特殊規則。條件『此角色下面擁有背面向上的卡』將使用 `filters: {\"has_underneath_card\": true}` 處理。",
+        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "conditions": [
+              {
+                "type": "target_count",
+                "target": {
+                  "self_card": true,
+                  "filters": {
+                    "has_underneath_card": true
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "gain_keyword",
+                "target": {
+                  "self_card": true
+                },
+                "keywords": {
+                  "impact_nullify": true
+                },
+                "duration": "continuous"
+              }
+            ]
+          },
+          {
+            "optional": false,
+            "conditions": [
+              {
+                "type": "is_self_turn"
+              },
+              {
+                "type": "target_count",
+                "target": {
+                  "self_card": true,
+                  "filters": {
+                    "has_underneath_card": true
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": {
+                  "self_card": true
+                },
+                "attribute": "bp",
+                "value": 1000,
+                "duration": "continuous"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47ST_TKG-1-102": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 4000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous, on_play, main_act 時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『然後』表示連續動作，『回合1』表示 per_turn_limit，『只有在...的情況下才可以發動』表示條件判斷。",
+        "3_confirm_effect_count": "任務面板顯示有3個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "所有函數皆匹配成功。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "gain_keyword",
+                "target": "self_card",
+                "keyword": "impact_nullify",
+                "value": true,
+                "duration": "continuous"
+              }
+            ]
+          }
+        ],
+        "on_play": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "draw",
+                "amount": 2
+              },
+              {
+                "type": "move_card",
+                "source": {
+                  "player": "self",
+                  "location": "hand",
+                  "amount": 1,
+                  "modifier": "exact",
+                  "filters": {}
+                },
+                "destination": "outside"
+              }
+            ]
+          }
+        ],
+        "main_act": [
+          {
+            "optional": false,
+            "conditions": [
+              {
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": "front_line",
+                  "filters": {
+                    "name": "金木 研"
+                  }
+                },
+                "operator": ">=",
+                "count": 1
+              },
+              {
+                "type": "state_check",
+                "target": "self_card",
+                "state": "has_underneath_card"
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "change_state",
+                "target": "self_card",
+                "state": "active"
+              }
+            ],
+            "per_turn_limit": 1
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-059": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 時機點中。",
+        "2_scan_special_rules": "無特殊規則。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『找不到對應函數名稱：無法直接表達「自己場外及移除區合計有10張卡或以上」的條件，因為 target selector 的 location 欄位不支援陣列或合計運算』。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "conditions": [
+              {
+                "type": "custom",
+                "description": "自己場外及移除區合計有10張卡或以上"
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": "self_card",
+                "attribute": "bp",
+                "value": 1000,
+                "duration": "continuous"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-059_2": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 時機點中。",
+        "2_scan_special_rules": "無特殊規則。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『找不到對應函數名稱：無法直接表達「自己場外及移除區合計有10張卡或以上」的條件，因為 target selector 的 location 欄位不支援陣列或合計運算』。"
+      },
+      "effect_blocks": {
+        "continuous": [
+          {
+            "optional": false,
+            "conditions": [
+              {
+                "type": "custom",
+                "description": "自己場外及移除區合計有10張卡或以上"
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "stat_change",
+                "target": "self_card",
+                "attribute": "bp",
+                "value": 1000,
+                "duration": "continuous"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-001": {
+    "ap_cost": 1,
+    "energy_req": 0,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 1000,
+    "color": "黃",
+    "traits": [
+      "CCG"登場時 『從自己牌庫上面查看１張卡，
+      然後放置到牌庫上面或下面』。自己場上擁有〈鈴屋 什造〉的情況下，
+      改為『從自己牌庫上面查看２張卡，然後任意放置到牌庫上面或下面』。
+    ],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：包含條件分歧『...的情況下，改為...』，將使用 conditional_branch 處理。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件 (一個 conditional_branch 包含兩個分支)。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『look_at_deck 函數的 remainder 參數無法表達「放置到牌庫上面或下面」的選擇，因此使用 custom 處理此部分』。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "conditional_branch",
+                "condition": {
+                  "type": "target_count",
+                  "target": {
+                    "player": "self",
+                    "location": "field",
+                    "filters": {
+                      "name": "鈴屋 什造"
+                    }
+                  },
+                  "operator": ">=",
+                  "count": 1
+                },
+                "if_true": [
+                  {
+                    "type": "custom",
+                    "description": "從自己牌庫上面查看２張卡，然後任意放置到牌庫上面或下面。"
+                  }
+                ],
+                "if_false": [
+                  {
+                    "type": "custom",
+                    "description": "從自己牌庫上面查看１張卡，然後放置到牌庫上面或下面。"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "draw",
+            "amount": 1
           }
         ]
       }
