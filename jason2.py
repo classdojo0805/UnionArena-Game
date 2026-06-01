@@ -9,6 +9,7 @@ import sys
 from dotenv import load_dotenv
 
 # ================= 配置區 =================
+<<<<<<< HEAD
 load_dotenv()
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 INPUT_FILE = os.path.join(BASE_DIR,  "TKG_final_structured.json")
@@ -20,6 +21,16 @@ last = 82
 # === LLM API 配置 ===
 api_keys_2 = os.getenv("API_KEYS_2").split(",")
 API_KEYS = [k.strip() for k in api_keys_2 if k.strip()]
+=======
+INPUT_FILE = r"C:\Users\wei\Documents\UA_APP0.1\Log_jason\TKG_final_structured.json"
+DISPLAY_FILE = r"C:\Users\wei\Documents\UA_APP0.1\Log_jason\TKG_final_Cards_Display.json"
+LOGIC_FILE = r"C:\Users\wei\Documents\UA_APP0.1\Log_jason\TKG_final_Cards_Logic_1.json"
+
+#=== LLM API 配置 ===
+API_KEYS = [
+
+] # 請記得填入你的 API Key 
+>>>>>>> d03ee3765e2cd678516d13cf8b1b5dc450c80989
 current_key_idx = 0
 client = genai.Client(api_key=API_KEYS[current_key_idx])
 sys.stdout.reconfigure(encoding='utf-8')

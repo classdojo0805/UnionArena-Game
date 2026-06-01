@@ -20,7 +20,13 @@ last = 123
 # === LLM API 配置 ===
 api_keys_3 = os.getenv("API_KEYS_3").split(",")
 
+<<<<<<< HEAD
 API_KEYS = [k.strip() for k in api_keys_3 if k.strip()]
+=======
+API_KEYS = [
+
+] # 請記得填入你的 API Key 
+>>>>>>> d03ee3765e2cd678516d13cf8b1b5dc450c80989
 current_key_idx = 0
 client = genai.Client(api_key=API_KEYS[current_key_idx])
 sys.stdout.reconfigure(encoding='utf-8')
