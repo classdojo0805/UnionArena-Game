@@ -15,7 +15,8 @@ DICT_COMMON = """
    - `{"type": "battle_result", "result": "win"|"lose"}`: 判定當前戰鬥的結果。
    - `{"type": "battle_participant", "role": "attacker"|"defender", "filters": {過濾器}}`: 判定參與戰鬥的特定一方是否符合條件。
    - `{"type": "history", "action": "entered_field_this_turn", "target": "self_card"}`: 判定目標是否在「本回合登場」。
-   - `{"type": "history", "action": "activated_effect_this_turn", "effect_type": "main_act"}`: 判定本回合是否有發動過特定類型的效果。
+   - `{"type": "history", "action": "activated_effect_this_turn", "effect_type": "main_act", "cost_includes": {代價積木}}`: 判定本回合是否有發動過特定類型與代價的效果。   (💡 應用：處理「本回合中有發動含有支付1AP的主起動效果」)
+   
    
 2. 動作與代價基礎積木 (Actions & Costs):
    - `{"type": "pay_ap", "amount": 1}`
