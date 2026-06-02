@@ -3272,9 +3272,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
-        "2_scan_special_rules": "發現條件分歧效果，將使用 conditional_branch 處理。",
+        "2_scan_special_rules": "發現條件分歧規則，將使用 conditional_branch 處理。",
         "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "找不到完全匹配的函數名稱來處理『查看牌庫頂N張卡，然後選擇將這些卡放置到牌庫頂或牌庫底』，將使用 custom 描述。"
+        "4_function_mapping_check": "逐一核對字典後，我發現『找不到對應函數名稱：查看牌庫頂X張並放置到牌庫頂/底』，將使用 custom 描述。"
       },
       "effect_blocks": {
         "on_play": [
@@ -3300,13 +3300,13 @@
                 "if_true": [
                   {
                     "type": "custom",
-                    "description": "查看牌庫頂2張卡，並選擇將其放置於牌庫頂或牌庫底"
+                    "description": "從自己牌庫上面查看2張卡，然後任意放置到牌庫上面或下面"
                   }
                 ],
                 "if_false": [
                   {
                     "type": "custom",
-                    "description": "查看牌庫頂1張卡，並選擇將其放置於牌庫頂或牌庫底"
+                    "description": "從自己牌庫上面查看1張卡，然後放置到牌庫上面或下面"
                   }
                 ]
               }

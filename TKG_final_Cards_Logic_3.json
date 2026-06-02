@@ -3468,6 +3468,65 @@
     },
     "life_trigger": []
   },
+  "UA47BT_TKG-1-027": {
+    "ap_cost": 1,
+    "energy_req": 4,
+    "type": "場域卡",
+    "gen_energy": 0,
+    "bp": 0,
+    "color": "黃",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張場域卡，我決定將主要效果放在 on_battle_win 時機點中。",
+        "2_scan_special_rules": "發現『回合1』為條件，將使用 turn_count 處理。無特殊規則。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "所有函數皆匹配成功。"
+      },
+      "effect_blocks": {
+        "on_battle_win": [
+          {
+            "optional": false,
+            "conditions": [
+              {
+                "type": "turn_count",
+                "operator": "==",
+                "count": 1
+              },
+              {
+                "type": "battle_participant",
+                "role": "attacker",
+                "filters": {
+                  "player": "self",
+                  "trait": "CCG"
+                }
+              }
+            ],
+            "costs": [],
+            "actions": [
+              {
+                "type": "draw",
+                "amount": 1
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "move_cards",
+            "target": "self_card",
+            "destination": "hand"
+          }
+        ]
+      }
+    ]
+  },
   "UA47BT_TKG-1-026": {
     "ap_cost": 1,
     "energy_req": 3,
@@ -3482,10 +3541,10 @@
     ],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 和 main_act 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『可改為』使用 alternative_cost，『在本回合中』使用 duration: 'turn'。",
+        "1_check_card_type_and_timing": "這是一張角色卡。效果1 (BP+2000) 屬於 continuous，效果2 (替代代價) 屬於卡片常駐規則，效果3 (複製主起動) 屬於 main_act。我決定將效果1和效果2放在 continuous 時機點，效果3放在 main_act 時機點。",
+        "2_scan_special_rules": "效果1包含 history 條件判斷。效果2包含 alternative_cost 規則，但因字典無直接函數可表達「卡片常駐的替代代價規則」，將使用 custom 動作描述。效果3包含 turn_count 條件，以及 copy_effect 動作。我將推斷 copy_effect 支援 duration 參數來表達「在本回合中」。",
         "3_confirm_effect_count": "任務面板顯示有 3 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『history 函數的 activated_effect_this_turn 動作無法精確指定含有支付AP的條件，將其作為 custom 條件處理。alternative_cost 函數無法精確指定僅適用於主起動效果，將其作為通用替代代價處理。其餘函數皆匹配成功。』"
+        "4_function_mapping_check": "stat_change, history, discard, target_count, turn_count, copy_effect 皆匹配成功。alternative_cost 找不到對應函數名稱來表達「卡片常駐的替代代價規則」，將使用 custom。copy_effect 的 duration 參數為推斷，若不符則需調整。"
       },
       "effect_blocks": {
         "continuous": [
@@ -3493,8 +3552,14 @@
             "optional": false,
             "conditions": [
               {
-                "type": "custom",
-                "description": "此角色在本回合中有發動含有支付1AP的主起動效果"
+                "type": "history",
+                "action": "activated_effect_this_turn",
+                "target": "self_card",
+                "effect_type": "main_act",
+                "cost_includes": {
+                  "type": "pay_ap",
+                  "amount": 1
+                }
               }
             ],
             "costs": [],
@@ -3514,21 +3579,8 @@
             "costs": [],
             "actions": [
               {
-                "type": "alternative_cost",
-                "original_cost": {
-                  "type": "pay_ap",
-                  "amount": 1
-                },
-                "new_cost": {
-                  "type": "discard",
-                  "target": {
-                    "player": "self",
-                    "location": "hand",
-                    "amount": 1,
-                    "modifier": "exact"
-                  },
-                  "destination": "outside"
-                }
+                "type": "custom",
+                "description": "此角色的主起動效果的支付1AP可改為將1張手牌放置到場外"
               }
             ]
           }
@@ -3614,10 +3666,10 @@
     ],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 和 main_act 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『可改為』使用 alternative_cost，『在本回合中』使用 duration: 'turn'。",
+        "1_check_card_type_and_timing": "這是一張角色卡。效果1 (BP+2000) 屬於 continuous，效果2 (替代代價) 屬於卡片常駐規則，效果3 (複製主起動) 屬於 main_act。我決定將效果1和效果2放在 continuous 時機點，效果3放在 main_act 時機點。",
+        "2_scan_special_rules": "效果1包含 history 條件判斷。效果2包含 alternative_cost 規則，但因字典無直接函數可表達「卡片常駐的替代代價規則」，將使用 custom 動作描述。效果3包含 turn_count 條件，以及 copy_effect 動作。我將推斷 copy_effect 支援 duration 參數來表達「在本回合中」。",
         "3_confirm_effect_count": "任務面板顯示有 3 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『history 函數的 activated_effect_this_turn 動作無法精確指定含有支付AP的條件，將其作為 custom 條件處理。alternative_cost 函數無法精確指定僅適用於主起動效果，將其作為通用替代代價處理。其餘函數皆匹配成功。』"
+        "4_function_mapping_check": "stat_change, history, discard, target_count, turn_count, copy_effect 皆匹配成功。alternative_cost 找不到對應函數名稱來表達「卡片常駐的替代代價規則」，將使用 custom。copy_effect 的 duration 參數為推斷，若不符則需調整。"
       },
       "effect_blocks": {
         "continuous": [
@@ -3625,8 +3677,14 @@
             "optional": false,
             "conditions": [
               {
-                "type": "custom",
-                "description": "此角色在本回合中有發動含有支付1AP的主起動效果"
+                "type": "history",
+                "action": "activated_effect_this_turn",
+                "target": "self_card",
+                "effect_type": "main_act",
+                "cost_includes": {
+                  "type": "pay_ap",
+                  "amount": 1
+                }
               }
             ],
             "costs": [],
@@ -3646,21 +3704,8 @@
             "costs": [],
             "actions": [
               {
-                "type": "alternative_cost",
-                "original_cost": {
-                  "type": "pay_ap",
-                  "amount": 1
-                },
-                "new_cost": {
-                  "type": "discard",
-                  "target": {
-                    "player": "self",
-                    "location": "hand",
-                    "amount": 1,
-                    "modifier": "exact"
-                  },
-                  "destination": "outside"
-                }
+                "type": "custom",
+                "description": "此角色的主起動效果的支付1AP可改為將1張手牌放置到場外"
               }
             ]
           }
@@ -3727,65 +3772,6 @@
           {
             "type": "draw",
             "amount": 1
-          }
-        ]
-      }
-    ]
-  },
-  "UA47BT_TKG-1-027": {
-    "ap_cost": 1,
-    "energy_req": 4,
-    "type": "場域卡",
-    "gen_energy": 0,
-    "bp": 0,
-    "color": "黃",
-    "traits": [],
-    "logic_tags": {
-      "_todolist": {
-        "1_check_card_type_and_timing": "這是一張場域卡，我決定將主要效果放在 on_battle_win 時機點中。",
-        "2_scan_special_rules": "發現『回合1』為條件，將使用 turn_count 處理。無特殊規則。",
-        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "所有函數皆匹配成功。"
-      },
-      "effect_blocks": {
-        "on_battle_win": [
-          {
-            "optional": false,
-            "conditions": [
-              {
-                "type": "turn_count",
-                "operator": "==",
-                "count": 1
-              },
-              {
-                "type": "battle_participant",
-                "role": "attacker",
-                "filters": {
-                  "player": "self",
-                  "trait": "CCG"
-                }
-              }
-            ],
-            "costs": [],
-            "actions": [
-              {
-                "type": "draw",
-                "amount": 1
-              }
-            ]
-          }
-        ]
-      }
-    },
-    "life_trigger": [
-      {
-        "conditions": [],
-        "costs": [],
-        "actions": [
-          {
-            "type": "move_cards",
-            "target": "self_card",
-            "destination": "hand"
           }
         ]
       }

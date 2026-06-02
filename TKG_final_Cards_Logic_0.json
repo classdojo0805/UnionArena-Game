@@ -1868,10 +1868,10 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張事件卡，我決定將主要效果放在 event_play 時機點中，並將常駐效果放在 continuous 時機點中。",
-        "2_scan_special_rules": "無特殊規則。",
+        "1_check_card_type_and_timing": "這是一張事件卡，第一個效果是常駐屬性變更，放在 continuous 時機點；第二個效果是打出後立即執行的效果，放在 event_play 時機點。",
+        "2_scan_special_rules": "無特殊規則，但需注意『最多』的修飾詞。",
         "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現所有函數皆匹配成功。"
+        "4_function_mapping_check": "所有函數皆匹配成功：treat_as_color, treat_energy_req_as_color, change_state。"
       },
       "effect_blocks": {
         "continuous": [
@@ -1948,9 +1948,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
-        "2_scan_special_rules": "未發現代價規則，但有生命值區間判斷，將使用巢狀 conditional_branch 處理。",
-        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果 (基於生命值條件)，我將在 JSON 中產出對應數量的物件 (透過 conditional_branch 實現)。",
-        "4_function_mapping_check": "所有函數皆匹配成功：conditional_branch, life_count, draw, move_card。"
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：無特殊規則。但有生命值區間判斷，將使用巢狀 conditional_branch 處理。",
+        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出 2 個 conditional_branch 物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
       },
       "effect_blocks": {
         "on_play": [
@@ -1982,8 +1982,8 @@
                         "amount": 1
                       },
                       {
-                        "type": "move_card",
-                        "source": {
+                        "type": "discard",
+                        "target": {
                           "player": "self",
                           "location": "hand",
                           "amount": 1,
@@ -1995,24 +1995,23 @@
                     "if_false": []
                   }
                 ],
-                "if_false": [
+                "if_false": []
+              },
+              {
+                "type": "conditional_branch",
+                "condition": {
+                  "type": "life_count",
+                  "player": "self",
+                  "operator": "<=",
+                  "count": 3
+                },
+                "if_true": [
                   {
-                    "type": "conditional_branch",
-                    "condition": {
-                      "type": "life_count",
-                      "player": "self",
-                      "operator": "<=",
-                      "count": 3
-                    },
-                    "if_true": [
-                      {
-                        "type": "draw",
-                        "amount": 1
-                      }
-                    ],
-                    "if_false": []
+                    "type": "draw",
+                    "amount": 1
                   }
-                ]
+                ],
+                "if_false": []
               }
             ]
           }
@@ -2103,9 +2102,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 main_act 和 on_leave 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『如這樣做』表示使用 on_success，『可將』表示 optional: true，『因戰鬥而退場』表示 history 條件。",
+        "2_scan_special_rules": "關於『如這樣做』的規則，我確認這張卡的處理方式為將後續效果放入前置動作的 on_success 陣列中。同時處理『回合1』和『因戰鬥而退場』的條件。",
         "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+        "4_function_mapping_check": "所有函數皆匹配成功：turn_count, life_to_hand, stat_change, history, life_count, discard, change_state。"
       },
       "effect_blocks": {
         "main_act": [
@@ -2118,12 +2117,7 @@
                 "count": 1
               }
             ],
-            "costs": [
-              {
-                "type": "pay_ap",
-                "amount": 1
-              }
-            ],
+            "costs": [],
             "actions": [
               {
                 "type": "life_to_hand",
@@ -2161,8 +2155,8 @@
             "costs": [],
             "actions": [
               {
-                "type": "move_card",
-                "source": {
+                "type": "discard",
+                "target": {
                   "player": "self",
                   "location": "hand",
                   "amount": 1,
@@ -2203,9 +2197,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 main_act 和 on_leave 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『如這樣做』表示使用 on_success，『可將』表示 optional: true，『因戰鬥而退場』表示 history 條件。",
+        "2_scan_special_rules": "關於『如這樣做』的規則，我確認這張卡的處理方式為將後續效果放入前置動作的 on_success 陣列中。同時處理『回合1』和『因戰鬥而退場』的條件。",
         "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+        "4_function_mapping_check": "所有函數皆匹配成功：turn_count, life_to_hand, stat_change, history, life_count, discard, change_state。"
       },
       "effect_blocks": {
         "main_act": [
@@ -2218,12 +2212,7 @@
                 "count": 1
               }
             ],
-            "costs": [
-              {
-                "type": "pay_ap",
-                "amount": 1
-              }
-            ],
+            "costs": [],
             "actions": [
               {
                 "type": "life_to_hand",
@@ -2261,8 +2250,8 @@
             "costs": [],
             "actions": [
               {
-                "type": "move_card",
-                "source": {
+                "type": "discard",
+                "target": {
                   "player": "self",
                   "location": "hand",
                   "amount": 1,
@@ -2302,9 +2291,9 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 和 on_opponent_attack_phase_end 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：包含「只能以突襲登場」的限制，以及「或」的抉擇效果。",
-        "3_confirm_effect_count": "任務面板顯示有 3 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 和 on_attack_end 時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：有『只能以突襲登場』的限制，以及『或』的抉擇效果。",
+        "3_confirm_effect_count": "任務面板顯示有 4 個獨立效果，我將在 JSON 中產出對應數量的物件。",
         "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
       },
       "effect_blocks": {
@@ -2315,8 +2304,7 @@
             "costs": [],
             "actions": [
               {
-                "type": "must_play_as_raid",
-                "target": "self_card"
+                "type": "must_play_as_raid"
               }
             ]
           },
@@ -2331,7 +2319,14 @@
                 "keyword": "impact",
                 "value": 1,
                 "duration": "continuous"
-              },
+              }
+            ]
+          },
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
               {
                 "type": "gain_keyword",
                 "target": "self_card",
@@ -2342,10 +2337,15 @@
             ]
           }
         ],
-        "on_opponent_attack_phase_end": [
+        "on_attack_end": [
           {
             "optional": false,
-            "conditions": [],
+            "conditions": [
+              {
+                "type": "is_self_turn",
+                "value": false
+              }
+            ],
             "costs": [],
             "actions": [
               {
@@ -2403,9 +2403,9 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 和 on_opponent_attack_phase_end 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：包含「只能以突襲登場」的限制，以及「或」的抉擇效果。",
-        "3_confirm_effect_count": "任務面板顯示有 3 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 和 on_attack_end 時機點中。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：有『只能以突襲登場』的限制，以及『或』的抉擇效果。",
+        "3_confirm_effect_count": "任務面板顯示有 4 個獨立效果，我將在 JSON 中產出對應數量的物件。",
         "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
       },
       "effect_blocks": {
@@ -2416,8 +2416,7 @@
             "costs": [],
             "actions": [
               {
-                "type": "must_play_as_raid",
-                "target": "self_card"
+                "type": "must_play_as_raid"
               }
             ]
           },
@@ -2432,7 +2431,14 @@
                 "keyword": "impact",
                 "value": 1,
                 "duration": "continuous"
-              },
+              }
+            ]
+          },
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
               {
                 "type": "gain_keyword",
                 "target": "self_card",
@@ -2443,10 +2449,15 @@
             ]
           }
         ],
-        "on_opponent_attack_phase_end": [
+        "on_attack_end": [
           {
             "optional": false,
-            "conditions": [],
+            "conditions": [
+              {
+                "type": "is_self_turn",
+                "value": false
+              }
+            ],
             "costs": [],
             "actions": [
               {
@@ -2555,9 +2566,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
-        "2_scan_special_rules": "發現條件分歧邏輯，將使用 conditional_branch 處理。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡包含條件分歧，將使用 conditional_branch 處理。",
         "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "所有函數皆匹配成功。"
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
       },
       "effect_blocks": {
         "on_play": [
@@ -2587,7 +2598,8 @@
                       "amount": 1,
                       "modifier": "exact"
                     },
-                    "destination": "outside"
+                    "destination": "outside",
+                    "face_down": false
                   }
                 ],
                 "if_false": [
@@ -2634,9 +2646,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
-        "2_scan_special_rules": "發現條件分歧邏輯，將使用 conditional_branch 處理。",
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡包含條件分歧，將使用 conditional_branch 處理。",
         "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "所有函數皆匹配成功。"
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
       },
       "effect_blocks": {
         "on_play": [
@@ -2666,7 +2678,8 @@
                       "amount": 1,
                       "modifier": "exact"
                     },
-                    "destination": "outside"
+                    "destination": "outside",
+                    "face_down": false
                   }
                 ],
                 "if_false": [
@@ -2712,10 +2725,10 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，登場時效果放在 on_play，退場時效果放在 on_leave。",
-        "2_scan_special_rules": "發現「自己的生命值是３或以下的情況下，改為３或以下」這段文本存在語義模糊，我將假設其修改的是「能源需求」的過濾條件，從「1或以下」改為「3或以下」。若此假設不符，則需要進一步澄清。",
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 和 on_leave 時機點中。",
+        "2_scan_special_rules": "關於『改為３或以下』的規則，我確認這張卡的處理方式為：在生命值條件滿足時，將可登場的卡片數量從最多1張改為最多3張。",
         "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+        "4_function_mapping_check": "所有函數皆匹配成功。"
       },
       "effect_blocks": {
         "on_play": [
@@ -2755,10 +2768,10 @@
                     "target": {
                       "player": "self",
                       "location": "hand",
-                      "amount": 1,
+                      "amount": 3,
                       "modifier": "up_to",
                       "filters": {
-                        "max_energy": 3,
+                        "max_energy": 1,
                         "ap_consumption": 1,
                         "color": "red",
                         "card_type": "character"
@@ -2815,10 +2828,10 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，登場時效果放在 on_play，退場時效果放在 on_leave。",
-        "2_scan_special_rules": "發現「自己的生命值是３或以下的情況下，改為３或以下」這段文本存在語義模糊，我將假設其修改的是「能源需求」的過濾條件，從「1或以下」改為「3或以下」。若此假設不符，則需要進一步澄清。",
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 和 on_leave 時機點中。",
+        "2_scan_special_rules": "關於『改為３或以下』的規則，我確認這張卡的處理方式為：在生命值條件滿足時，將可登場的卡片數量從最多1張改為最多3張。",
         "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+        "4_function_mapping_check": "所有函數皆匹配成功。"
       },
       "effect_blocks": {
         "on_play": [
@@ -2858,10 +2871,10 @@
                     "target": {
                       "player": "self",
                       "location": "hand",
-                      "amount": 1,
+                      "amount": 3,
                       "modifier": "up_to",
                       "filters": {
-                        "max_energy": 3,
+                        "max_energy": 1,
                         "ap_consumption": 1,
                         "color": "red",
                         "card_type": "character"
@@ -2918,10 +2931,10 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 in_hand_continuous 時機點中。",
-        "2_scan_special_rules": "發現條件減費規則，但減費數值不明確，將使用 custom 處理。",
-        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出 1 個物件。",
-        "4_function_mapping_check": "找不到對應函數名稱：cost_reduction 的 value 參數不明確。"
+        "1_check_card_type_and_timing": "這是一張角色卡，效果為手牌常駐，我決定將主要效果放在 in_hand_continuous 時機點中。",
+        "2_scan_special_rules": "無特殊規則，但能源需求減少的數值未明確指定。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『cost_reduction 函數的 value 參數在文本中未明確指定，因此將使用 custom 類型處理』。"
       },
       "effect_blocks": {
         "in_hand_continuous": [
@@ -2952,7 +2965,7 @@
             "actions": [
               {
                 "type": "custom",
-                "description": "手牌上此卡的能源需求減少，減少數值不明。"
+                "description": "能源需求減少，但減少的數值未在文本中指定"
               }
             ]
           }
@@ -2971,25 +2984,13 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
-        "2_scan_special_rules": "關於『改為』的規則，我確認這張卡的處理方式為：使用 conditional_branch 進行條件分歧。",
-        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "所有函數皆匹配成功。"
+        "1_check_card_type_and_timing": "這是一張角色卡，主要效果放在 on_play 時機點中。此卡本身具有以激活狀態登場的特性。",
+        "2_scan_special_rules": "發現條件替換邏輯，將使用 conditional_branch 處理。無其他特殊規則。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果 (登場時觸發)，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "所有函數皆匹配成功：conditional_branch, life_count, retire。"
       },
       "effect_blocks": {
         "on_play": [
-          {
-            "optional": false,
-            "conditions": [],
-            "costs": [],
-            "actions": [
-              {
-                "type": "change_state",
-                "target": "self_card",
-                "state": "active"
-              }
-            ]
-          },
           {
             "optional": false,
             "conditions": [],
@@ -3102,8 +3103,8 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
-        "2_scan_special_rules": "關於『有加入手牌的情況下』，我確認這張卡的處理方式為：使用 on_success 參數來處理條件性後續動作。",
-        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "2_scan_special_rules": "關於『有加入手牌的情況下』，我確認這張卡的處理方式為：將後續效果放在前置動作的 on_success 陣列中。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果（包含一個條件式後續動作），我將在 JSON 中產出 1 個物件。",
         "4_function_mapping_check": "所有函數皆匹配成功。"
       },
       "effect_blocks": {
@@ -3117,20 +3118,21 @@
                 "type": "look_at_deck",
                 "player": "self",
                 "amount": 2,
-                "select_amount": 1,
-                "select_modifier": "up_to",
-                "select_filters": {
-                  "any_of": [
-                    {
-                      "trait": "CCG"
-                    },
-                    {
-                      "name": "亞門的掌上壓"
-                    }
-                  ]
+                "target_to_hand": {
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {
+                    "any_of": [
+                      {
+                        "trait": "CCG"
+                      },
+                      {
+                        "name": "亞門的掌上壓"
+                      }
+                    ]
+                  },
+                  "reveal": true
                 },
-                "destination": "hand",
-                "reveal": true,
                 "remainder": "bottom_deck_any_order",
                 "on_success": [
                   {
