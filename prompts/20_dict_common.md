@@ -58,4 +58,10 @@ DICT_COMMON = """
      - 遇到「本回合中，此角色獲得 [關鍵字] 或 [能力]」時：
      - 優先檢查 `gain_keyword` 是否能處理（如衝擊、2次攻擊）。
      - 若為複雜文本能力，則使用 `gain_effect` 並定義正確的 `gained_trigger`。
+
+5. 🎯 目標選取器規範 (Target Selector Rules):
+   - 當積木中出現 `{選取器}` 時，支援使用以下通用屬性進行精確鎖定：
+   - `modifier`: `"exact"` (剛好) | `"up_to"` (最多) | `"at_least"` (至少/或以上)
+   - `location`: `"hand"` | `"field"` | `"deck"` | `"outside"` | `"removed_area"` 等。如果是跨區域合計計算（如：場外與移除區），請使用陣列格式，例如 `["outside", "removed_area"]`。
+   - `filters`: 可包含多個條件過濾，例如 `{"name": "...", "card_type": "...", "trait": "...", "has_underneath_card": true}` 等。
 """
