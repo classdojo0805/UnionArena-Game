@@ -3637,9 +3637,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 in_hand_continuous, on_play, continuous 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『自己場外的卡的能源需求數目有５種或以上』此條件無法直接參數化，將使用 custom 描述；『可能的話對手必需要阻擋此角色的第１次攻擊』的限制無法參數化，將在 gain_keyword 中使用 description 補充；『此角色進行攻擊並戰鬥勝利時』此觸發時機無法直接參數化，將在 gain_effect 中使用 custom 描述。",
-        "3_confirm_effect_count": "任務面板顯示有 4 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現找不到對應函數名稱：target_count 無法處理『能源需求數目有５種或以上』的條件；gained_trigger 無法處理『攻擊並戰鬥勝利時』的觸發。"
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『能源需求減少』預設為減少1點；『必需要阻擋此角色的第１次攻擊』將使用 must_block: true 處理，不特別區分第1次攻擊；『回合1』作為條件處理。",
+        "3_confirm_effect_count": "任務面板顯示有 5 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
       },
       "effect_blocks": {
         "in_hand_continuous": [
@@ -3647,8 +3647,15 @@
             "optional": false,
             "conditions": [
               {
-                "type": "custom",
-                "description": "自己場外的卡的能源需求數目有５種或以上"
+                "type": "unique_attribute_count",
+                "target": {
+                  "player": "self",
+                  "location": "outside",
+                  "filters": {}
+                },
+                "attribute": "energy_req",
+                "operator": ">=",
+                "count": 5
               }
             ],
             "costs": [],
@@ -3680,29 +3687,32 @@
                 "keywords": {
                   "must_block": true
                 },
-                "duration": "turn",
-                "description": "可能的話對手必需要阻擋此角色的第１次攻擊"
+                "duration": "turn"
               },
               {
                 "type": "gain_effect",
                 "target": "self_card",
-                "gained_trigger": "custom",
-                "description": "此角色進行攻擊並戰鬥勝利時",
-                "conditions": [
-                  {
-                    "type": "turn_count",
-                    "operator": "==",
-                    "count": 1
-                  }
-                ],
+                "gained_trigger": "on_battle_win",
                 "effects": [
                   {
-                    "type": "change_state",
-                    "target": "self_card",
-                    "state": "active"
+                    "optional": false,
+                    "conditions": [
+                      {
+                        "type": "turn_count",
+                        "operator": "==",
+                        "count": 1
+                      }
+                    ],
+                    "costs": [],
+                    "actions": [
+                      {
+                        "type": "change_state",
+                        "target": "self_card",
+                        "state": "active"
+                      }
+                    ]
                   }
-                ],
-                "duration": "turn"
+                ]
               }
             ]
           }
@@ -3753,9 +3763,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 in_hand_continuous, on_play, continuous 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『自己場外的卡的能源需求數目有５種或以上』此條件無法直接參數化，將使用 custom 描述；『可能的話對手必需要阻擋此角色的第１次攻擊』的限制無法參數化，將在 gain_keyword 中使用 description 補充；『此角色進行攻擊並戰鬥勝利時』此觸發時機無法直接參數化，將在 gain_effect 中使用 custom 描述。",
-        "3_confirm_effect_count": "任務面板顯示有 4 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現找不到對應函數名稱：target_count 無法處理『能源需求數目有５種或以上』的條件；gained_trigger 無法處理『攻擊並戰鬥勝利時』的觸發。"
+        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：『能源需求減少』預設為減少1點；『必需要阻擋此角色的第１次攻擊』將使用 must_block: true 處理，不特別區分第1次攻擊；『回合1』作為條件處理。",
+        "3_confirm_effect_count": "任務面板顯示有 5 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
       },
       "effect_blocks": {
         "in_hand_continuous": [
@@ -3763,8 +3773,15 @@
             "optional": false,
             "conditions": [
               {
-                "type": "custom",
-                "description": "自己場外的卡的能源需求數目有５種或以上"
+                "type": "unique_attribute_count",
+                "target": {
+                  "player": "self",
+                  "location": "outside",
+                  "filters": {}
+                },
+                "attribute": "energy_req",
+                "operator": ">=",
+                "count": 5
               }
             ],
             "costs": [],
@@ -3796,29 +3813,32 @@
                 "keywords": {
                   "must_block": true
                 },
-                "duration": "turn",
-                "description": "可能的話對手必需要阻擋此角色的第１次攻擊"
+                "duration": "turn"
               },
               {
                 "type": "gain_effect",
                 "target": "self_card",
-                "gained_trigger": "custom",
-                "description": "此角色進行攻擊並戰鬥勝利時",
-                "conditions": [
-                  {
-                    "type": "turn_count",
-                    "operator": "==",
-                    "count": 1
-                  }
-                ],
+                "gained_trigger": "on_battle_win",
                 "effects": [
                   {
-                    "type": "change_state",
-                    "target": "self_card",
-                    "state": "active"
+                    "optional": false,
+                    "conditions": [
+                      {
+                        "type": "turn_count",
+                        "operator": "==",
+                        "count": 1
+                      }
+                    ],
+                    "costs": [],
+                    "actions": [
+                      {
+                        "type": "change_state",
+                        "target": "self_card",
+                        "state": "active"
+                      }
+                    ]
                   }
-                ],
-                "duration": "turn"
+                ]
               }
             ]
           }

@@ -6470,6 +6470,238 @@
       }
     ]
   },
+  "UA47BT_TKG-1-037": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 和 main_act 時機點中。",
+        "2_scan_special_rules": "『休息 此卡退場』為主起動的代價，將其放入 costs 陣列。登場時效果的『有加入手牌的情況下』為條件式後續動作，將其放入 look_at_deck 內 select_to_hand 的 on_success 中。",
+        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "look_at_deck",
+                "player": "self",
+                "amount": 4,
+                "select_to_outside": {
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {}
+                },
+                "select_to_hand": {
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {
+                    "card_type": "character"
+                  },
+                  "reveal": true,
+                  "on_success": [
+                    {
+                      "type": "move_card",
+                      "source": {
+                        "player": "self",
+                        "location": "hand",
+                        "amount": 1,
+                        "modifier": "exact"
+                      },
+                      "destination": "outside"
+                    }
+                  ]
+                },
+                "remainder": "bottom_deck_any_order"
+              }
+            ]
+          }
+        ],
+        "main_act": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [
+              {
+                "type": "change_state",
+                "target": "self_card",
+                "state": "rest"
+              },
+              {
+                "type": "retire",
+                "target": "self_card",
+                "to_removal": false
+              }
+            ],
+            "actions": [
+              {
+                "type": "look_at_deck",
+                "player": "self",
+                "amount": 3,
+                "select_to_hand": {
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {}
+                },
+                "remainder": "outside"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
+  "UA47BT_TKG-1-037_2": {
+    "ap_cost": 1,
+    "energy_req": 3,
+    "type": "角色卡",
+    "gen_energy": 0,
+    "bp": 3000,
+    "color": "紫",
+    "traits": [],
+    "logic_tags": {
+      "_todolist": {
+        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 和 main_act 時機點中。",
+        "2_scan_special_rules": "『休息 此卡退場』為主起動的代價，將其放入 costs 陣列。登場時效果的『有加入手牌的情況下』為條件式後續動作，將其放入 look_at_deck 內 select_to_hand 的 on_success 中。",
+        "3_confirm_effect_count": "任務面板顯示有 2 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "逐一核對字典後，我發現『所有函數皆匹配成功』。"
+      },
+      "effect_blocks": {
+        "on_play": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [],
+            "actions": [
+              {
+                "type": "look_at_deck",
+                "player": "self",
+                "amount": 4,
+                "select_to_outside": {
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {}
+                },
+                "select_to_hand": {
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {
+                    "card_type": "character"
+                  },
+                  "reveal": true,
+                  "on_success": [
+                    {
+                      "type": "move_card",
+                      "source": {
+                        "player": "self",
+                        "location": "hand",
+                        "amount": 1,
+                        "modifier": "exact"
+                      },
+                      "destination": "outside"
+                    }
+                  ]
+                },
+                "remainder": "bottom_deck_any_order"
+              }
+            ]
+          }
+        ],
+        "main_act": [
+          {
+            "optional": false,
+            "conditions": [],
+            "costs": [
+              {
+                "type": "change_state",
+                "target": "self_card",
+                "state": "rest"
+              },
+              {
+                "type": "retire",
+                "target": "self_card",
+                "to_removal": false
+              }
+            ],
+            "actions": [
+              {
+                "type": "look_at_deck",
+                "player": "self",
+                "amount": 3,
+                "select_to_hand": {
+                  "amount": 1,
+                  "modifier": "up_to",
+                  "filters": {}
+                },
+                "remainder": "outside"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "life_trigger": [
+      {
+        "conditions": [],
+        "costs": [],
+        "actions": [
+          {
+            "type": "change_state",
+            "target": {
+              "player": "self",
+              "location": "field",
+              "amount": 1,
+              "filters": {
+                "card_type": "character"
+              }
+            },
+            "state": "active"
+          },
+          {
+            "type": "buff_bp",
+            "target": "selected_target",
+            "amount": 3000,
+            "duration": "turn"
+          }
+        ]
+      }
+    ]
+  },
   "UA47BT_TKG-1-049": {
     "ap_cost": 1,
     "energy_req": 0,

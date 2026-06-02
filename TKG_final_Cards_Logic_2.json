@@ -3147,10 +3147,10 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 時機點中。",
-        "2_scan_special_rules": "無特殊規則。",
+        "1_check_card_type_and_timing": "這是一張角色卡，效果為常駐型能力，我決定將主要效果放在 continuous 時機點中。",
+        "2_scan_special_rules": "無特殊規則，但需要處理跨區域的合計卡片數量。",
         "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『找不到對應函數名稱：無法直接表達「自己場外及移除區合計有10張卡或以上」的條件，因為 target selector 的 location 欄位不支援陣列或合計運算』。"
+        "4_function_mapping_check": "所有函數皆匹配成功：target_count 和 stat_change。"
       },
       "effect_blocks": {
         "continuous": [
@@ -3158,8 +3158,17 @@
             "optional": false,
             "conditions": [
               {
-                "type": "custom",
-                "description": "自己場外及移除區合計有10張卡或以上"
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": [
+                    "outside",
+                    "removed_area"
+                  ],
+                  "filters": {}
+                },
+                "operator": ">=",
+                "count": 10
               }
             ],
             "costs": [],
@@ -3199,10 +3208,10 @@
     "traits": [],
     "logic_tags": {
       "_todolist": {
-        "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 continuous 時機點中。",
-        "2_scan_special_rules": "無特殊規則。",
+        "1_check_card_type_and_timing": "這是一張角色卡，效果為常駐型能力，我決定將主要效果放在 continuous 時機點中。",
+        "2_scan_special_rules": "無特殊規則，但需要處理跨區域的合計卡片數量。",
         "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『找不到對應函數名稱：無法直接表達「自己場外及移除區合計有10張卡或以上」的條件，因為 target selector 的 location 欄位不支援陣列或合計運算』。"
+        "4_function_mapping_check": "所有函數皆匹配成功：target_count 和 stat_change。"
       },
       "effect_blocks": {
         "continuous": [
@@ -3210,8 +3219,17 @@
             "optional": false,
             "conditions": [
               {
-                "type": "custom",
-                "description": "自己場外及移除區合計有10張卡或以上"
+                "type": "target_count",
+                "target": {
+                  "player": "self",
+                  "location": [
+                    "outside",
+                    "removed_area"
+                  ],
+                  "filters": {}
+                },
+                "operator": ">=",
+                "count": 10
               }
             ],
             "costs": [],
@@ -3254,9 +3272,9 @@
     "logic_tags": {
       "_todolist": {
         "1_check_card_type_and_timing": "這是一張角色卡，我決定將主要效果放在 on_play 時機點中。",
-        "2_scan_special_rules": "關於『作為代價』或『全部AP』等規則，我確認這張卡的處理方式為：包含條件分歧『...的情況下，改為...』，將使用 conditional_branch 處理。",
-        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件 (一個 conditional_branch 包含兩個分支)。",
-        "4_function_mapping_check": "逐一核對字典後，我發現『look_at_deck 函數的 remainder 參數無法表達「放置到牌庫上面或下面」的選擇，因此使用 custom 處理此部分』。"
+        "2_scan_special_rules": "發現條件分歧效果，將使用 conditional_branch 處理。",
+        "3_confirm_effect_count": "任務面板顯示有 1 個獨立效果，我將在 JSON 中產出對應數量的物件。",
+        "4_function_mapping_check": "找不到完全匹配的函數名稱來處理『查看牌庫頂N張卡，然後選擇將這些卡放置到牌庫頂或牌庫底』，將使用 custom 描述。"
       },
       "effect_blocks": {
         "on_play": [
@@ -3282,13 +3300,13 @@
                 "if_true": [
                   {
                     "type": "custom",
-                    "description": "從自己牌庫上面查看２張卡，然後任意放置到牌庫上面或下面。"
+                    "description": "查看牌庫頂2張卡，並選擇將其放置於牌庫頂或牌庫底"
                   }
                 ],
                 "if_false": [
                   {
                     "type": "custom",
-                    "description": "從自己牌庫上面查看１張卡，然後放置到牌庫上面或下面。"
+                    "description": "查看牌庫頂1張卡，並選擇將其放置於牌庫頂或牌庫底"
                   }
                 ]
               }
