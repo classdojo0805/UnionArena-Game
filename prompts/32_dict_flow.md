@@ -12,4 +12,7 @@ DICT_FLOW_ADV = """
 3. 效果賦予與複製 (gain_effect):
    - `{"type": "gain_effect", "target": {選取器}, "gained_trigger": "main_act"|"on_play"等, "effects": [動作陣列]}`
    - 💡 應用：處理「獲得被選擇角色的 1 個主起動效果」或「賦予其他卡片新的能力」。
+4. 抉擇效果 (choose_effect):
+   - `{"type": "choose_effect", "player": "self"|"opponent", "amount": 數字, "modifier": "exact"|"up_to", "options": [ [動作陣列1], [動作陣列2] ]}`
+   - 💡 應用：處理「選擇以下其中一項：」或「從以下選擇 X 項：」。請將各個選項的執行動作分別包裝成獨立陣列，放入 options 中。
 """

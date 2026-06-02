@@ -23,6 +23,7 @@ DICT_KEYWORDS_EXT = """
 3. 其他屬性與效果賦予：
    - `{"type": "treat_as_name", "target": {選取器}, "name": "卡名"}`
    - `{"type": "treat_as_color", "target": {選取器}, "color": "all"|顏色}`
+   - `{"type": "treat_energy_req_as_color", "target": {選取器}, "color": "all"|顏色}` (💡 應用：處理「此卡的能源需求也被視為全部顏色」)
    - `{"type": "gain_effect", "target": {選取器}, "gained_trigger": "觸發時機", "effects": [動作陣列]}`
-   - `{"type": "apply_player_restriction", "player": "self"|"opponent", "restriction": "cannot_play_from_hand", "duration": "turn"}`
+   - `{"type": "apply_player_restriction", "player": "self"|"opponent", "restriction": "cannot_play_from_hand"|"must_play_as_raid", "duration": "turn"|"continuous"}` (💡 擴充 `must_play_as_raid` 處理「此角色只能以突襲登場」)
 """
