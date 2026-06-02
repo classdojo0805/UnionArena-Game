@@ -12,6 +12,10 @@ DICT_COMMON = """
    - `{"type": "history", "action": "added_to_hand_this_turn"}`: 判定本回合是否有卡片加入手牌。
    - `{"type": "history", "action": "rested_by_own_effect_this_turn"` (💡 應用：篩選「在本回合中因自己的效果而變為休息狀態」的卡片)
    - `{"type": "unique_attribute_count", "target": {選取器}, "attribute": "energy_req"|"color"|"trait", "operator": ">="|"<="|"==", "count": 數字}` (💡 應用：處理「能源需求數目有Ｘ種或以上」、「顏色有Ｘ種」)
+   - `{"type": "battle_result", "result": "win"|"lose"}`: 判定當前戰鬥的結果。
+   - `{"type": "battle_participant", "role": "attacker"|"defender", "filters": {過濾器}}`: 判定參與戰鬥的特定一方是否符合條件。
+   - `{"type": "history", "action": "entered_field_this_turn", "target": "self_card"}`: 判定目標是否在「本回合登場」。
+   - `{"type": "history", "action": "activated_effect_this_turn", "effect_type": "main_act"}`: 判定本回合是否有發動過特定類型的效果。
    
 2. 動作與代價基礎積木 (Actions & Costs):
    - `{"type": "pay_ap", "amount": 1}`
@@ -64,4 +68,5 @@ DICT_COMMON = """
    - `modifier`: `"exact"` (剛好) | `"up_to"` (最多) | `"at_least"` (至少/或以上)
    - `location`: `"hand"` | `"field"` | `"deck"` | `"outside"` | `"removed_area"` 等。如果是跨區域合計計算（如：場外與移除區），請使用陣列格式，例如 `["outside", "removed_area"]`。
    - `filters`: 可包含多個條件過濾，例如 `{"name": "...", "card_type": "...", "trait": "...", "has_underneath_card": true}` 等。
+
 """
