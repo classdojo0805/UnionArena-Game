@@ -6,8 +6,8 @@ DICT_KEYWORDS_EXT = """
    - 【關鍵字物件內容 (全量定義)】：
      - `"impact": 數字` (衝擊)
      - `"damage": 數字` (傷害)
-     - `"twice_attack": true` (2次攻擊)
-     - `"twice_block": true` (2次阻擋)
+     - `"twice_attack": true` (2次攻擊 / 兩次攻擊)
+     - `"twice_block": true` (2次阻擋 / 兩次阻擋)
      - `"impact_nullify": true` (衝擊無效)
      - `"step": true` (步進)
      - `"snipe": true` (狙擊)

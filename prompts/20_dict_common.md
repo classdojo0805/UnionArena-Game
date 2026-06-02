@@ -10,6 +10,7 @@ DICT_COMMON = """
    - `{"type": "state_check", "target": {選取器}, "state": "active"|"rest"}`: 判定目標當前的激活/休息狀態。
    - `{"type": "history", "action": "retired_by_battle"}`: 判定目標是否因「戰鬥」而退場。
    - `{"type": "history", "action": "added_to_hand_this_turn"}`: 判定本回合是否有卡片加入手牌。
+   - `{"type": "history", "action": "rested_by_own_effect_this_turn"` (💡 應用：篩選「在本回合中因自己的效果而變為休息狀態」的卡片)
    - `{"type": "unique_attribute_count", "target": {選取器}, "attribute": "energy_req"|"color"|"trait", "operator": ">="|"<="|"==", "count": 數字}` (💡 應用：處理「能源需求數目有Ｘ種或以上」、「顏色有Ｘ種」)
    
 2. 動作與代價基礎積木 (Actions & Costs):
