@@ -30,8 +30,8 @@ DICT_COMMON = """
    - `{"type": "move_card", "source": {選取器}, "destination": "hand"|"bottom_deck"|"top_deck"|"outside"|"removed_area"|"under_character", "target_character": {選取器}, "amount": 數字, "face_down": true/false}`
    - `{"type": "stat_change", "target": {選取器}, "attribute": "bp"|"ap"|"generated_energy", "value": 數字, "duration": "turn"|"continuous"}`
    - `{"type": "change_state", ..., "on_success": [動作積木]}`: 💡重要：現在 change_state 支援 on_success 用於處理「將其休息。如這樣做...」。
-   - `{"type": "move_character", "target": {選取器}, "to_line": "front_line"|"energy_line"}`: 將角色在前後線之間移動。
-   - `{"type": "move_character", "target": {選取器}, "to_line": "front_line"|"energy_line"}`: 將角色在前後線之間移動。
+   - `{"type": "move_character", "target": {選取器}, "to_line": "front_line"|"energy_line"|"other"}`: 將角色在前後線之間移動 (支援 "other" 代表移動到另一個戰線)。
+   - `{"type": "swap_position", "target1": {選取器}, "target2": {選取器}}`: 讓兩個指定的目標互相調換位置。
 
 3. 💡 動態參數化規範 (Dynamic Parameter Formatting):
    - 遇到「BP少於或等於自己場上[特徵]張數 x 500」等計算邏輯時，禁止填寫純數字。

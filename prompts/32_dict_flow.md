@@ -15,4 +15,7 @@ DICT_FLOW_ADV = """
 4. 抉擇效果 (choose_effect):
    - `{"type": "choose_effect", "player": "self"|"opponent", "amount": 數字, "modifier": "exact"|"up_to", "options": [ [動作陣列1], [動作陣列2] ]}`
    - 💡 應用：處理「選擇以下其中一項：」或「從以下選擇 X 項：」。請將各個選項的執行動作分別包裝成獨立陣列，放入 options 中。
+5. 複製效果 (copy_effect):
+   - `{"type": "copy_effect", "target": "self_card", "source_target": {選取器}, "effect_type": "main_act", "cost_filter": {代價積木}}`
+   - 💡 應用：處理「獲得被選擇角色的１個含有支付1AP的主起動效果」，將 `cost_filter` 設為 `{"type": "pay_ap", "amount": 1}`。
 """
